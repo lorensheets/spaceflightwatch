@@ -1,0 +1,266 @@
+:root {
+  --main-bg-color: #21252b;
+  --main-txt-color: #eee;
+  --countdown-bg-color: #d82b1c;
+  --link-bg-color: #35393f;
+}
+html, body {
+  height: 100vh;
+  width: 100%;
+  font-size: 1em;
+  background: var(--main-bg-color);
+  color: var(--main-txt-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 200;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  padding-bottom: 55px;
+}
+li {
+  padding: 3px 0;
+  text-transform: capitalize;
+}
+a {
+  color: var(--main-txt-color);
+}
+.container-fluid {
+  width: 95%;
+  margin: 0 auto;
+}
+.fullwidth {
+  width: 100% !important;
+}
+.margins {
+  width: 95%;
+  margin: 0 auto;
+}
+.countdown {
+  height: auto;
+  padding: 6px 0;
+  background: var(--countdown-bg-color);
+  font-size: 0.9em;
+}
+.countdown-container {
+  width: 97.5%;
+  margin: 0 auto;
+}
+.countdown p {
+  margin: 0;
+  padding: 3px 0;
+}
+.countdown a {
+  display: inline-block;
+  vertical-align: middle;
+  background: var(--link-bg-color);
+  border-radius: 3px;
+  padding: 3px 6px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2;
+}
+.countdown a:focus {
+  color: var(--main-txt-color);
+  text-decoration: none;
+
+}
+.countdown a:hover {
+  background: var(--main-bg-color);
+  color: var(--main-txt-color);
+  text-decoration: none;
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2;
+}
+
+.table {
+  background: #111;
+}
+.table-header {
+  width: 97.5%;
+  margin: 0 auto;
+  padding: 0;
+}
+.table-header p {
+  margin: 0;
+  padding: 8px 0;
+}
+.launch-table {
+  padding-top: 10px;
+  height: 250px;
+  background: #1b1f26;
+  position: relative;
+}
+.launch-table-container {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 240px;
+  overflow: scroll;
+}
+.launches {
+  width: 97.5%;
+  margin: 0 auto;
+  font-size: 0.9em;
+}
+.bottom-fade {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  background: -webkit-linear-gradient(
+    rgba(27, 31, 38, 0) 0%,
+    rgba(27, 31, 38, 0.95) 95%
+  );
+  background-image: -moz-linear-gradient(
+    rgba(27, 31, 38, 0) 0%,
+    rgba(27, 31, 38, 0.95) 95%
+  );
+  background-image: -o-linear-gradient(
+    rgba(27, 31, 38, 0) 0%,
+    rgba(27, 31, 38, 0.95) 95%
+  );
+  background-image: linear-gradient(
+    rgba(27, 31, 38, 0) 0%,
+    rgba(27, 31, 38, 0.95) 95%
+  );
+  background-image: -ms-linear-gradient(
+    rgba(27, 31, 38, 0) 0%,
+    rgba(27, 31, 38, 0.95) 95%
+  );
+}
+
+
+/* space jobs styles */
+
+.jobs-container {
+  background: #1b1f26;
+  height: 250px;
+  position: relative;
+  font-size: 0.9em;
+}
+.jobs-list {
+  height: 240px;
+  width: 100%;
+  overflow: scroll;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.jobs-list__bg {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  /*background-image: url('/static/images/spacex.png');*/
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+.companies-container {
+  background: #111;
+}
+.companies {
+  width: 97.5%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.company-icon-container {
+  text-align: center;
+  margin: 0;
+}
+.company-icon {
+  width: auto;
+  height: 16px;
+  transition: 0.2s;
+  filter: saturate(0%) brightness(70%);
+  -webkit-filter: saturate(0%) brightness(70%);
+  -moz-filter: saturate(0%) brightness(70%);
+  -ms-filter: saturate(0%) brightness(70%);
+  -o-filter: saturate(0%) brightness(70%);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.company-icon:hover {
+  cursor: pointer;
+  filter: saturate(100%) brightness(120%);
+  -webkit-filter: saturate(100%) brightness(120%);
+  -moz-filter: saturate(100%) brightness(120%);
+  -ms-filter: saturate(100%) brightness(120%);
+  -o-filter: saturate(100%) brightness(120%);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.active {
+  filter: saturate(100%) brightness(120%);
+  -webkit-filter: saturate(100%) brightness(120%);
+  -moz-filter: saturate(100%) brightness(120%);
+  -ms-filter: saturate(100%) brightness(120%);
+  -o-filter: saturate(100%) brightness(120%);
+}
+.job-list {
+  display: none;
+}
+.selected {
+  display: block;
+}
+
+
+/* footer styles */
+
+footer {
+  height: 100px;
+  width: 100%;
+}
+
+
+
+/* text-align */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+	background-color:transparent;
+	}
+::-webkit-scrollbar-button {
+	height: 0;
+	width: 0;
+	}
+::-webkit-scrollbar-thumb {
+	background-color:transparent;
+	border-radius:20%;
+	}
+::-webkit-scrollbar-track {
+	background-color:transparent;
+	box-shadow: none;
+	}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+  }

@@ -1,0 +1,148 @@
+{%extends "layout.html"%}
+
+{%block header%}
+
+  <title>Space News</title>
+  <meta name="description" content="The latest in space news and rocket launches">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href={{url_for('static',filename='css/index.css')}} rel="stylesheet" type="text/css" />
+
+{%endblock%}
+
+
+{%block title%}
+
+  <h1>Upcoming Rocket Launches</h1>
+
+{%endblock%}
+
+{%block countdown%}
+
+  <div class="col-xs-4 left">
+    <p class="next-launch">Next Launch: {{ next }}</p>
+  </div>
+  <div class="col-xs-4 center">
+    <p class="time-until"></p>
+  </div>
+  <div class="col-xs-4 right">
+    <a class="button" href="{{ link }}" target="_blank">Live Stream</a>
+  </div>
+
+  <script type="text/javascript">
+    var date = "{{ date }}";
+    var time = "{{ time }}";
+    /*
+    var now = Math.round(Date.now()/1000);
+    var i = 0;
+    var dt;
+    setInterval(function() {
+      dt = ((time - now - i) * 1000);
+      var hours = moment.utc(dt).format("HH");
+      var minutes = moment.utc(dt).format("mm");
+      var seconds = moment.utc(dt).format("ss");
+      $('.time-until').text("T-MINUS: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+      i++;
+    }, 1000);
+    */
+    $('.time-until').html(date + ", 2017 &#8226; " + time);
+
+  </script>
+
+{%endblock%}
+
+{%block content%}
+
+{% for data in upcoming %}
+  <div class="row launches">
+    <div class="col-xs-2 left">
+      <p>{{data[2]}}, 2017</p>
+    </div>
+    <div class="col-xs-3 left">
+      <p class="next-launch">{{ data[1] }}</p>
+    </div>
+    <div class="col-xs-5 left">
+      <p class="time-until">{{ data[0] }}</p>
+    </div>
+    <div class="col-xs-2 right">
+      <p></p>
+    </div>
+  </div>
+
+{% endfor %}
+
+{%endblock%}
+
+
+{% block spacejobs %}
+  <ul id="spacex__job-list" class="job-list">
+    {% for job in spacexjobs %}
+    <li>
+      <a href="http://www.spacex.com{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul id="blueorigin__job-list" class="job-list">
+    {% for job in blueoriginjobs %}
+    <li>
+      <a href="http://www.blueorigin.com{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul id="phasefour__job-list" class="job-list">
+    {% for job in phasefourjobs %}
+    <li>
+      <a href="{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul id="rocketlabs__job-list" class="job-list">
+    {% for job in rocketlabsjobs %}
+    <li>
+      <a href="http://www.rocketlabusa.com{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul id="planetaryresources__job-list" class="job-list">
+    {% for job in planetaryresourcesjobs %}
+    <li>
+      <a href="http://www.planetaryresources.com/careers/job-board/{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul id="bigelow__job-list" class="job-list">
+    {% for job in bigelowjobs %}
+    <li>
+      <a href="{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <script>
+
+    $('.company-icon').on('click', function() {
+      var company = $(this).attr('id');
+      $('.job-list').removeClass('selected');
+      $('#' + company + '__job-list').addClass('selected');
+
+      $('.company-icon').removeClass('active');
+      $(this).addClass('active');
+
+      $('.jobs-list__bg').css('background-image', 'url(/static/images/' + company + '.png)');
+      /*
+      $(this).css({
+        'filter': 'saturate(100%)',
+        '-webkit-filter': 'saturate(100%)',
+        '-moz-filter': 'saturate(100%)',
+        '-ms-filter': 'saturate(100%)',
+        '-o-filter': 'saturate(100%)'
+      });
+      */
+    });
+
+  </script>
+{%endblock%}
