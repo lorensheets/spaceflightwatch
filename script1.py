@@ -1,10 +1,16 @@
 from flask import Flask, render_template
-import nextlaunch, urllib.request, json
+import nextlaunch, urllib.request, json, ssl
 
 app=Flask(__name__)
 
 @app.route('/')
 def home():
+
+    context = ssl._create_unverified_context()
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs") as url:
+        spacexjobs = json.loads(url.read().decode())
+
+
     launch = nextlaunch.getnext()
     upcoming = nextlaunch.upcoming()
     #spacexjobs = jobs.spacex()
@@ -13,8 +19,7 @@ def home():
     #rocketlabsjobs = jobs.rocketlabs()
     #bigelowjobs = jobs.bigelow()
 
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs") as url:
-        spacexjobs = json.loads(url.read().decode())
+
 
     planetaryresourcesjobs = [['Finance & Operations Analyst','?gh_jid=744711'], \
         ['Chief Scientist','?gh_jid=682831'], \
