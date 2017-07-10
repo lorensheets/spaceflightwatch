@@ -13,7 +13,7 @@ def home():
     #rocketlabsjobs = jobs.rocketlabs()
     #bigelowjobs = jobs.bigelow()
 
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs.html") as url:
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs") as url:
         spacexjobs = json.loads(url.read().decode())
 
     planetaryresourcesjobs = [['Finance & Operations Analyst','?gh_jid=744711'], \
@@ -39,6 +39,6 @@ def home():
 if __name__=="__main__":
     app.run(debug=True)
 
-@app.route('/jsondata')
+@app.route('/spacexjobs')
 def data():
-    return render_template("json.html")
+    return render_template("spacexjobs.html")
