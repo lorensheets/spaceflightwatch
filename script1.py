@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import nextlaunch, jobs
+import nextlaunch, urllib.request, json
 
 app=Flask(__name__)
 
@@ -7,11 +7,14 @@ app=Flask(__name__)
 def home():
     launch = nextlaunch.getnext()
     upcoming = nextlaunch.upcoming()
-    spacexjobs = jobs.spacex()
-    blueoriginjobs = jobs.blueorigin()
-    phasefourjobs = jobs.phasefour()
-    rocketlabsjobs = jobs.rocketlabs()
-    bigelowjobs = jobs.bigelow()
+    #spacexjobs = jobs.spacex()
+    #blueoriginjobs = jobs.blueorigin()
+    #phasefourjobs = jobs.phasefour()
+    #rocketlabsjobs = jobs.rocketlabs()
+    #bigelowjobs = jobs.bigelow()
+
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs.html") as url:
+        spacexjobs = json.loads(url.read().decode())
 
     planetaryresourcesjobs = [['Finance & Operations Analyst','?gh_jid=744711'], \
         ['Chief Scientist','?gh_jid=682831'], \
