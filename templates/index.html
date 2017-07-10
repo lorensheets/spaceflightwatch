@@ -77,7 +77,7 @@
   <ul id="spacex__job-list" class="job-list selected">
     {% for job in spacexjobs %}
     <li>
-      <a href="http://www.spacex.com{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+      <a href="http://www.spacex.com{{spacexjobs[job]}}" target="_blank">{{ job }}</a><br>
     </li>
     {% endfor %}
   </ul>
