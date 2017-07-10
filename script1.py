@@ -17,15 +17,15 @@ def home():
         blueoriginjobs = json.loads(url.read().decode())
 
     #phasefour jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/blueoriginjobs") as url:
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/phasefourjobs") as url:
         phasefourjobs = json.loads(url.read().decode())
 
     #rocketlabs jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/blueoriginjobs") as url:
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/rocketlabsjobs") as url:
         rocketlabsjobs = json.loads(url.read().decode())
 
     #bigelow jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/blueoriginjobs") as url:
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/bigelowjobs") as url:
         bigelowjobs = json.loads(url.read().decode())
 
     launch = nextlaunch.getnext()
