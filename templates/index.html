@@ -85,7 +85,7 @@
   <ul id="blueorigin__job-list" class="job-list">
     {% for job in blueoriginjobs %}
     <li>
-      <a href="http://www.blueorigin.com{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+      <a href="http://www.blueorigin.com{{blueoriginjobs[job]}}" target="_blank">{{ job }}</a><br>
     </li>
     {% endfor %}
   </ul>
@@ -93,7 +93,7 @@
   <ul id="phasefour__job-list" class="job-list">
     {% for job in phasefourjobs %}
     <li>
-      <a href="{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+      <a href="{{phasefourjobs[job]}}" target="_blank">{{ job }}</a><br>
     </li>
     {% endfor %}
   </ul>
@@ -101,7 +101,7 @@
   <ul id="rocketlabs__job-list" class="job-list">
     {% for job in rocketlabsjobs %}
     <li>
-      <a href="http://www.rocketlabusa.com{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+      <a href="http://www.rocketlabusa.com{{rocketlabsjobs[job]}}" target="_blank">{{ job }}</a><br>
     </li>
     {% endfor %}
   </ul>
@@ -117,7 +117,7 @@
   <ul id="bigelow__job-list" class="job-list">
     {% for job in bigelowjobs %}
     <li>
-      <a href="{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+      <a href="{{bigelowjobs[job]}}" target="_blank">{{ job }}</a><br>
     </li>
     {% endfor %}
   </ul>
