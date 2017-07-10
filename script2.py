@@ -1,5 +1,7 @@
-import urllib.request, json
+import urllib.request, json, ssl
 
-with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs.html") as url:
+context = ssl._create_unverified_context()
+
+with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs",context=context) as url:
     data = json.loads(url.read().decode())
     print(data)
