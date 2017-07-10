@@ -6,20 +6,30 @@ app=Flask(__name__)
 @app.route('/')
 def home():
 
-    context = ssl._create_unverified_context()
+    #context = ssl._create_unverified_context()
+
+    #spacex jobs
     with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs") as url:
         spacexjobs = json.loads(url.read().decode())
 
+    #blueorigin jobs
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/blueoriginjobs") as url:
+        blueoriginjobs = json.loads(url.read().decode())
+
+    #phasefour jobs
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/blueoriginjobs") as url:
+        phasefourjobs = json.loads(url.read().decode())
+
+    #rocketlabs jobs
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/blueoriginjobs") as url:
+        rocketlabsjobs = json.loads(url.read().decode())
+
+    #bigelow jobs
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/blueoriginjobs") as url:
+        bigelowjobs = json.loads(url.read().decode())
 
     launch = nextlaunch.getnext()
     upcoming = nextlaunch.upcoming()
-    #spacexjobs = jobs.spacex()
-    #blueoriginjobs = jobs.blueorigin()
-    #phasefourjobs = jobs.phasefour()
-    #rocketlabsjobs = jobs.rocketlabs()
-    #bigelowjobs = jobs.bigelow()
-
-
 
     planetaryresourcesjobs = [['Finance & Operations Analyst','?gh_jid=744711'], \
         ['Chief Scientist','?gh_jid=682831'], \
@@ -39,11 +49,34 @@ def home():
 
     return render_template("index.html", time=launch[0],
     next=launch[1], link=launch[2], date=launch[3], upcoming=upcoming,
-    spacexjobs=spacexjobs, planetaryresourcesjobs=planetaryresourcesjobs)
+    spacexjobs=spacexjobs, blueoriginjobs=blueoriginjobs,
+    phasefourjobs=phasefourjobs, planetaryresourcesjobs=planetaryresourcesjobs,
+    rocketlabsjobs=rocketlabsjobs, bigelowjobs=bigelowjobs)
 
 if __name__=="__main__":
     app.run(debug=True)
 
+#render spacexjobs json
 @app.route('/spacexjobs')
 def data():
     return render_template("spacexjobs.html")
+
+#render blueoriginjobs json
+@app.route('/blueoriginjobs')
+def data():
+    return render_template("blueoriginjobs.html")
+
+#render phasefourjobs json
+@app.route('/phasefourjobs')
+def data():
+    return render_template("phasefourjobs.html")
+
+#render rocketlabsjobs json
+@app.route('/rocketlabsjobs')
+def data():
+    return render_template("rocketlabsjobs.html")
+
+#render bigelowjobs json
+@app.route('/bigelowjobs')
+def data():
+    return render_template("bigelowjobs.html")
