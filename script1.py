@@ -58,25 +58,25 @@ if __name__=="__main__":
 
 #render spacexjobs json
 @app.route('/spacexjobs')
-def data():
+def spacexjobs():
     return render_template("spacexjobs.html")
 
 #render blueoriginjobs json
 @app.route('/blueoriginjobs')
-def data():
+def blueoriginjobs():
     return render_template("blueoriginjobs.html")
 
 #render phasefourjobs json
 @app.route('/phasefourjobs')
-def data():
+def phasefourjobs():
     return render_template("phasefourjobs.html")
 
 #render rocketlabsjobs json
 @app.route('/rocketlabsjobs')
-def data():
+def rocketlabsjobs():
     return render_template("rocketlabsjobs.html")
 
 #render bigelowjobs json
 @app.route('/bigelowjobs')
-def data():
+def bigelowjobs():
     return render_template("bigelowjobs.html")
