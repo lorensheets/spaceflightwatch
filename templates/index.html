@@ -34,9 +34,12 @@
     /* get just the GMT time or TBD */
     if (time != "TBD") {
       let gmt = time.indexOf("GMT");
-      time = time.slice(0,gmt+3);
+      let dash = time.indexOf("-");
+      time = time.slice(0,gmt);
+      time = time.slice(0,dash);
+      time = time.substr(0,2) + ":" + time.substr(2);
+      time = moment(time);
     }
-
     var offset = new Date().getTimezoneOffset();
 
     var now = Math.round(Date.now()/1000);
