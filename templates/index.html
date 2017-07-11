@@ -38,6 +38,7 @@
       time = time.slice(0,gmt);
       time = time.slice(0,dash);
       time = time.substr(0,2) + ":" + time.substr(2);
+      console.log(time);
       time = moment(time);
     }
     var offset = new Date().getTimezoneOffset();
