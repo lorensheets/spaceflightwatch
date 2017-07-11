@@ -54,26 +54,28 @@
       if(time.length < 5){
         time = time + ":00";
       }
-      time = moment(date + " " + time);
+      time_utc = moment(date + " " + time);
     }
     var offset = new Date().getTimezoneOffset();
-    time = time + offset;
-    time = moment(time).format('MMMM Do YYYY, h:mm:ss a');
+    time_local = time_utc + offset;
+    time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
 
-    /*
+    var now = Date.now() * 1000;
     var i = 0;
     var dt;
     setInterval(function() {
-      dt = ((time - now - i) * 1000);
+      dt = ((time_utc - now - i));
       var hours = moment.utc(dt).format("HH");
       var minutes = moment.utc(dt).format("mm");
       var seconds = moment.utc(dt).format("ss");
-      $('.time-until').text("T-MINUS: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+      console.log("T-MINUS: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
       i++;
     }, 1000);
-    */
-    $('.time-until').html(time);
+
+
+    
+    $('.time-until').html(time_formatted);
 
   </script>
 
