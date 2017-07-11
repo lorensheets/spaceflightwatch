@@ -29,6 +29,8 @@
   </div>
   <script type="text/javascript">
     var date = "{{ date }}";
+    var y = new Date().getFullYear();
+    date = date + " " + y;
     function formatDate(date) {
       let d = new Date(date),
           month = '' + (d.getMonth() + 1),
