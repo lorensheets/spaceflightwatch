@@ -11,13 +11,13 @@
 
 
 {%block nextlaunch%}
-  <div class="col-xs-4">
+  <div class="col-xs-4 col-height ">
     <h1>Next Launch: </h1>
   </div>
-  <div class="col-xs-4">
+  <div class="col-xs-4 col-height left">
     <p>{{ next }}</p>
   </div>
-  <div class="col-xs-4">
+  <div class="col-xs-4 col-height left">
     <p class="time-until"></p>
   </div>
   <script type="text/javascript">
@@ -49,20 +49,6 @@
 
 {%endblock%}
 
-{%block countdown%}
-  <!--
-  <div class="col-xs-4 left">
-    <p class="next-launch">Next Launch: {{ next }}</p>
-  </div>
-  <div class="col-xs-4 center">
-    <p class="time-until"></p>
-  </div>
-  <div class="col-xs-4 right">
-    <a class="button" href="{{ link }}" target="_blank">Live Stream</a>
-  </div>
--->
-
-{%endblock%}
 
 {%block content%}
 

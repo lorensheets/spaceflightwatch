@@ -39,51 +39,12 @@ a {
   width: 95%;
   margin: 0 auto;
 }
-.countdown {
-  height: auto;
-  padding: 6px 0;
-  background: var(--countdown-bg-color);
-  font-size: 0.9em;
+.col-height {
+  height: 50px;
+  line-height: 50px;
 }
-.countdown-container {
-  width: 97.5%;
-  margin: 0 auto;
-}
-.countdown p {
-  margin: 0;
-  padding: 3px 0;
-}
-.countdown a {
-  display: inline-block;
-  vertical-align: middle;
-  background: var(--link-bg-color);
-  border-radius: 3px;
-  padding: 3px 6px;
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2;
-}
-.countdown a:focus {
-  color: var(--main-txt-color);
-  text-decoration: none;
-
-}
-.countdown a:hover {
-  background: var(--main-bg-color);
-  color: var(--main-txt-color);
-  text-decoration: none;
-  transform: scale(1.03);
-  -webkit-transform: scale(1.03);
-  -moz-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  -o-transform: scale(1.03);
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2;
+.left {
+  text-align: left;
 }
 
 .table {
