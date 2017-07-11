@@ -54,7 +54,7 @@
       if(time.length < 5){
         time = time + ":00";
       }
-      time = moment(date + " " + time) * 1000;
+      time = moment(date + " " + time);
     }
     var offset = new Date().getTimezoneOffset();
     time = time + offset;
