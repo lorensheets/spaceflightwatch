@@ -11,14 +11,19 @@
 
 
 {%block nextlaunch%}
-  <div class="col-xs-4">
-    <h1>Next Launch: </h1>
+  <div class="row">
+    <h1>Next Launch</h1>
   </div>
-  <div class="col-xs-4 left">
-    <p>{{ next }}</p>
-  </div>
-  <div class="col-xs-4 left">
-    <p class="time-until"></p>
+  <div class="row">
+    <div class="col-xs-4 left">
+      <p>{{ next }}</p>
+    </div>
+    <div class="col-xs-4 left">
+      <p class="time-until"></p>
+    </div>
+    <div class="col-xs-4 left">
+      <p></p>
+    </div>
   </div>
   <script type="text/javascript">
     var date = "{{ date }}";
