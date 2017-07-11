@@ -31,8 +31,13 @@
     var date = "{{ date }}";
     var time = "{{ time }}";
 
+    /* get just the GMT time or TBD */
+    if (time != "TBD") {
+      let gmt = time.indexOf("GMT");
+      time = time.slice(0,gmt);
+    }
+
     var offset = new Date().getTimezoneOffset();
-    alert(offset);
 
     var now = Math.round(Date.now()/1000);
 
