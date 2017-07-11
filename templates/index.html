@@ -65,7 +65,7 @@
       let now = Date.now();
       let dt = (time_utc - now);
       let countdown = moment.utc(dt);
-      let days = moment.utc(dt).format("Do");
+      let days = moment.utc(dt).format("DD");
       let hours = moment.utc(dt).format("HH");
       let minutes = moment.utc(dt).format("mm");
       let seconds = moment.utc(dt).format("ss");
