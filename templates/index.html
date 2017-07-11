@@ -29,8 +29,7 @@
   </div>
   <script type="text/javascript">
     var date = "{{ date }}";
-    d = new Date(date);
-    d.format('YYYY-MM-DD');
+    d = new Date(date).toISOString();
     console.log(d);
     /*
     d = date.substr(date.indexOf(" "+1));
