@@ -41,9 +41,8 @@
       if(time.length < 5){
         time = time + ":00";
       }
-      time = moment(time);
+      time = moment(date + time);
     }
-    date = moment(date);
     var offset = new Date().getTimezoneOffset();
 
     var now = Math.round(Date.now()/1000);
