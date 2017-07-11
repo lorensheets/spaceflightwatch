@@ -29,9 +29,9 @@
   </div>
   <script type="text/javascript">
     var date = "{{ date }}";
-    date = date.substr(date.indexOf(" ")+1, date.indexOf(",")) + date.substr(0, date.indexOf(" ")) + date.substr(date.indexOf(","));
-    date.replace(",","");
-    
+    date = date.substr(date.indexOf(" ")+1, date.indexOf(",")+1) + date.substr(0, date.indexOf(" ")) + date.substr(date.indexOf(",")+1);
+    date = date.replace(",","");
+
     var time = "{{ time }}";
 
     /* get just the GMT time or TBD */
