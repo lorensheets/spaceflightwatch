@@ -61,18 +61,14 @@
     time_local = time_utc + offset;
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
-
-    var i = 0;
-
     setInterval(function() {
       let now = Date.now();
-      let dt = (time_utc - now - (i * 1000));
-      let countdown = moment.utc(dt).format('MMMM Do YYYY, h:mm:ss a');
-      console.log(countdown);
-      var hours = moment.utc(dt).format("HH");
-      var minutes = moment.utc(dt).format("mm");
-      var seconds = moment.utc(dt).format("ss");
-      //console.log("T-MINUS: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+      let dt = (time_utc - now);
+      let countdown = moment.utc(dt);
+      let hours = moment.utc(dt).format("HH");
+      let minutes = moment.utc(dt).format("mm");
+      let seconds = moment.utc(dt).format("ss");
+      console.log("T-MINUS: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
       i++;
     }, 1000);
 
