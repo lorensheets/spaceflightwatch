@@ -34,7 +34,7 @@
     /* get just the GMT time or TBD */
     if (time != "TBD") {
       let gmt = time.indexOf("GMT");
-      time = time.slice(0,gmt);
+      time = time.slice(0,gmt+3);
     }
 
     var offset = new Date().getTimezoneOffset();
