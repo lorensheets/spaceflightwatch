@@ -22,7 +22,7 @@ def upcoming():
     launch_dates = spider.dates();
     launch_times = spider.times();
     list = []
-    for i in range(2,len(launches)):
+    for i in range(1,len(launches)):
         next_launch = launches[i]
         next_launch_time = launch_times[i]
         next_launch_date = launch_dates[i]
