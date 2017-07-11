@@ -24,7 +24,7 @@
       <p class="launch-date"></p>
     </div>
     <div class="col-xs-6 left">
-      <p class="time-until"></p>
+      <p class="t-minus"></p>
     </div>
   </div>
   <script type="text/javascript">
@@ -69,7 +69,7 @@
       let hours = moment.utc(dt).format("HH");
       let minutes = moment.utc(dt).format("mm");
       let seconds = moment.utc(dt).format("ss");
-      $('.time-until').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+      $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
     }, 1000);
 
 
