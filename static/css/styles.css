@@ -40,11 +40,7 @@ a {
   margin: 0 auto;
 }
 .col-height {
-  height: 50px;
-  line-height: 50px;
-}
-.left {
-  text-align: left;
+  height: 50px !important;
 }
 
 .table {
