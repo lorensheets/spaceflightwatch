@@ -54,11 +54,12 @@
       if(time.length < 5){
         time = time + ":00";
       }
-      time = moment(date + " " + time);
+      time = moment(date + " " + time) * 1000;
     }
     var offset = new Date().getTimezoneOffset();
+    time = time + offset;
+    time = moment(time).format('MMMM Do YYYY, h:mm:ss a');
 
-    var now = Math.round(Date.now()/1000);
 
     /*
     var i = 0;
@@ -72,7 +73,7 @@
       i++;
     }, 1000);
     */
-    $('.time-until').html(date + " &#8226; " + time);
+    $('.time-until').html(time);
 
   </script>
 
