@@ -61,11 +61,11 @@
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
 
-    var now = Date.now() * 1000;
+    var now = Date.now() / 1000;
 
     console.log(time_utc);
     console.log(now);
-    
+
     var i = 0;
     var dt;
     setInterval(function() {
@@ -73,7 +73,7 @@
       var hours = moment.utc(dt).format("HH");
       var minutes = moment.utc(dt).format("mm");
       var seconds = moment.utc(dt).format("ss");
-      /*console.log("T-MINUS: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");*/
+      console.log("T-MINUS: " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
       i++;
     }, 1000);
 
