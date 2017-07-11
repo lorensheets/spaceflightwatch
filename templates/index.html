@@ -21,10 +21,10 @@
       <p>{{ next }}</p>
     </div>
     <div class="col-xs-4 left">
-      <p class="time-until"></p>
+      <p class="launch-date"></p>
     </div>
     <div class="col-xs-4 left">
-      <p></p>
+      <p class="time-until"></p>
     </div>
   </div>
   <script type="text/javascript">
@@ -69,12 +69,12 @@
       let hours = moment.utc(dt).format("HH");
       let minutes = moment.utc(dt).format("mm");
       let seconds = moment.utc(dt).format("ss");
-      console.log("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+      $('.time-until').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
     }, 1000);
 
 
 
-    $('.time-until').html(time_formatted);
+    $('.launch-date').html(time_formatted);
 
   </script>
 
