@@ -43,7 +43,8 @@
     date = formatDate(date);
 
     var time = "{{ time }}";
-
+    var time_utc;
+    
     /* get just the GMT time or TBD */
     if (time != "TBD") {
       let gmt = time.indexOf("GMT");
@@ -62,11 +63,11 @@
 
 
     var i = 0;
-    var dt;
+
     setInterval(function() {
-      var now = Date.now() / 1000;
-      dt = ((time_utc - now - i));
-      var countdown = moment.utc(dt).format('MMMM Do YYYY, h:mm:ss a');
+      let now = Date.now() / 1000;
+      let dt = (time_utc - now - i);
+      let countdown = moment.utc(dt);
       console.log(countdown);
       var hours = moment.utc(dt).format("HH");
       var minutes = moment.utc(dt).format("mm");
