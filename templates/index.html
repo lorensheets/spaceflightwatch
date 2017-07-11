@@ -30,8 +30,13 @@
   <script type="text/javascript">
     var date = "{{ date }}";
     var time = "{{ time }}";
-    /*
+
+    var offset = new Date().getTimezoneOffset();
+    alert(offset);
+
     var now = Math.round(Date.now()/1000);
+
+    /*
     var i = 0;
     var dt;
     setInterval(function() {
