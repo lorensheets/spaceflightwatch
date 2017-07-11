@@ -61,7 +61,6 @@
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
 
-    var now = Date.now() / 1000;
 
     console.log(time_utc);
     console.log(now);
@@ -69,6 +68,7 @@
     var i = 0;
     var dt;
     setInterval(function() {
+      var now = Date.now() / 1000;
       dt = ((time_utc - now - i));
       var countdown = moment.utc(dt).format('MMMM Do YYYY, h:mm:ss a');
       console.log(countdown);
