@@ -178,22 +178,22 @@
 
 {%block content%}
 
-{% for data in upcoming %}
-  <div class="row launches">
-    <div class="col-xs-2 left">
-      <p>{{data[2]}}, 2017</p>
+  {% for data in upcoming %}
+    <div class="row launches">
+      <div class="col-xs-2 left">
+        <p>{{data[2]}}, 2017</p>
+      </div>
+      <div class="col-xs-3 left">
+        <p class="next-launch">{{ data[1] }}</p>
+      </div>
+      <div class="col-xs-5 left">
+        <p class="time-until">{{ data[0] }}</p>
+      </div>
+      <div class="col-xs-2 right">
+        <p></p>
+      </div>
     </div>
-    <div class="col-xs-3 left">
-      <p class="next-launch">{{ data[1] }}</p>
-    </div>
-    <div class="col-xs-5 left">
-      <p class="time-until">{{ data[0] }}</p>
-    </div>
-    <div class="col-xs-2 right">
-      <p></p>
-    </div>
-  </div>
 
-{% endfor %}
+  {% endfor %}
 
 {%endblock%}
