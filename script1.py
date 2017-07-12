@@ -13,7 +13,7 @@ def home():
         next=launch[1], link=launch[2], date=launch[3], upcoming=upcoming)
 
 
-@app.route('/jobs')
+#@app.route('/jobs')
 def jobs():
 
     #context = ssl._create_unverified_context()
