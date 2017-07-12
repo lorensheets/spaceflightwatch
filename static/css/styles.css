@@ -51,6 +51,9 @@ a {
   margin: 0;
   padding: 8px 0;
 }
+.livestream-container {
+  display: none;
+}
 .launch-table {
   padding-top: 10px;
   height: 250px;
