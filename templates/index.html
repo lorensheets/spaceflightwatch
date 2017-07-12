@@ -59,7 +59,7 @@
       time_utc = moment.utc(date + " " + time);
     }
     var offset = new Date().getTimezoneOffset();
-    time_local = time_utc - offset; console.log(time_local);
+    time_local = time_utc - offset;
     time_local_utc = moment.utc(time_utc - offset);
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
     time_diff = time_local_utc.diff(moment.utc());
@@ -147,8 +147,8 @@
 
   <script>
 
-    console.log(time_diff);
-    if (time_diff < 259200) {
+    console.log(time_diff/1000);
+    if (time_diff/1000 < 259200) {
       $('#livestream').css('display', 'block');
     }
 
