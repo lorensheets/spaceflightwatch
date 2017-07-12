@@ -145,12 +145,14 @@
   <script>
 
     if (time_diff/1000 < 172800) {
-      var w = window.innerWidth();
+      var w = window.innerWidth() * 0.8;  console.log(w);
+      var h = w * 0.56;                   console.log(h);
+      var m = w * 0.05 + "px auto";       console.log(m);
       $('#livestream').css({
         'display': 'block',
-        'width': w * 0.8,
-        'height': (w * 0.8) * 0.56,
-        'margin': w * 0.1 + 'px auto'
+        'width': w,
+        'height': h,
+        'margin': m
       });
     }
 
