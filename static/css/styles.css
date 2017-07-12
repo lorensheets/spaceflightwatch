@@ -20,8 +20,10 @@ html, body {
 }
 nav {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
+  width: 100%;
   text-align: right;
   background: var(--nav-bg-color);
   padding: 3px 0;
