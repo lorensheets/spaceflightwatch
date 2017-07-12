@@ -56,7 +56,7 @@
       if(time.length < 5){
         time = time + ":00";
       }
-      time_utc = moment(date + " " + time);
+      time_utc = moment.utc(date + " " + time);
     }
     var offset = new Date().getTimezoneOffset();
     time_local = time_utc + offset;
@@ -91,7 +91,7 @@
   <script>
 
     console.log(moment.utc(date) - moment.utc());
-    
+
   </script>
 
 {%endblock%}
