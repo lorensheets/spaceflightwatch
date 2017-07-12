@@ -39,6 +39,12 @@ a {
   width: 95%;
   margin: 0 auto;
 }
+.nextLaunch-container {
+  padding: 20px 0;
+}
+.nextLaunch {
+  margin: 0 auto;
+}
 .table {
   background: #111;
 }
