@@ -64,17 +64,27 @@
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
     setInterval(function() {
-
       let now = moment.utc();
-      let dt = time_local_utc.diff(now);console.log(dt);
-      /*
-      let days = moment(dt/1000).format("DD");
-      let hours = moment.utc(dt/1000).format("HH");
-      let minutes = moment.utc(dt/1000).format("mm");
-      let seconds = moment.utc(dt/1000).format("ss");
+      let dt = time_local_utc.diff(now);
+      let delta = Math.abs(dt - now) / 1000;
+
+      // calculate (and subtract) whole days
+      let days = Math.floor(delta / 86400);
+      delta -= days * 86400;
+
+      // calculate (and subtract) whole hours
+      let hours = Math.floor(delta / 3600) % 24;
+      delta -= hours * 3600;
+
+      // calculate (and subtract) whole minutes
+      let minutes = Math.floor(delta / 60) % 60;
+      delta -= minutes * 60;
+
+      // what's left is seconds
+      let seconds = delta % 60;
 
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
-      */
+
     }, 1000);
 
     $('.launch-date').html(time_formatted);
