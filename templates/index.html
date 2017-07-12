@@ -70,6 +70,7 @@
       let hours = moment.utc(dt).format("HH");
       let minutes = moment.utc(dt).format("mm");
       let seconds = moment.utc(dt).format("ss");
+      let time_left = moment.utc(dt).format("DD HH mm ss"); console.log(time_left);
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
     }, 1000);
 
@@ -90,7 +91,6 @@
 
   <script>
 
-    console.log(moment.utc(date) - moment.utc());
 
   </script>
 
