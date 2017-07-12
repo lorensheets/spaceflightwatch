@@ -89,9 +89,9 @@
   </div>
 
   <script>
-    var newdate = new Date(date).getTime();
-    var now = Date.now().getTime();
-    console.log(newdate - now);
+
+    console.log(moment.utc(date) - moment.utc());
+    
   </script>
 
 {%endblock%}
