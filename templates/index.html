@@ -146,16 +146,23 @@
   <script>
 
     if (time_diff/1000 < 172800) {
-      var w = window.innerWidth * 0.8;    console.log(w);
-      var h = w * 0.56;                   console.log(h);
-      var m = w * 0.05 + "px auto";       console.log(m);
+      var w = window.innerWidth * 0.8;
+      var h = w * 0.56;
+      var m = "0px auto " + w * 0.05 + "px auto";
+      var mtop = w * 0.05 + "px";
+      var mleft = w * 0.1 + "px";
+
       $('#livestream').css({
         'display': 'block',
         'width': w,
         'height': h,
         'margin': m
       });
-      $('.watch-live').css('display','block');
+      $('.watch-live').css({
+        'display': 'block',
+        'margin-top': mtop,
+        'margin-left': mleft
+      });
     }
 
   </script>
