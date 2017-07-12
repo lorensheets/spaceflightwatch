@@ -60,18 +60,17 @@
     }
     var offset = new Date().getTimezoneOffset();
     time_local = time_utc - offset;
-    time_local_utc = moment(time_utc - offset);
+    time_local_utc = moment.utc(time_utc - offset);
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
     setInterval(function() {
-      let now = moment();
-      let dt = time_local_utc.diff(now);
-      let days = moment(dt/1000).format("DD");
-      let hours = moment(dt/1000).format("HH");
-      let minutes = moment(dt/1000).format("mm");
-      let seconds = moment(dt/1000).format("ss");
+      let now = moment.utc();      console.log(now);
+      let dt = time_local_utc.diff(now); console.log(dt);
+      let days = moment.utc(dt/1000).format("DD"); console.log(dt);
+      let hours = moment.utc(dt/1000).format("HH");
+      let minutes = moment.utc(dt/1000).format("mm");
+      let seconds = moment.utc(dt/1000).format("ss");
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
-      console.log(dt);
     }, 1000);
 
     $('.launch-date').html(time_formatted);
