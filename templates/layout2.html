@@ -32,58 +32,52 @@
 
   <body>
 
-    <div class="container-fluid nextlaunch-container">
-      {%block nextlaunch%}
-      {%endblock%}
-    </div>
-    <div class="container-fluid fullwidth table">
-      {%block video%}
-      {%endblock%}
-    </div>
-    <div class="container-fluid upcoming-container">
-      <div class="row">
-        <div class="col-xs-12">
-          {%block title%}
-          {%endblock%}
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid fullwidth table">
-      <div class="row table-header">
-        <div class="col-xs-2 left">
-          <p>DATE</p>
-        </div>
-        <div class="col-xs-3 left">
-          <p>VEHICLE &#8226; PAYLOAD</p>
-        </div>
-        <div class="col-xs-5 left">
-          <p>LAUNCH TIME</p>
-        </div>
-        <div class="col-xs-2">
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid fullwidth launch-table">
-      <div class="container-fluid fullwidth launch-table-container">
-        {%block content%}
-        {%endblock%}
-      </div>
-      <div class="bottom-fade"></div>
-    </div>
-
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
-          <!--<h3>Space News</h3>-->
+          <h1>Space Jobs</h1>
         </div>
       </div>
+    </div>
+
+    <div class="container-fluid fullwidth companies-container">
+      <div class="row companies">
+        <div class="col-xs-2 company-icon-container">
+          <img id="spacex" class="company-icon active" style="height:20px" src="static/images/spacex.png"/>
+        </div>
+        <div class="col-xs-2 company-icon-container">
+          <img id="blueorigin" class="company-icon" style="height:14px" src="static/images/blueorigin.png"/>
+        </div>
+        <div class="col-xs-2 company-icon-container">
+          <img id="planetaryresources" class="company-icon" style="height:18px" src="static/images/planetaryresources.png"/>
+        </div>
+        <div class="col-xs-2 company-icon-container">
+          <img id="rocketlabs" class="company-icon" style="height:10px" src="static/images/rocketlabs.png"/>
+        </div>
+        <div class="col-xs-2 company-icon-container">
+          <img id="phasefour" class="company-icon" style="height:14px" src="static/images/phasefour.png"/>
+        </div>
+        <div class="col-xs-2 company-icon-container">
+          <img id="bigelow" class="company-icon" style="height:24px" src="static/images/bigelow.png"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid fullwidth jobs-container">
+      <div class="row margins">
+        <div class="col-xs-12">
+          <div class="jobs-list">
+            {% block spacejobs %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+      <div class="jobs-list__bg"></div>
+      <div class="bottom-fade"></div>
     </div>
 
     <footer>
     </footer>
 
   </body>
-
-</html>
+  </html>

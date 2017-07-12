@@ -6,6 +6,17 @@ app=Flask(__name__)
 @app.route('/')
 def home():
 
+    launch = nextlaunch.getnext()
+    upcoming = nextlaunch.upcoming()
+
+
+    return render_template("index.html", time=launch[0],
+    next=launch[1], link=launch[2], date=launch[3], upcoming=upcoming)
+
+
+@app.route('/jobs')
+def jobs():
+
     #context = ssl._create_unverified_context()
 
     #spacex jobs
@@ -28,9 +39,6 @@ def home():
     with urllib.request.urlopen("https://spaceinfo.herokuapp.com/bigelowjobs") as url:
         bigelowjobs = json.loads(url.read().decode())
 
-    launch = nextlaunch.getnext()
-    upcoming = nextlaunch.upcoming()
-
     planetaryresourcesjobs = [['Finance & Operations Analyst','?gh_jid=744711'], \
         ['Chief Scientist','?gh_jid=682831'], \
         ['Director of Instrument Systems','?gh_jid=682839'], \
@@ -47,11 +55,10 @@ def home():
         ['Business Analyst','?gh_jid=744045'], \
         ['Director of Marketing','?gh_jid=682845']]
 
-    return render_template("index.html", time=launch[0],
-    next=launch[1], link=launch[2], date=launch[3], upcoming=upcoming,
-    spacexjobs=spacexjobs, blueoriginjobs=blueoriginjobs,
-    phasefourjobs=phasefourjobs, planetaryresourcesjobs=planetaryresourcesjobs,
-    rocketlabsjobs=rocketlabsjobs, bigelowjobs=bigelowjobs)
+        return render_template("jobs.html", spacexjobs=spacexjobs, blueoriginjobs=blueoriginjobs,
+        phasefourjobs=phasefourjobs, planetaryresourcesjobs=planetaryresourcesjobs,
+        rocketlabsjobs=rocketlabsjobs, bigelowjobs=bigelowjobs)
+
 
 if __name__=="__main__":
     app.run(debug=True)
