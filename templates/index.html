@@ -59,7 +59,7 @@
       time_utc = moment.utc(date + " " + time);
     }
     var offset = new Date().getTimezoneOffset();
-    time_local = moment.utc(time_utc + offset);
+    time_local = moment.utc(time_utc + offset); console.log(time_local);
     time_formatted = moment.utc(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
     setInterval(function() {
@@ -70,7 +70,7 @@
       let minutes = moment.utc(dt/1000).format("mm");
       let seconds = moment.utc(dt/1000).format("ss");
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
-
+      console.log(dt);
     }, 1000);
 
     $('.launch-date').html(time_formatted);
