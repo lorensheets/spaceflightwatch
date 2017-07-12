@@ -81,7 +81,7 @@
       delta -= minutes * 60;
 
       // what's left is seconds
-      let seconds = delta % 60;
+      let seconds = Math.floor(delta % 60);
 
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
 
