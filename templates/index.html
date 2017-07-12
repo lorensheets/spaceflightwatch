@@ -65,7 +65,7 @@
 
     setInterval(function() {
       let days = moment(time_local_utc, "DD HH:mm:ss").fromNow();
-
+      console.log(days);
       /*
       let now = moment.utc();
       let dt = time_local_utc.diff(now);
@@ -73,8 +73,9 @@
       let hours = moment.utc(dt/1000).format("HH");
       let minutes = moment.utc(dt/1000).format("mm");
       let seconds = moment.utc(dt/1000).format("ss");
-      */
+
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
+      */
     }, 1000);
 
     $('.launch-date').html(time_formatted);
