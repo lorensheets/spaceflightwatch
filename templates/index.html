@@ -29,8 +29,6 @@
   </div>
   <script type="text/javascript">
 
-    $('iframe').hide();
-
     var date = "{{ date }}";
     var y = new Date().getFullYear();
     date = date + " " + y;
@@ -75,9 +73,9 @@
       let seconds = moment.utc(dt).format("ss");
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
       if (days > 2) {
-        $('iframe').hide();
+        $('iframe').css('display:none');
       } else {
-        $('iframe').slideDown();
+        $('iframe').css('display:block');
       }
     }, 1000);
 
@@ -92,7 +90,7 @@
 
   <div class="row">
     <div class="col-xs-12">
-      <iframe width="560" height="315" style="display:block; margin: 10px auto;" src="{{link}}" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" style="display:none; margin: 10px auto;" src="{{link}}" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 
