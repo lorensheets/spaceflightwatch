@@ -60,7 +60,6 @@
     var offset = new Date().getTimezoneOffset();
     time_local = time_utc + offset;
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
-    var countdownStart;
 
     setInterval(function() {
       let now = Date.now();
@@ -71,7 +70,9 @@
       let minutes = moment.utc(dt).format("mm");
       let seconds = moment.utc(dt).format("ss");
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
-      countdownStart = days;
+      if (days < 1) {
+        $('.livestream-container').css('display','block');
+      }
     }, 1000);
 
     $('.launch-date').html(time_formatted);
@@ -91,9 +92,7 @@
 
   <script>
 
-    if (countdownStart < 1) {
-      $('.livestream-container').css('display','block');
-    }
+
 
   </script>
 
