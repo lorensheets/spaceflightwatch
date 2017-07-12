@@ -64,10 +64,10 @@
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
     setInterval(function() {
-      let days = moment(time_local_utc, "DD HH:mm:ss").fromNow();
-      console.log(days);
+
+      let now = moment.utc(); console.log(now);
+      
       /*
-      let now = moment.utc();
       let dt = time_local_utc.diff(now);
       let days = moment(dt/1000).format("DD");
       let hours = moment.utc(dt/1000).format("HH");
