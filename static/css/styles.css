@@ -51,6 +51,9 @@ a {
   margin: 0;
   padding: 8px 0;
 }
+.nextlaunch-container {
+  padding-bottom: 20px;
+}
 .upcoming-container {
   padding: 20px 0;
 }
