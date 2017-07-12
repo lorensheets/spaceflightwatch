@@ -109,13 +109,12 @@
           countdown += minutes + " minute ";
         }
       }
-      if (seconds > 0) {
-        if (seconds > 1) {
-          countdown += seconds + " seconds ";
-        } else {
-          countdown += seconds + " second ";
-        }
+      if (seconds == 1) {
+        countdown += seconds + " second ";
+      } else {
+        countdown += seconds + " seconds ";
       }
+
 
 
       $('.t-minus').html("T-MINUS: " + countdown);
