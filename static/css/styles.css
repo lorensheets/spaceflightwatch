@@ -19,9 +19,6 @@ html, body {
 iframe, .watch-live {
   display: none;
 }
-.watch-live {
-  color: #d00 !important;
-}
 ul {
   list-style-type: none;
   padding: 0;
