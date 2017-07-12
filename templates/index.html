@@ -64,12 +64,18 @@
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
     setInterval(function() {
-      let now = moment.utc();      console.log(now);
-      let dt = time_local_utc.diff(now); console.log(dt);
-      let days = moment.utc(dt/1000).format("DD"); console.log(dt);
+      let days = moment(time_local_utc, "DD").fromNow();
+      let hours = moment(time_local_utc, "HH").fromNow();
+      let minutes = moment(time_local_utc, "mm").fromNow();
+      let seconds = moment(time_local_utc, "ss").fromNow();
+      /*
+      let now = moment.utc();
+      let dt = time_local_utc.diff(now);
+      let days = moment(dt/1000).format("DD");
       let hours = moment.utc(dt/1000).format("HH");
       let minutes = moment.utc(dt/1000).format("mm");
       let seconds = moment.utc(dt/1000).format("ss");
+      */
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
     }, 1000);
 
