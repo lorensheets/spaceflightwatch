@@ -18,7 +18,7 @@ html, body {
   font-weight: 200;
 }
 nav {
-  /*position: fixed;*/
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
