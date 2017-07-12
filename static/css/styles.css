@@ -57,6 +57,11 @@ a {
 .nextlaunch-container {
   padding-bottom: 20px;
 }
+.watch-live {
+  color: #d00;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+}
 .upcoming-container {
   padding: 20px 15px;
 }
