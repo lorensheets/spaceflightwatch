@@ -59,13 +59,13 @@
       time_utc = moment.utc(date + " " + time);
     }
     var offset = new Date().getTimezoneOffset();
-    time_local = time_utc - offset; console.log(time_local);
-    time_local_utc = moment.utc(time_utc + offset);
+    time_local = time_utc - offset;
+    time_local_utc = moment.utc(time_utc - offset);
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
 
     setInterval(function() {
       let now = moment.utc();
-      let dt = time_local.diff(now);
+      let dt = time_local_utc.diff(now);
       let days = moment.utc(dt/1000).format("DD");
       let hours = moment.utc(dt/1000).format("HH");
       let minutes = moment.utc(dt/1000).format("mm");
