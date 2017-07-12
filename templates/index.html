@@ -71,7 +71,7 @@
       let seconds = moment.utc(dt).format("ss");
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
       if (days < 4) {
-        $('.livestream-container').css('display','block');
+        $('.livestream-container').css('display','block !important');
       }
     }, 1000);
 
