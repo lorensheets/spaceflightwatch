@@ -13,17 +13,14 @@
 {%block nextlaunch%}
   <div class="row">
     <div class="col-xs-12">
-      <h1>Next Rocket Launch</h1>
+      <h1>Next Rocket Launch: {{next}}</h1>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-3 left">
-      <p>{{ next }}</p>
-    </div>
-    <div class="col-xs-3 left">
       <p class="launch-date"></p>
     </div>
-    <div class="col-xs-6 left">
+    <div class="col-xs-9 left">
       <p class="t-minus"></p>
     </div>
   </div>
@@ -130,7 +127,7 @@
 
     }, 1000);
 
-    $('.launch-date').html(time_formatted);
+    $('.launch-date').html("LAUNCHING ON " + time_formatted);
 
   </script>
 
