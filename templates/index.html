@@ -60,18 +60,19 @@
     var offset = new Date().getTimezoneOffset();
     time_local = time_utc + offset;
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
+    var days;
 
     setInterval(function() {
       let now = Date.now();
       let dt = (time_utc - now);
       let countdown = moment.utc(dt);
-      let days = moment.utc(dt).format("DD");
+      days = moment.utc(dt).format("DD");
       let hours = moment.utc(dt).format("HH");
       let minutes = moment.utc(dt).format("mm");
       let seconds = moment.utc(dt).format("ss");
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
-      if (days < 4) {
-        $('.livestream-container').css('display','block !important');
+      if (days > 4) {
+        $('iframe').hide();
       }
     }, 1000);
 
@@ -89,12 +90,6 @@
       <iframe width="560" height="315" style="display:block; margin: 10px auto;" src="{{link}}" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-
-  <script>
-
-
-
-  </script>
 
 {%endblock%}
 
