@@ -65,16 +65,10 @@
     setInterval(function() {
       let now = moment.utc();
       let dt = time_utc.diff(now);
-      let days = moment.utc(dt).format("DD"); console.log(days);
-      let hours = moment.utc(dt).format("HH");
-      let minutes = moment.utc(dt).format("mm");
-      let seconds = moment.utc(dt).format("ss");
-      /*
-      let days = moment.utc(dt).format("DD");
-      let hours = moment.utc(dt).format("HH");
-      let minutes = moment.utc(dt).format("mm");
-      let seconds = moment.utc(dt).format("ss");
-      let time_left = moment.utc(dt).format("DD HH mm ss"); console.log(time_left);*/
+      let days = moment.utc(dt/1000).format("DD"); console.log(dt);
+      let hours = moment.utc(dt/1000).format("HH");
+      let minutes = moment.utc(dt/1000).format("mm");
+      let seconds = moment.utc(dt/1000).format("ss");
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
 
     }, 1000);
