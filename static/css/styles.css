@@ -16,8 +16,11 @@ html, body {
   font-family: 'Exo 2', sans-serif;
   font-weight: 200;
 }
-iframe {
+iframe, .watch-live {
   display: none;
+}
+.watch-live {
+  color: #d00;
 }
 ul {
   list-style-type: none;
