@@ -101,12 +101,20 @@
         } else {
           countdown += hours + " hour ";
         }
+      } else {
+        if (days > 0) {
+          countdown += hours + " hours ";
+        }
       }
       if (minutes > 0) {
         if (minutes > 1) {
           countdown += minutes + " minutes ";
         } else {
           countdown += minutes + " minute ";
+        }
+      } else {
+        if (hours > 0) {
+          countdown += minutes + " minutes ";
         }
       }
       if (seconds == 1) {
