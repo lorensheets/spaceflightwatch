@@ -66,7 +66,7 @@
     setInterval(function() {
       let now = moment.utc();
       let dt = time_local_utc.diff(now);
-      let delta = Math.abs(dt - now) / 1000;
+      let delta = Math.abs(dt) / 1000;
 
       // calculate (and subtract) whole days
       let days = Math.floor(delta / 86400);
