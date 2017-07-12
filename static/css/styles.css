@@ -96,7 +96,7 @@ a {
   position: absolute;
   top: 10px;
   left: 0;
-  padding-bottom: 75px;
+  padding-bottom: 75px !important;
   height: -webkit-calc(70vh - 10px);
   height: -moz-calc(70vh - 10px);
   height: calc(70vh - 10px);
