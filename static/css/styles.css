@@ -22,7 +22,7 @@ nav {
   padding: 3px 0;
 }
 nav a {
-  display: block;
+  display: inline-block;
   margin: 0 10px;
 }
 iframe, .watch-live {
