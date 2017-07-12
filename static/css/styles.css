@@ -65,7 +65,7 @@ a {
 }
 .launch-table {
   padding-top: 10px;
-  height: 250px;
+  height: 70vh;
   background: #1b1f26;
   position: relative;
 }
@@ -73,7 +73,9 @@ a {
   position: absolute;
   top: 10px;
   left: 0;
-  height: 240px;
+  height: -webkit-calc(70vh - 10px);
+  height: -moz-calc(70vh - 10px);
+  height: calc(70vh - 10px);
   overflow: scroll;
 }
 .launches {
