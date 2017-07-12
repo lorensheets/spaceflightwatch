@@ -71,7 +71,7 @@
       let minutes = moment.utc(dt).format("mm");
       let seconds = moment.utc(dt).format("ss");
       $('.t-minus').html("T-MINUS: " + days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds");
-      if (days > 4) {
+      if (days > 2) {
         $('iframe').hide();
       }
     }, 1000);
