@@ -39,12 +39,6 @@ a {
   width: 95%;
   margin: 0 auto;
 }
-.nextLaunch-container {
-  padding: 20px 0;
-}
-.nextLaunch {
-  margin: 0 auto;
-}
 .table {
   background: #111;
 }
@@ -56,6 +50,12 @@ a {
 .table-header p {
   margin: 0;
   padding: 8px 0;
+}
+.upcoming-container {
+  padding: 20px 0;
+}
+.upcoming {
+  margin: 0 auto;
 }
 .launch-table {
   padding-top: 10px;
