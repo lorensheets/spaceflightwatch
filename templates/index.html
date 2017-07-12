@@ -89,7 +89,9 @@
   </div>
 
   <script>
-    console.log(date);
+    var newdate = new Date(date).getTime();
+    var now = Date.now().getTime();
+    console.log(newdate - now);
   </script>
 
 {%endblock%}
