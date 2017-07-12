@@ -120,12 +120,14 @@ a {
 
 .jobs-container {
   background: #1b1f26;
-  height: 250px;
+  height: 70vh;
   position: relative;
   font-size: 0.9em;
 }
 .jobs-list {
-  height: 240px;
+  height: -webkit-calc(70vh - 10px);
+  height: -moz-calc(70vh - 10px);
+  height: calc(70vh - 10px);
   width: 100%;
   overflow: scroll;
   position: absolute;
