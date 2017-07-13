@@ -91,7 +91,6 @@ a {
   height: 200px;
   background: #1b1f26;
   position: relative;
-  overflow: hidden;
 }
 .launch-table-container {
   position: absolute;
@@ -103,7 +102,7 @@ a {
   height: -moz-calc(70vh - 10px);
   height: calc(70vh - 10px);
   */
-  height: 100%;
+  height: 190px;
   overflow: hidden;
 }
 .launches {
