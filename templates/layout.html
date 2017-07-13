@@ -112,9 +112,7 @@
             'height': launchTableHeight + "px",
           }, 500, 'easeInOutQuad');
 
-          $('html,body').animate({
-            scrollTop: scroll
-          }, 500, 'easeInOutQuad');
+          window.scrollTo(0, scroll);
 
         });
       </script>
