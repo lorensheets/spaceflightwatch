@@ -6,7 +6,7 @@
   --nav-bg-color: #000;
 }
 html, body {
-  height: 100vh;
+  height: auto;
   width: 100%;
   font-size: 1em;
   background: var(--main-bg-color);
