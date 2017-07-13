@@ -91,6 +91,7 @@ a {
   height: 200px;
   background: #1b1f26;
   position: relative;
+  overflow: hidden;
 }
 .launch-table-container {
   position: absolute;
