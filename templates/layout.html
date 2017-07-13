@@ -99,13 +99,15 @@
       <script>
         $('.expand').click(function() {
 
+          var launchContainerHeight = window.innerHeight * 0.7;
           var launchTableHeight = ( window.innerHeight * 0.7 ) - 10;
-          var scroll = $('#launchTable').offset().top - 140; 
+          var scroll = $('#launchTable').offset().top - 140;
+          var overflow = $('.launch-table-container').css('overflow') ? 'hidden' : 'scroll';
 
-          $('.launch-table-container').css('overflow','scroll');
+          $('.launch-table-container').css('overflow',overflow);
 
           $('.launch-table').animate({
-            'height': window.innerHeight * 0.7
+            'height': launchContainerHeight
           }, 500, 'easeInOutQuad');
 
           $('.launch-table-container').animate({
