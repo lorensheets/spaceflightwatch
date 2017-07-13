@@ -100,7 +100,7 @@
         $('.expand').click(function() {
 
           var launchTableHeight = ( window.innerHeight * 0.7 ) - 10;
-          var scrollTop = $('#launchTable').offset().top; console.log(scrollTop);
+          var scroll = $('#launchTable').offset().top; console.log(scrollTop);
 
           $('.launch-table-container').css('overflow','scroll');
 
@@ -113,7 +113,7 @@
           }, 500, 'easeInOutQuad');
 
           $('html,body').animate({
-            'scrollTop': scrollTop
+            scrollTop: scroll
           }, 500, 'easeInOutQuad');
 
         });
