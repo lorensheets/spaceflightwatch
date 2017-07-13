@@ -150,6 +150,9 @@ a {
   background: none;
   border: none;
 }
+.expand:focus {
+  outline: none;
+}
 
 
 /* space jobs styles */
