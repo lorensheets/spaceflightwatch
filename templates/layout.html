@@ -95,6 +95,14 @@
       <div class="expand-container">
         <button class="expand">View More</button>
       </div>
+
+      <script>
+        $('.expand').click(function() {
+          $('.launch-table-container').animate({
+            'height': '70vh'
+          }, 1000, 'easeInOutQuad').css('overflow','scroll');
+        });
+      </script>
     </div>
 
     <div class="container-fluid">
