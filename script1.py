@@ -57,6 +57,10 @@ def jobs():
         phasefourjobs=phasefourjobs, planetaryresourcesjobs=planetaryresourcesjobs,
         rocketlabsjobs=rocketlabsjobs, bigelowjobs=bigelowjobs)
 
+@app.route('/news')
+def news():
+    return render_template("spacenews.html")
+
 
 
 if __name__=="__main__":
