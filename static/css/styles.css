@@ -103,7 +103,7 @@ a {
   height: -moz-calc(70vh - 10px);
   height: calc(70vh - 10px);
   */
-  height: 190px;
+  height: 100%;
   overflow: hidden;
 }
 .launches {
