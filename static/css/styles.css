@@ -136,11 +136,18 @@ a {
     rgba(27, 31, 38, 0.95) 95%
   );
 }
-.expand {
+.expand-container {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.expand {
   margin: 0 auto;
-  width: 40px;
+  width: 80px;
+  height: 25px;
+  background: #000;
+  border: none;
 }
 
 
