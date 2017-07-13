@@ -138,15 +138,13 @@ a {
 }
 .expand-container {
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   width: 100%;
   text-align: center;
 }
 .expand {
   margin: 0 auto;
-  width: 80px;
-  height: 25px;
-  background: #000;
+  background: none;
   border: none;
 }
 
