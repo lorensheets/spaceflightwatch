@@ -100,7 +100,7 @@
         $('.expand').click(function() {
 
           var launchTableHeight = ( window.innerHeight * 0.7 ) - 10;
-          var scrollTop = $('#launchTable').pageYOffset;
+          var scrollTop = $('#launchTable').offset().top; console.log(scrollTop);
 
           $('.launch-table-container').css('overflow','scroll');
 
