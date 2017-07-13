@@ -104,11 +104,11 @@
           $('.launch-table-container').css('overflow','scroll');
 
           $('.launch-table').animate({
-            'height': launchTableHeight + "px"
+            'height': window.innerHeight * 0.5
           }, 500, 'easeInOutQuad');
 
           $('.launch-table-container').animate({
-            'height': window.innerHeight * 0.5,
+            'height': launchTableHeight + "px",
           }, 500, 'easeInOutQuad');
 
         });
