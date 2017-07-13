@@ -86,7 +86,7 @@
       </div>
     </div>
 
-    <div class="container-fluid fullwidth launch-table">
+    <div id="launchTable" class="container-fluid fullwidth launch-table">
       <div class="container-fluid fullwidth launch-table-container">
         {%block content%}
         {%endblock%}
@@ -100,6 +100,7 @@
         $('.expand').click(function() {
 
           var launchTableHeight = ( window.innerHeight * 0.7 ) - 10;
+          var scrollTop = $('#launchTable').offsetY();
 
           $('.launch-table-container').css('overflow','scroll');
 
@@ -109,6 +110,10 @@
 
           $('.launch-table-container').animate({
             'height': launchTableHeight + "px",
+          }, 500, 'easeInOutQuad');
+
+          $('html,body').animate({
+            'scrollTop': scrollTop
           }, 500, 'easeInOutQuad');
 
         });
