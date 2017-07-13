@@ -99,13 +99,13 @@
       <script>
         $('.expand').click(function() {
 
-          var launchTableHeight = ( $(window).height() * 0.7 ) - 10;
+          var launchTableHeight = ( window.innerHeight * 0.7 ) - 10;
 
           $('.launch-table-container').css('overflow','scroll');
 
           $('.launch-table').animate({
             'height': launchTableHeight + "px"
-          }, 1000, 'easeInOutQuad');*/
+          }, 1000, 'easeInOutQuad');
 
           $('.launch-table-container').animate({
             'height': '70vh',
