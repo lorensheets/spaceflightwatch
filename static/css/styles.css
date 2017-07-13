@@ -13,7 +13,6 @@ html, body {
   color: var(--main-txt-color);
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-family: 'Exo 2', sans-serif;
   font-weight: 200;
 }
