@@ -145,7 +145,7 @@
 
   <script>
 
-    if (-10800 < time_diff/1000 < 172800) {
+    if ( (time_diff/1000 < 172800) && (time_diff/1000 > -3600)) {
       console.log(time_diff);
       var w = window.innerWidth * 0.7;
       var h = w * 0.56;
