@@ -63,7 +63,7 @@
 
     setInterval(function() {
       let now = moment.utc();
-      let dt = time_local_utc.diff(now);
+      let dt = time_local_utc - now;
       let delta = Math.abs(dt) / 1000;
       let countdown = "";
 
