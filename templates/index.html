@@ -64,6 +64,7 @@
     setInterval(function() {
       let now = moment.utc();
       let dt = time_local_utc - now;
+      let sign = dt < 0 ? "+" : "-";
       let delta = Math.abs(dt) / 1000;
       let countdown = "";
 
@@ -123,7 +124,7 @@
 
 
 
-      $('.t-minus').html("T-MINUS: " + countdown);
+      $('.t-minus').html("T" + sign + " " + countdown);
 
     }, 1000);
 
