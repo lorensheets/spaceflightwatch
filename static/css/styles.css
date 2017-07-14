@@ -51,9 +51,7 @@ a {
 }
 .ad {
   text-align: center;
-}
-.ad iframe {
-  margin: 0 auto;
+  padding-top: 10px;
 }
 .top {
   margin-top: 28px;
