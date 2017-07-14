@@ -61,6 +61,8 @@
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
     time_diff = time_local_utc.diff(moment.utc());
 
+    console.log( moment.utc() - time_local_utc);
+
     setInterval(function() {
       let now = moment.utc();
       let dt = time_local_utc.diff(now);
