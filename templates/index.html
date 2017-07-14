@@ -59,9 +59,7 @@
     time_local = time_utc - offset;
     time_local_utc = moment.utc(time_utc - offset);
     time_formatted = moment(time_local).format('MMMM Do YYYY, h:mm:ss a');
-    time_diff = time_local_utc.diff(moment.utc());
-
-    console.log( time_local_utc - moment.utc() );
+    time_diff = time_local_utc - moment.utc();
 
     setInterval(function() {
       let now = moment.utc();
@@ -147,7 +145,7 @@
 
   <script>
 
-    if (time_diff/1000 < 172800) {
+    if (-10800 < time_diff/1000 < 172800) {
       var w = window.innerWidth * 0.7;
       var h = w * 0.56;
       var m = "5px auto " + w * 0.05 + "px auto";
