@@ -49,6 +49,12 @@ a {
   width: 95%;
   margin: 0 auto;
 }
+.ad {
+  text-align: center;
+}
+.ad iframe {
+  margin: 0 auto;
+}
 .top {
   margin-top: 28px;
 }
