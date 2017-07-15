@@ -13,14 +13,15 @@
 {% block spacejobs %}
   <ul id="spacex__job-list" class="job-list selected">
     {% for job in spacexjobs %}
+    <!--
       {% if job == 'category' %}
         <li>
           <h4>{{ spacexjobs[job] }}</h4>
         </li>
-      {% else %}
-      <li>
-        <a href="http://www.spacex.com{{spacexjobs[job]}}" target="_blank">{{ job }}</a><br>
-      </li>
+      {% else %}-->
+        <li>
+          <a href="http://www.spacex.com{{spacexjobs[job]}}" target="_blank">{{ job }}</a><br>
+        </li>
       {% endif %}
     {% endfor %}
   </ul>
