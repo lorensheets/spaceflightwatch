@@ -30,7 +30,7 @@ nav a {
   display: inline-block;
   margin: 0 10px;
 }
-iframe, .watch-live {
+#livestream, .watch-live {
   display: none;
 }
 ul {
