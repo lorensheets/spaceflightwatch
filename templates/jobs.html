@@ -1,4 +1,4 @@
-{%extends "jobs_layout.html"%}
+{%extends "layout.html"%}
 
 {%block header%}
 
@@ -9,82 +9,109 @@
 
 {%endblock%}
 
+{%block scripts%}
 
-{% block spacejobs %}
-  <ul id="spacex__job-list" class="job-list selected">
-    {%for key in spacexjobs%}
-      <li><h4>{{key}}</h4></li>
-      {%for val in spacexjobs[key]%}
-        {% for job in val %}
-        <li class="job">
-          <a href="http://www.spacex.com{{val[job]}}">{{ job }}</a><br>
-        </li>
-        {% endfor %}
-      {% endfor %}
-    {% endfor %}
-  </ul>
+  <script src={{url_for('static',filename='js/jobs.js')}}></script>
 
-  <ul id="blueorigin__job-list" class="job-list">
-    {% for job in blueoriginjobs %}
-    <li>
-      <a href="http://www.blueorigin.com{{blueoriginjobs[job]}}" target="_blank">{{ job }}</a><br>
-    </li>
-    {% endfor %}
-  </ul>
+{%endblock%}
 
-  <ul id="phasefour__job-list" class="job-list">
-    {% for job in phasefourjobs %}
-    <li>
-      <a href="{{phasefourjobs[job]}}" target="_blank">{{ job }}</a><br>
-    </li>
-    {% endfor %}
-  </ul>
 
-  <ul id="rocketlabs__job-list" class="job-list">
-    {% for job in rocketlabsjobs %}
-    <li>
-      <a href="http://www.rocketlabusa.com{{rocketlabsjobs[job]}}" target="_blank">{{ job }}</a><br>
-    </li>
-    {% endfor %}
-  </ul>
+{%block content%}
 
-  <ul id="planetaryresources__job-list" class="job-list">
-    {% for job in planetaryresourcesjobs %}
-    <li>
-      <a href="http://www.planetaryresources.com/careers/job-board/{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
-    </li>
-    {% endfor %}
-  </ul>
+  <div class="container-fluid top">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Space Jobs</h1>
+      </div>
+    </div>
+  </div>
 
-  <ul id="bigelow__job-list" class="job-list">
-    {% for job in bigelowjobs %}
-    <li>
-      <a href="{{bigelowjobs[job]}}" target="_blank">{{ job }}</a><br>
-    </li>
-    {% endfor %}
-  </ul>
+  <div class="container-fluid fullwidth companies-container">
+    <div class="row row-eq-height companies">
+      <div class="col-xs-4 col-md-2 company-icon-container">
+        <img id="spacex" class="company-icon active" style="height:20px" src="static/images/spacex.png"/>
+      </div>
+      <div class="col-xs-4 col-md-2 company-icon-container">
+        <img id="blueorigin" class="company-icon" style="height:14px" src="static/images/blueorigin.png"/>
+      </div>
+      <div class="col-xs-4 col-md-2 company-icon-container">
+        <img id="planetaryresources" class="company-icon" style="height:18px" src="static/images/planetaryresources.png"/>
+      </div>
+      <div class="col-xs-4 col-md-2 company-icon-container">
+        <img id="rocketlabs" class="company-icon" style="height:10px" src="static/images/rocketlabs.png"/>
+      </div>
+      <div class="col-xs-4 col-md-2 company-icon-container">
+        <img id="phasefour" class="company-icon" style="height:14px" src="static/images/phasefour.png"/>
+      </div>
+      <div class="col-xs-4 col-md-2 company-icon-container">
+        <img id="bigelow" class="company-icon" style="height:24px" src="static/images/bigelow.png"/>
+      </div>
+    </div>
+  </div>
 
-  <script>
+  <div class="container-fluid fullwidth jobs-container">
+    <div class="row margins">
+      <div class="col-xs-12">
+        <div class="jobs-list">
 
-    $('.company-icon').on('click', function() {
-      var company = $(this).attr('id');
-      $('.job-list').removeClass('selected');
-      $('#' + company + '__job-list').addClass('selected');
+          <ul id="spacex__job-list" class="job-list selected">
+            {%for key in spacexjobs%}
+              <li><h4>{{key}}</h4></li>
+              {%for val in spacexjobs[key]%}
+                {% for job in val %}
+                <li class="job">
+                  <a href="http://www.spacex.com{{val[job]}}">{{ job }}</a><br>
+                </li>
+                {% endfor %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
 
-      $('.company-icon').removeClass('active');
-      $(this).addClass('active');
+          <ul id="blueorigin__job-list" class="job-list">
+            {% for job in blueoriginjobs %}
+            <li>
+              <a href="http://www.blueorigin.com{{blueoriginjobs[job]}}" target="_blank">{{ job }}</a><br>
+            </li>
+            {% endfor %}
+          </ul>
 
-      $('.jobs-list__bg').css('background-image', 'url(/static/images/' + company + '.png)');
-      /*
-      $(this).css({
-        'filter': 'saturate(100%)',
-        '-webkit-filter': 'saturate(100%)',
-        '-moz-filter': 'saturate(100%)',
-        '-ms-filter': 'saturate(100%)',
-        '-o-filter': 'saturate(100%)'
-      });
-      */
-    });
+          <ul id="phasefour__job-list" class="job-list">
+            {% for job in phasefourjobs %}
+            <li>
+              <a href="{{phasefourjobs[job]}}" target="_blank">{{ job }}</a><br>
+            </li>
+            {% endfor %}
+          </ul>
 
-  </script>
+          <ul id="rocketlabs__job-list" class="job-list">
+            {% for job in rocketlabsjobs %}
+            <li>
+              <a href="http://www.rocketlabusa.com{{rocketlabsjobs[job]}}" target="_blank">{{ job }}</a><br>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <ul id="planetaryresources__job-list" class="job-list">
+            {% for job in planetaryresourcesjobs %}
+            <li>
+              <a href="http://www.planetaryresources.com/careers/job-board/{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <ul id="bigelow__job-list" class="job-list">
+            {% for job in bigelowjobs %}
+            <li>
+              <a href="{{bigelowjobs[job]}}" target="_blank">{{ job }}</a><br>
+            </li>
+            {% endfor %}
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="jobs-list__bg"></div>
+    <div class="bottom-fade"></div>
+  </div>
+
 {%endblock%}
