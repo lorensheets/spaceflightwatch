@@ -12,11 +12,16 @@
 
 {% block spacejobs %}
   <ul id="spacex__job-list" class="job-list selected">
+    <!--
     {% for job in spacexjobs %}
         <li>
           <a href="http://www.spacex.com{{spacexjobs[job]}}" target="_blank">{{ job }}</a><br>
         </li>
     {% endfor %}
+  -->
+    {%for item in spacexjobs%}
+      <p>{{item}}</p><br>
+    {%endfor%}
   </ul>
 
   <ul id="blueorigin__job-list" class="job-list">
