@@ -27,9 +27,17 @@ def spacex():
             file.write("\"" + job + "\":\"" + joblink + "\",\n")
             file.close()
             #spacex_results.append([job,joblink])
+    file = open("templates/spacexjobs.html","r")
+    lines = file.readlines()
+    lines[len(lines)-1] = lines[len(lines)-1][:-2]
+    file.close()
+    file = open("templates/spacexjobs.html","w")
+    file.writelines(lines)
+    file.close()
     file = open("templates/spacexjobs.html","a")
     file.write("}")
     file.close()
+
     #return spacex_results
 
 def blueorigin():
@@ -47,6 +55,13 @@ def blueorigin():
         file.write("\"" + job.string + "\":\"" + joblink + "\",\n")
         file.close()
         #blueorigin_results.append([job.string,joblink])
+    file = open("templates/blueoriginjobs.html","r")
+    lines = file.readlines()
+    lines[len(lines)-1] = lines[len(lines)-1][:-2]
+    file.close()
+    file = open("templates/blueoriginjobs.html","w")
+    file.writelines(lines)
+    file.close()
     file = open("templates/blueoriginjobs.html","a")
     file.write("}")
     file.close()
@@ -68,6 +83,13 @@ def phasefour():
         file.write("\"" + job + "\":\"" + joblink + "\",\n")
         file.close()
         #phasefour_results.append([job,joblink])
+    file = open("templates/phasefourjobs.html","r")
+    lines = file.readlines()
+    lines[len(lines)-1] = lines[len(lines)-1][:-2]
+    file.close()
+    file = open("templates/phasefourjobs.html","w")
+    file.writelines(lines)
+    file.close()
     file = open("templates/phasefourjobs.html","a")
     file.write("}")
     file.close()
@@ -89,6 +111,13 @@ def rocketlabs():
         file.write("\"" + job.string + "\":\"" + joblink + "\",\n")
         file.close()
         #rocketlabs_results.append([job.string,joblink])
+    file = open("templates/rocketlabsjobs.html","r")
+    lines = file.readlines()
+    lines[len(lines)-1] = lines[len(lines)-1][:-2]
+    file.close()
+    file = open("templates/rocketlabsjobs.html","w")
+    file.writelines(lines)
+    file.close()
     file = open("templates/rocketlabsjobs.html","a")
     file.write("}")
     file.close()
@@ -111,6 +140,13 @@ def bigelow():
             file.write("\"" + job + "\":\"" + joblink + "\",\n")
             file.close()
             #bigelow_results.append([job,joblink])
+    file = open("templates/bigelowjobs.html","r")
+    lines = file.readlines()
+    lines[len(lines)-1] = lines[len(lines)-1][:-2]
+    file.close()
+    file = open("templates/bigelowjobs.html","w")
+    file.writelines(lines)
+    file.close()
     file = open("templates/bigelowjobs.html","a")
     file.write("}")
     file.close()
