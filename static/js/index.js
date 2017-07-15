@@ -35,7 +35,7 @@ $(document).ready(function() {
 
   setInterval(function() {
     let now = moment.utc();
-    let dt = time_local_utc - now; 
+    let dt = time_local_utc - now;
     let sign = dt < 0 ? "+" : "-";
     let delta = Math.abs(dt) / 1000;
     let countdown = "";
@@ -56,7 +56,7 @@ $(document).ready(function() {
     let seconds = Math.floor(delta % 60);
 
     switch(days) {
-      case 2:
+      case (days >= 2):
         countdown += days + " days ";
         break;
       case 1:
