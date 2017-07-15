@@ -35,13 +35,13 @@ $(document).ready(function() {
 
   setInterval(function() {
     let now = moment.utc();
-    let dt = time_local_utc - now; console.log(dt);
+    let dt = time_local_utc - now; 
     let sign = dt < 0 ? "+" : "-";
     let delta = Math.abs(dt) / 1000;
     let countdown = "";
 
     // calculate (and subtract) whole days
-    let days = Math.floor(delta / 86400);
+    let days = Math.floor(delta / 86400); console.log(days);
     delta -= days * 86400;
 
     // calculate (and subtract) whole hours
