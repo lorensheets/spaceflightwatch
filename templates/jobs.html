@@ -22,9 +22,11 @@
     {%for key in spacexjobs%}
       <li><h4>{{key}}</h4></li>
       {%for val in spacexjobs[key]%}
-        <li>
-          <a href="http://www.spacex.com{{val}}" target="_blank">{{ spacexjobs[key][val] }}</a><br>
-        </li>
+         {%for job in spacexjobs[key][val]%}
+          <li>
+            <a href="http://www.spacex.com{{spacexjobs[key][val][job]}}" target="_blank">{{ job }}</a><br>
+          </li>
+        {%endfor%}
       {%endfor%}
     {%endfor%}
   </ul>
