@@ -17,16 +17,9 @@
       {%for val in spacexjobs[key]%}
         {% for job in val %}
         <li>
-          {{ job }}
+          <a href="http://www.spacex.com{{spacexjobs[key][val][job]}}">{{ job }}</a><br>
         </li>
         {% endfor %}
-        <!--
-         {%for job in spacexjobs[key][val]%}
-          <li>
-            <a href="http://www.spacex.com{{spacexjobs[key][val][job]}}" target="_blank">{{ job }}</a><br>
-          </li>
-        {%endfor%}
-      -->
       {% endfor %}
     {% endfor %}
   </ul>
