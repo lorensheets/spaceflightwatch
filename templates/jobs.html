@@ -15,9 +15,11 @@
     {%for key in spacexjobs%}
       <li><h4>{{key}}</h4></li>
       {%for val in spacexjobs[key]%}
+        {% for job in val %}
         <li>
           {{ val }}
         </li>
+        {% endfor %}
         <!--
          {%for job in spacexjobs[key][val]%}
           <li>
@@ -25,8 +27,8 @@
           </li>
         {%endfor%}
       -->
-      {%endfor%}
-    {%endfor%}
+      {% endfor %}
+    {% endfor %}
   </ul>
 
   <ul id="blueorigin__job-list" class="job-list">
