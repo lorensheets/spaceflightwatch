@@ -41,7 +41,7 @@ $(document).ready(function() {
     let countdown = "";
 
     // calculate (and subtract) whole days
-    let days = Math.floor(delta / 86400); console.log(days);
+    let days = Math.floor(delta / 86400);
     delta -= days * 86400;
 
     // calculate (and subtract) whole hours
