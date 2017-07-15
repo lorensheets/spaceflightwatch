@@ -12,21 +12,19 @@
 
 {% block spacejobs %}
   <ul id="spacex__job-list" class="job-list selected">
-    <!--
-    {% for job in spacexjobs %}
-        <li>
-          <a href="http://www.spacex.com{{spacexjobs[job]}}" target="_blank">{{ job }}</a><br>
-        </li>
-    {% endfor %}
-  -->
     {%for key in spacexjobs%}
       <li><h4>{{key}}</h4></li>
       {%for val in spacexjobs[key]%}
+        <li>
+          {{ val }}
+        </li>
+        <!--
          {%for job in spacexjobs[key][val]%}
           <li>
             <a href="http://www.spacex.com{{spacexjobs[key][val][job]}}" target="_blank">{{ job }}</a><br>
           </li>
         {%endfor%}
+      -->
       {%endfor%}
     {%endfor%}
   </ul>
