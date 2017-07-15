@@ -1,6 +1,6 @@
 
 /* Launch Table Toggle Expand script */
-
+$(document).ready(function() {
   $('.expand').click(function() {
 
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
@@ -24,3 +24,4 @@
     $(this).text(thisTxt);
 
   });
+});
