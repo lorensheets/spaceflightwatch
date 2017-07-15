@@ -55,14 +55,14 @@ $(document).ready(function() {
     // what's left is seconds
     let seconds = Math.floor(delta % 60);
 
-    switch(days) {
+    switch(true) {
       case (days >= 2):
         countdown += days + " days ";
         break;
-      case 1:
+      case (days == 1):
         countdown += days + " day ";
         break;
-      case 0:
+      case (days == 0):
         coundown = "";
         break;
     }

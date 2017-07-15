@@ -10,7 +10,7 @@ def getnext():
     next_launch = launches[1]
     next_launch_date = launch_dates[1]
     next_launch_time = launch_times[1]
-    link = "https://www.youtube.com/watch?v=7cjPwT-Nd38"
+    link = "https://youtu.be/7cjPwT-Nd38"
     list.append(next_launch_time)
     list.append(next_launch)
     list.append(link)
