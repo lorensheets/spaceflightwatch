@@ -13,7 +13,7 @@
 {% block spacejobs %}
   <ul id="spacex__job-list" class="job-list selected">
     {% for job in spacexjobs %}
-      {% if job == "category" %}
+      {% if job === 'category' %}
         <li>
           <h4>{{ spacexjobs[job] }}</h4>
         </li>
