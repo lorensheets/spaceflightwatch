@@ -18,7 +18,7 @@ def spacex():
     for tables in soup.findAll('table', {'class': 'views-table'}):
         category = tables.find('div', {'class': 'field-name-field-job-category'})
         file = open("templates/spacexjobs.html","a")
-        file.write("\"category\":\"" + category.string + "\",\n")
+        file.write("\"category\":\"" + category.string.strip() + "\",\n")
         file.close()
         for jobs in tables.findAll('a',href=True):
             job = jobs.string
