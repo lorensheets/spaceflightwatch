@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
   var y = new Date().getFullYear();
@@ -105,7 +104,6 @@ $(document).ready(function() {
   // Watch Live script
 
   if ( (time_diff/1000 < 172800) && (time_diff/1000 > -3600)) {
-    console.log(time_diff);
     var w = window.innerWidth * 0.7;
     var h = w * 0.56;
     var m = "5px auto " + w * 0.05 + "px auto";
@@ -150,4 +148,5 @@ $(document).ready(function() {
     $(this).text(thisTxt);
 
   });
+  
 });
