@@ -208,6 +208,9 @@ a {
   background-position: center;
   opacity: 0.1;
 }
+.job {
+  padding-left: 15px;
+}
 .companies-container {
   background: #111;
 }
