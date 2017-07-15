@@ -35,7 +35,7 @@ $(document).ready(function() {
 
   setInterval(function() {
     let now = moment.utc();
-    let dt = time_local_utc - now;
+    let dt = time_local_utc - now; console.log(dt);
     let sign = dt < 0 ? "+" : "-";
     let delta = Math.abs(dt) / 1000;
     let countdown = "";
@@ -148,5 +148,5 @@ $(document).ready(function() {
     $(this).text(thisTxt);
 
   });
-  
+
 });
