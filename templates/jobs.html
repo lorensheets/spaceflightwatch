@@ -19,8 +19,8 @@
         </li>
     {% endfor %}
   -->
-    {%for key, val in spacexjobs%}
-      <p>{{key}}, {{val}}</p><br>
+    {%for key in spacexjobs|keys%}
+      <p>{{key}}</p><br>
     {%endfor%}
   </ul>
 
