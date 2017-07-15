@@ -12,6 +12,10 @@
 
 {%block scripts%}
 
+  <script>
+    var date = "{{ date }}";
+    var time = "{{ time }}";
+  </script>
   <script src={{url_for('static',filename='js/index.js')}}></script>
 
 {%endblock%}
@@ -103,7 +107,6 @@
 
   <script>
 
-    var date = "{{ date }}";
     var y = new Date().getFullYear();
     date = date + " " + y;
     function formatDate(date) {
@@ -117,7 +120,6 @@
     }
     date = formatDate(date);
 
-    var time = "{{ time }}";
     var time_utc;
 
     // get just the GMT time or TBD
