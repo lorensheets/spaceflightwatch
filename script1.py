@@ -97,5 +97,5 @@ def bigelowjobs():
 
 #render moonexpressjobs json
 @app.route('/moonexpressjobs')
-def bigelowjobs():
+def moonexpressjobs():
     return render_template("moonexpressjobs.html")
