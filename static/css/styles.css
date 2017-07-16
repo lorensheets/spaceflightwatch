@@ -5,7 +5,10 @@
   --link-bg-color: #35393f;
   --nav-bg-color: #000;
 }
-html { height: 100%; }
+html {
+  height: auto;
+  min-height: 100%;
+}
 body {
   min-height: 100%;
   position: relative;
