@@ -181,7 +181,9 @@ a {
 .expand:focus {
   outline: none;
 }
-
+.bottom {
+  margin-bottom: 50px;
+}
 
 /* space jobs styles */
 
