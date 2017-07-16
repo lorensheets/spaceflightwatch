@@ -127,6 +127,8 @@ $(document).ready(function() {
 
   $('.expand').click(function() {
 
+    $('body').css('height', '100%');
+
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
     var launchContainerHeight = $('.launch-table').css('height') == '200px' ? window.innerHeight * 0.7 + 'px' : '200px';
     var launchTableHeight = $('.launch-table-container').css('height') == '190px' ? ( window.innerHeight * 0.7 ) - 12 + 'px' : '190px';
