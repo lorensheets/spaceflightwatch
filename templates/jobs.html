@@ -110,6 +110,14 @@
             {% endfor %}
           </ul>
 
+          <ul id="moonexpress__job-list" class="job-list">
+            {% for job in moonexpressjobs %}
+            <li>
+              <a href="{{moonexpressjobs[job]}}" target="_blank">{{ job }}</a><br>
+            </li>
+            {% endfor %}
+          </ul>
+
         </div>
       </div>
     </div>
