@@ -5,9 +5,9 @@
   --link-bg-color: #35393f;
   --nav-bg-color: #000;
 }
+html { height: 100%; }
+body { min-height: 100%; }
 html, body {
-  height: auto;
-  min-height: 100%;
   width: 100%;
   font-size: 1em;
   background: var(--main-bg-color);
