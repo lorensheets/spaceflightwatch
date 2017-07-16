@@ -161,7 +161,7 @@ def moon():
     source_code = requests.get(url)
     plain_text = source_code.text
     soup = BeautifulSoup(plain_text, "html5lib")
-    file = open("templates/moonexpress.html","w")
+    file = open("templates/moonexpressjobs.html","w")
     file.write("{\n")
     file.close()
     for items in soup.findAll('article'):
