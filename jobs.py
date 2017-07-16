@@ -156,8 +156,35 @@ def bigelow():
     #return bigelow_results
 
 
+def moon():
+    url = "http://www.moonexpress.com/careers/"
+    source_code = requests.get(url)
+    plain_text = source_code.text
+    soup = BeautifulSoup(plain_text, "html5lib")
+    file = open("templates/moonexpress.html","w")
+    file.write("{\n")
+    file.close()
+    for items in soup.findAll('article'):
+        jobs = items.find('h3')
+        job = jobs.string.strip()
+        joblink = items.find('a')['href'].strip()
+        file = open("templates/moonexpress.html","a")
+        file.write("\"" + job + "\":\"" + joblink + "\",\n")
+        file.close()
+    file = open("templates/moonexpress.html","r")
+    lines = file.readlines()
+    lines[len(lines)-1] = lines[len(lines)-1][:-2]
+    file.close()
+    file = open("templates/moonexpress.html","w")
+    file.writelines(lines)
+    file.close()
+    file = open("templates/moonexpress.html","a")
+    file.write("}")
+    file.close()
+
 spacex()
 blueorigin()
 phasefour()
 rocketlabs()
 bigelow()
+moon()
