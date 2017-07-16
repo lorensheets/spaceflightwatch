@@ -7,6 +7,7 @@
 }
 html, body {
   height: auto;
+  min-height: 100vh;
   width: 100%;
   font-size: 1em;
   background: var(--main-bg-color);
