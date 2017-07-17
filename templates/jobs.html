@@ -125,7 +125,7 @@
             {% for item in planetlabsjobs %}
               {% for category in planetlabsjobs[item] %}
                 <li><h4>{{ category.name }}</h4></li>
-                {% for job in category[name] %}
+                {% for job in category %}
                   <li>{{ job.title }}</li>
                 {%endfor%}
               {%endfor%}
