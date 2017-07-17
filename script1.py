@@ -18,31 +18,31 @@ def jobs():
     #context = ssl._create_unverified_context()
 
     #spacex jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/spacexjobs") as url:
+    with urllib.request.urlopen("http://spaceflight.watch/spacexjobs") as url:
         spacexjobs = json.loads(url.read().decode())
 
     #blueorigin jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/blueoriginjobs") as url:
+    with urllib.request.urlopen("http://spaceflight.watch/blueoriginjobs") as url:
         blueoriginjobs = json.loads(url.read().decode())
 
     #phasefour jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/phasefourjobs") as url:
+    with urllib.request.urlopen("http://spaceflight.watch/phasefourjobs") as url:
         phasefourjobs = json.loads(url.read().decode())
 
     #rocketlabs jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/rocketlabsjobs") as url:
+    with urllib.request.urlopen("http://spaceflight.watch/rocketlabsjobs") as url:
         rocketlabsjobs = json.loads(url.read().decode())
 
     #bigelow jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/bigelowjobs") as url:
+    with urllib.request.urlopen("http://spaceflight.watch/bigelowjobs") as url:
         bigelowjobs = json.loads(url.read().decode())
 
     #moon express jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/moonexpressjobs") as url:
+    with urllib.request.urlopen("http://spaceflight.watch/moonexpressjobs") as url:
         moonexpressjobs = json.loads(url.read().decode())
 
     #planet labs jobs
-    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/planetlabsjobs") as url:
+    with urllib.request.urlopen("http://spaceflight.watch/planetlabsjobs") as url:
         planetlabsjobs = json.loads(url.read().decode())
 
     planetaryresourcesjobs = [['Finance & Operations Analyst','?gh_jid=744711'], \
