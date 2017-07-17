@@ -50,7 +50,7 @@
         <img id="moonexpress" class="company-icon" style="height:9px" src="static/images/moonexpress.png"/>
       </div>
       <div class="col-xs-4 col-md-2 company-icon-container">
-        <img id="planetlabs" class="company-icon" style="height:22px" src="static/images/moonexpress.png"/>
+        <img id="planetlabs" class="company-icon" style="height:22px" src="static/images/planetlabs.png"/>
       </div>
     </div>
   </div>
@@ -122,8 +122,10 @@
           </ul>
 
           <ul id="planetlabs__job-list" class="job-list">
-            {% for job in planetlabsjobs %}
-              <p>{{ job }}</p>
+            {% for item in planetlabsjobs %}
+              {% for category in item %}
+                <p>{{ category }}</p>
+              {%endfor%}
             {%endfor%}
           </ul>
 
