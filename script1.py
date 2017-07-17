@@ -107,5 +107,5 @@ def moonexpressjobs():
 
 #render moonexpressjobs json
 @app.route('/planetlabsjobs')
-def moonexpressjobs():
+def planetlabsjobs():
     return render_template("planetlabsjobs.html")
