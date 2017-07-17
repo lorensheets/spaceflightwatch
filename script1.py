@@ -41,6 +41,10 @@ def jobs():
     with urllib.request.urlopen("https://spaceinfo.herokuapp.com/moonexpressjobs") as url:
         moonexpressjobs = json.loads(url.read().decode())
 
+    #planet labs jobs
+    with urllib.request.urlopen("https://spaceinfo.herokuapp.com/planetlabsjobs") as url:
+        planetlabsjobs = json.loads(url.read().decode())
+
     planetaryresourcesjobs = [['Finance & Operations Analyst','?gh_jid=744711'], \
         ['Chief Scientist','?gh_jid=682831'], \
         ['Director of Instrument Systems','?gh_jid=682839'], \
@@ -59,7 +63,8 @@ def jobs():
 
     return render_template("jobs.html", spacexjobs=spacexjobs, blueoriginjobs=blueoriginjobs,
         phasefourjobs=phasefourjobs, planetaryresourcesjobs=planetaryresourcesjobs,
-        rocketlabsjobs=rocketlabsjobs, bigelowjobs=bigelowjobs, moonexpressjobs=moonexpressjobs)
+        rocketlabsjobs=rocketlabsjobs, bigelowjobs=bigelowjobs, moonexpressjobs=moonexpressjobs,
+        planetlabsjobs=planetlabsjobs)
 
 @app.route('/news')
 def news():
@@ -99,3 +104,8 @@ def bigelowjobs():
 @app.route('/moonexpressjobs')
 def moonexpressjobs():
     return render_template("moonexpressjobs.html")
+
+#render moonexpressjobs json
+@app.route('/planetlabsjobs')
+def moonexpressjobs():
+    return render_template("planetlabsjobs.html")

@@ -168,23 +168,33 @@ def moon():
         jobs = items.find('h3')
         job = jobs.string.strip()
         joblink = items.find('a')['href'].strip()
-        file = open("templates/moonexpress.html","a")
+        file = open("templates/moonexpressjobs.html","a")
         file.write("\"" + job + "\":\"" + joblink + "\",\n")
         file.close()
-    file = open("templates/moonexpress.html","r")
+    file = open("templates/moonexpressjobs.html","r")
     lines = file.readlines()
     lines[len(lines)-1] = lines[len(lines)-1][:-2]
     file.close()
-    file = open("templates/moonexpress.html","w")
+    file = open("templates/moonexpressjobs.html","w")
     file.writelines(lines)
     file.close()
-    file = open("templates/moonexpress.html","a")
+    file = open("templates/moonexpressjobs.html","a")
     file.write("}")
     file.close()
 
-spacex()
-blueorigin()
-phasefour()
-rocketlabs()
-bigelow()
-moon()
+
+def planetlabs():
+    url = "https://api.greenhouse.io/v1/boards/planetlabs/departments?callback=_handleopeningsCallback"
+    source_code = requests.get(url)
+    plain_text = source_code.text
+    file = open("templates/planetlabsjobs.html","w")
+    file.write(plain_text)
+    file.close()
+
+#spacex()
+#blueorigin()
+#phasefour()
+#rocketlabs()
+#bigelow()
+#moon()
+planetlabs()

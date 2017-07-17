@@ -49,6 +49,9 @@
       <div class="col-xs-4 col-md-2 company-icon-container">
         <img id="moonexpress" class="company-icon" style="height:9px" src="static/images/moonexpress.png"/>
       </div>
+      <div class="col-xs-4 col-md-2 company-icon-container">
+        <img id="planetlabs" class="company-icon" style="height:22px" src="static/images/moonexpress.png"/>
+      </div>
     </div>
   </div>
 
@@ -116,6 +119,12 @@
               <a href="{{moonexpressjobs[job]}}" target="_blank">{{ job }}</a><br>
             </li>
             {% endfor %}
+          </ul>
+
+          <ul id="planetlabs__job-list" class="job-list">
+            {% for job in planetlabsjobs %}
+              <p>{{ job }}</p>
+            {%endfor%}
           </ul>
 
         </div>
