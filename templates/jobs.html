@@ -123,7 +123,9 @@
 
           <ul id="planetlabs__job-list" class="job-list">
             {% for item in planetlabsjobs %}
-              <li>{{ item }}</li>
+              {% for category in planetlabsjobs[item] %}
+                <li>{{ category }}</li>
+              {%endfor%}
             {%endfor%}
           </ul>
 
