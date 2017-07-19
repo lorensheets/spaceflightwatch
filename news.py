@@ -6,3 +6,6 @@ def getnews():
     source_code = requests.get(url)
     plain_text = source_code.text
     soup = BeautifulSoup(plain_text, "html5lib")
+    print(plain_text)
+
+getnews()

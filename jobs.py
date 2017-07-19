@@ -191,10 +191,19 @@ def planetlabs():
     file.write(plain_text)
     file.close()
 
+def vector():
+    url = "https://vectorspacesystems.com/send-resume/"
+    source_code = requests.get(url)
+    plain_text = source_code.text
+    soup = BeautifulSoup(plain_text, "html5lib")
+    print(soup.prettify)
+
+
 #spacex()
 #blueorigin()
 #phasefour()
 #rocketlabs()
 #bigelow()
 #moon()
-planetlabs()
+#planetlabs()
+vector()
