@@ -206,4 +206,4 @@ def vector():
 #bigelow()
 #moon()
 #planetlabs()
-vector()
+#vector()

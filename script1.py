@@ -45,7 +45,8 @@ def jobs():
     with urllib.request.urlopen("http://spaceflight.watch/planetlabsjobs") as url:
         planetlabsjobs = json.loads(url.read().decode())
 
-    planetaryresourcesjobs = [['Finance & Operations Analyst','?gh_jid=744711'], \
+    planetaryresourcesjobs = [
+        ['Finance & Operations Analyst','?gh_jid=744711'], \
         ['Chief Scientist','?gh_jid=682831'], \
         ['Director of Instrument Systems','?gh_jid=682839'], \
         ['Early Career Engineer','?gh_jid=682849'], \
@@ -59,12 +60,19 @@ def jobs():
         ['Mission Design Engineer, Luxembourg','?gh_jid=716075'], \
         ['Planetary Scientist - Luxembourg','?gh_jid=716052'], \
         ['Business Analyst','?gh_jid=744045'], \
-        ['Director of Marketing','?gh_jid=682845']]
+        ['Director of Marketing','?gh_jid=682845']
+    ]
+
+    vectoraerospacejobs = [
+        ['Ground Software Engineer','/job/ground-software-engineer/'], \
+        ['Electrical Wiring Technician','/job/electrical-wiring-technician/'], \
+        ['Embedded Software Engineer','/job/embedded-software-engineer/']
+    ]
 
     return render_template("jobs.html", spacexjobs=spacexjobs, blueoriginjobs=blueoriginjobs,
         phasefourjobs=phasefourjobs, planetaryresourcesjobs=planetaryresourcesjobs,
         rocketlabsjobs=rocketlabsjobs, bigelowjobs=bigelowjobs, moonexpressjobs=moonexpressjobs,
-        planetlabsjobs=planetlabsjobs)
+        planetlabsjobs=planetlabsjobs,vectoraerospacejobs=vectoraerospacejobs)
 
 @app.route('/news')
 def news():
