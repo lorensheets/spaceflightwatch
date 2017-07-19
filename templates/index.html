@@ -78,16 +78,16 @@
     <div class="container-fluid fullwidth launch-table-container">
 
       {% for data in upcoming %}
-        {% set payload = data[1].split('•') %}
+        {% set vehicle = data[1].split('•') %}
         <div class="row launches">
           <div class="col-xs-2 left">
             <p>{{data[2]}}, 2017</p>
           </div>
           <div class="col-xs-2 left">
-            <p class="next-launch">{{ data[1] }}</p>
+            <p class="next-launch">{{ vehicle[0] }}</p>
           </div>
           <div class="col-xs-2 left">
-            <p>{{ payload[1] }}</p>
+            <p>{{ vehicle[1] }}</p>
           </div>
           <div class="col-xs-6 left">
             <p class="time-until">{{ data[0] }}</p>
