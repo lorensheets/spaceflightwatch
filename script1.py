@@ -63,7 +63,7 @@ def jobs():
         ['Director of Marketing','?gh_jid=682845']
     ]
 
-    vectoraerospacejobs = [
+    vectorspacesystemsjobs = [
         ['Ground Software Engineer','/job/ground-software-engineer/'], \
         ['Electrical Wiring Technician','/job/electrical-wiring-technician/'], \
         ['Embedded Software Engineer','/job/embedded-software-engineer/']
@@ -72,7 +72,7 @@ def jobs():
     return render_template("jobs.html", spacexjobs=spacexjobs, blueoriginjobs=blueoriginjobs,
         phasefourjobs=phasefourjobs, planetaryresourcesjobs=planetaryresourcesjobs,
         rocketlabsjobs=rocketlabsjobs, bigelowjobs=bigelowjobs, moonexpressjobs=moonexpressjobs,
-        planetlabsjobs=planetlabsjobs,vectoraerospacejobs=vectoraerospacejobs)
+        planetlabsjobs=planetlabsjobs,vectorspacesystemsjobs=vectorspacesystemsjobs)
 
 @app.route('/news')
 def news():
