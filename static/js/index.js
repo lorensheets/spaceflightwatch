@@ -108,6 +108,7 @@ $(document).ready(function() {
     var h = w * 0.56;
     var m = "5px auto " + w * 0.05 + "px auto";
     var m2 = w * 0.02 + "px auto 0 auto";
+    console.log( time_diff );
 
     $('#livestream').css({
       'display': 'block',
