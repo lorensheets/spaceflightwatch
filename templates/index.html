@@ -78,7 +78,6 @@
     <div class="container-fluid fullwidth launch-table-container">
 
       {% for data in upcoming %}
-        {% set foo = "new string"|slice(3) %}
         <div class="row launches">
           <div class="col-xs-2 left">
             <p>{{data[2]}}, 2017</p>
@@ -87,7 +86,7 @@
             <p class="next-launch">{{ data[1] }}</p>
           </div>
           <div class="col-xs-2 left">
-            <p>{{ foo }}</p>
+            <p>{{ data[1]|slice(6) }}</p>
           </div>
           <div class="col-xs-6 left">
             <p class="time-until">{{ data[0] }}</p>
