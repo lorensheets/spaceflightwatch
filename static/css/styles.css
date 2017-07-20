@@ -184,7 +184,7 @@ a {
   outline: none;
 }
 .bottom {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 /* space jobs styles */
@@ -329,7 +329,9 @@ footer {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+  .bottom {
+    margin-bottom: 100px;
+  }
 }
 
 
