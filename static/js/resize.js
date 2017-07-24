@@ -16,6 +16,8 @@ $(document).ready(function() {
       'width': w,
       'margin': m2
     });
+    var navHeight = $('nav').innerHeight();
+    $('.top').css('margin-top', navHeight);
   }
 
   if (live_stream == true) {
@@ -24,6 +26,15 @@ $(document).ready(function() {
 
     $(window).on("resize", livestream_size);
 
+  } else {
+
+    $(window).on("resize", function() {
+      var navHeight = $('nav').innerHeight();
+      $('.top').css('margin-top', navHeight);
+    });
+
   }
+
+
 
 });
