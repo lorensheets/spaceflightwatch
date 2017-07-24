@@ -28,6 +28,7 @@
     {%block scripts%}
     {%endblock%}
     <script src={{url_for('static',filename='js/resize.js')}}></script>
+    <script src={{url_for('static',filename='js/stats.js')}}></script>
 
 
     <!-- open graph protocol -->
@@ -75,6 +76,11 @@
             <a href="/">Rocket Launches</a>
             <a href="/jobs">Space Jobs</a>
             <!--<a href="/news">Space News</a>-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p id="people_in_space"></a>
           </div>
         </div>
       </div>
