@@ -9,7 +9,7 @@ $(document).ready(function() {
   var epoch_0 = 1500825600;
   var epoch_1 = 1500912000;
 
-  var current_time = Math.round(new Date().getTime()/1000); console.log(current_time);
+  var current_time = Math.round(new Date().getTime()/1000); 
 
   var dist_0_v1 = 20738518374.9197;
   var dist_1_v1 = 20741458818.1222;
@@ -64,7 +64,7 @@ $(document).ready(function() {
 
   	document.getElementById('voyager_1').innerHTML = addCommas( Math.round(current_dist_km_v1) + " KM" );
 
-  	current_time += 1; console.log(current_time);
+  	current_time += 1;
   }
 
   function addCommas(nStr){
