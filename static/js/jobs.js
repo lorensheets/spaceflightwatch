@@ -12,9 +12,9 @@ $(document).ready(function() {
   });
 
   $('.capitalize').each(function() {
-      let j = $(this).text();
+      let j = $(this).innerHTML(); console.log(j);
       j.toLowerCase().replace(/(^| )(\w)/g, s => j.toUpperCase());
-      $(this).text(j);
+      $(this).innerHTML(j);
   });
 
 });
