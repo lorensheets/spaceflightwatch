@@ -322,6 +322,10 @@ footer {
   background: var(--nav-bg-color);
 }
 
+footer a:hover {
+  cursor: pointer;
+}
+
 
 /* text-align */
 .left { text-align: left; }
