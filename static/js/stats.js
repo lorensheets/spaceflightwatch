@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   /*  Handles updating of Voyager Distances from Earth and the Sun  */
 
-  /*
+
   var epoch_0 = 1301500800; //1281510000;
   var epoch_1 = 1301587200; //1281596400;
 
@@ -23,7 +23,6 @@ $(document).ready(function() {
 
   var dist_0_v2s = 14204601577.2787;
   var dist_1_v2s = 14205894342.6130;
-  */
 
   var current_dist_km_v1 = 0;
   var current_dist_au_v1 = 0;
