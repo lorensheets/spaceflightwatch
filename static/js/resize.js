@@ -7,7 +7,7 @@ $(window).on("orientationchange", function() {
   }
 });
 
-
+/*
 $(window).on("resize", function() {
   // portrait mode
   if(window.innerHeight > window.innerWidth){
@@ -15,4 +15,4 @@ $(window).on("resize", function() {
   } else {  // landscape mode
     alert("landscape");
   }
-});
+});*/
