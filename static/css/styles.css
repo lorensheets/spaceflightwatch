@@ -39,7 +39,7 @@ nav .row {
 }
 nav .stats {
   text-align: left;
-  color: #999;
+  color: #bbb;
   font-size: 0.9em;
   border-top: var(--stats-border);
   border-bottom: var(--stats-border);
