@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import nextlaunch, urllib.request, json, ssl
+import nextlaunch, objects, urllib.request, json, ssl
 
 app=Flask(__name__)
 
@@ -8,9 +8,10 @@ def home():
 
     launch = nextlaunch.getnext()
     upcoming = nextlaunch.upcoming()
+    objects = objects.total()
 
     return render_template("index.html", time=launch[0],
-        next=launch[1], link=launch[2], date=launch[3], upcoming=upcoming)
+        next=launch[1], link=launch[2], date=launch[3], upcoming=upcoming, objects=objects)
 
 @app.route('/jobs')
 def jobs():
