@@ -1,6 +1,6 @@
-$(document).ready(function() {
+var live_stream;
 
-  var live_stream;
+$(document).ready(function() {
 
   var y = new Date().getFullYear();
   date = date + " " + y;
