@@ -189,6 +189,10 @@ a {
 
 /* space jobs styles */
 
+h1 span {
+  font-size: 0.5em;
+  color: #555;
+}
 .jobs-container {
   background: #1b1f26;
   height: 70vh;
