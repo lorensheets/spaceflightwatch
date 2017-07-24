@@ -13,6 +13,7 @@ body {
   height: auto;
   min-height: 100vh !important;
   position: relative;
+  overflow-x: hidden;
 }
 html, body {
   width: 100%;
