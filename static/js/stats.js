@@ -117,7 +117,7 @@ $(document).ready(function() {
   }
 
   // Start Voyager distance updates
-  $(window).on('load', function( {
+  $(window).on('load', function() {
     setInterval(dist_controller(),1000);
   });
 
