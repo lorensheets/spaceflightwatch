@@ -46,7 +46,7 @@ nav .stats {
   background-color: var(--main-bg-color);
 }
 nav .stats div {
-  padding: 0;
+  padding: 0 !important;
 }
 nav a {
   display: inline-block;
