@@ -43,7 +43,7 @@ nav .stats {
   font-size: 0.9em;
   border-top: var(--stats-border);
   border-bottom: var(--stats-border);
-  background-color: var(--main-bg-color);
+  background-color: #111;
 }
 nav .stats div {
   padding: 0 !important;
