@@ -12,32 +12,32 @@ def spacex():
     source_code = requests.get(url)
     plain_text = source_code.text
     soup = BeautifulSoup(plain_text, "html5lib")
-    file = open("templates/spacexjobs.html","w")
+    file = open("templates/spacexjobs1.html","w")
     file.write("{\n")
     file.close()
     for tables in soup.findAll('table', {'class': 'views-table'}):
         category = tables.find('div', {'class': 'field-name-field-job-category'})
-        file = open("templates/spacexjobs.html","a")
+        file = open("templates/spacexjobs1.html","a")
         file.write("\"" + category.string.strip() + "\":[{\n")
         file.close()
         for jobs in tables.findAll('a',href=True):
             job = jobs.string
             joblink = jobs['href']
-            file = open("templates/spacexjobs.html","a")
+            file = open("templates/spacexjobs1.html","a")
             file.write("\"" + job + "\":\"" + joblink + "\",\n")
             file.close()
             #spacex_results.append([job,joblink])
-        file = open("templates/spacexjobs.html","a")
+        file = open("templates/spacexjobs1.html","a")
         file.write("}],\n")
         file.close()
-    file = open("templates/spacexjobs.html","r")
+    file = open("templates/spacexjobs1.html","r")
     lines = file.readlines()
     lines[len(lines)-1] = lines[len(lines)-1][:-2]
     file.close()
-    file = open("templates/spacexjobs.html","w")
+    file = open("templates/spacexjobs1.html","w")
     file.writelines(lines)
     file.close()
-    file = open("templates/spacexjobs.html","a")
+    file = open("templates/spacexjobs1.html","a")
     file.write("}")
     file.close()
 
@@ -199,7 +199,7 @@ def vector():
     print(soup.prettify)
 
 
-#spacex()
+spacex()
 #blueorigin()
 #phasefour()
 #rocketlabs()
