@@ -222,6 +222,7 @@ h1 span {
   height: 70vh;
   position: relative;
   font-size: 0.9em;
+  margin-bottom: 50px;
 }
 .jobs-list {
   height: -webkit-calc(70vh - 12px);
