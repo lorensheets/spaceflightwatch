@@ -40,6 +40,7 @@ nav .row {
 nav .stats {
   text-align: left;
   border-top: var(--stats-border);
+  border-bottom: var(--stats-border);
   background-color: var(--main-bg-color);
 }
 nav a {
