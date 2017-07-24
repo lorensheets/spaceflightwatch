@@ -122,7 +122,7 @@ a {
 .launches {
   width: 97.5%;
   margin: 0 auto;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 .bottom-fade {
   position: absolute;
@@ -337,6 +337,9 @@ footer {
 @media (min-width: 768px) {
   .table-header {
     font-size: 1em;
+  }
+  .launches {
+    font-size: 0.9em;
   }
   .bottom {
     margin-bottom: 100px;
