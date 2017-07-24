@@ -9,8 +9,9 @@ $(document).ready(function() {
   var epoch_0 = 1301500800; //1281510000;
   var epoch_1 = 1301587200; //1281596400;
 
-  var current_time = Date.now()/1000;
-
+  var current_time = new Date().getTime()/1000;
+  console.log(current_time);
+  
   var dist_0_v1 = 17396281625.1305;
   var dist_1_v1 = 17395807835.8111;
 
