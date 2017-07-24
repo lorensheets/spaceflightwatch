@@ -6,7 +6,6 @@ $(document).ready(function() {
 
   /*  Handles updating of Voyager Distances from Earth and the Sun  */
 
-
   var epoch_0 = 1301500800; //1281510000;
   var epoch_1 = 1301587200; //1281596400;
 
@@ -38,7 +37,7 @@ $(document).ready(function() {
 
   var au_const = 149597870.691;
 
-  function dist_controller(){
+  function dist_controller() {
 
   	current_dist_km_v1 = ( ( ( current_time - epoch_0 ) / ( epoch_1 - epoch_0 ) ) * ( dist_1_v1 - dist_0_v1 ) ) + dist_0_v1;
   	current_dist_au_v1 = (current_dist_km_v1/au_const) + '';
@@ -87,17 +86,16 @@ $(document).ready(function() {
   	nStr += '';
   	x = nStr.split('.');
 
-  		x1 = x[0];
-  		x2 = x.length > 1 ? '.' + x[1] : '';
+  	x1 = x[0];
+  	x2 = x.length > 1 ? '.' + x[1] : '';
 
-  		var rgx = /(\d+)(\d{3})/;
+  	var rgx = /(\d+)(\d{3})/;
 
-  		while ( rgx.test(x1) )
-  		{
-  			x1 = x1.replace(rgx, '$1' + ',' + '$2');
-  		}
-  		return x1 + x2;
-    }
+  	while ( rgx.test(x1) ){
+  		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+  	}
+  	return x1 + x2;
+  }
 
   function formatSeconds(num){
   	var hours = Math.floor(num / 3600);
