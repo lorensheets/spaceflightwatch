@@ -4,7 +4,7 @@
   --countdown-bg-color: #d82b1c;
   --link-bg-color: #35393f;
   --nav-bg-color: #000;
-  --stats-border: 1px solid #21252b;
+  --stats-border: 1px solid #35393f;
 }
 html {
   height: 100%;
@@ -40,7 +40,7 @@ nav .row {
 nav .stats {
   text-align: left;
   border-top: var(--stats-border);
-  background-color: #111;
+  background-color: var(--main-bg-color);
 }
 nav a {
   display: inline-block;
