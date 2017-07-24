@@ -63,23 +63,8 @@ $(document).ready(function() {
   	current_dist_lt_v2 = current_dist_km_v2 * 2 / 299792.458;
 
   	document.getElementById('voyager_1').innerHTML = addCommas( Math.round(current_dist_km_v1) + " KM" );
-  	/*document.getElementById('voy1_au').innerHTML = addCommas( current_dist_au_v1 ) + " AU";
 
-  	document.getElementById('voy2_km').innerHTML = addCommas( Math.round(current_dist_km_v2) + " KM" );
-  	document.getElementById('voy2_au').innerHTML = addCommas( current_dist_au_v2 ) + " AU";
-
-  	document.getElementById('voy1_kms').innerHTML = addCommas( Math.round(current_dist_km_v1s) + " KM" );
-  	document.getElementById('voy1_aus').innerHTML = addCommas( current_dist_au_v1s ) + " AU";
-
-  	document.getElementById('voy2_kms').innerHTML = addCommas( Math.round(current_dist_km_v2s) + " KM");
-  	document.getElementById('voy2_aus').innerHTML = addCommas( current_dist_au_v2s ) + " AU";
-
-  	document.getElementById('voy1_lt').innerHTML = formatSeconds(current_dist_lt_v1);
-  	document.getElementById('voy2_lt').innerHTML = formatSeconds(current_dist_lt_v2);
-
-  	//alert("dist_controller.addCommas( Math.round(current_dist_km_v1) ): " + addCommas( Math.round(current_dist_km_v1) ));
-    */
-  	current_time += 1;
+  	current_time += 1; console.log(current_time);
   }
 
   function addCommas(nStr){
@@ -117,8 +102,6 @@ $(document).ready(function() {
   }
 
   // Start Voyager distance updates
-  $(window).on('load', function() {
-    setInterval(dist_controller(),1000);
-  });
+  setInterval(dist_controller(),1000);
 
 });
