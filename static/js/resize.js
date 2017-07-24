@@ -12,9 +12,9 @@ $(document).ready(function() {
 
   $(window).on("resize", function() {
 
-    console.log(livestream);
+    console.log(live_stream);
     
-    if (livestream == true) {
+    if (live_stream == true) {
 
       var w = window.innerWidth * 0.95;
       var h = w * 0.56;
