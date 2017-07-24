@@ -41,8 +41,6 @@ nav .stats {
   text-align: left;
   color: #bbb;
   font-size: 0.9em;
-  border-top: var(--stats-border);
-  border-bottom: var(--stats-border);
   background-color: #1b1f26;
 }
 nav .stats div {
