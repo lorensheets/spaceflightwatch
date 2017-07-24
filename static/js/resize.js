@@ -6,3 +6,13 @@ $(window).on("orientationchange", function() {
     alert("landscape");
   }
 });
+
+
+$(window).on("resize", function() {
+  // portrait mode
+  if(window.innerHeight > window.innerWidth){
+    alert("portrait");
+  } else {  // landscape mode
+    alert("landscape");
+  }
+});
