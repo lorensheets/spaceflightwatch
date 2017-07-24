@@ -6,5 +6,5 @@ def total():
     source_code = requests.get(url)
     plain_text = source_code.text
     soup = BeautifulSoup(plain_text, "html5lib")
-    obj = soup.find('div', {'id': 'found-count'})
-    return obj.string
+    for obj in soup.findAll('div', {'id': 'found-count'}):
+        return obj.string
