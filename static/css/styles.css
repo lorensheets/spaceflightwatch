@@ -45,6 +45,10 @@ nav a {
   display: inline-block;
   margin: 0 10px;
 }
+nav p {
+  margin: 0;
+  padding: 0;
+}
 #livestream, .watch-live {
   display: none;
 }
