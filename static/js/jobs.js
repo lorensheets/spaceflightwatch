@@ -13,7 +13,7 @@ $(document).ready(function() {
 
   $('.capitalize').each(function() {
       let j = $(this).html(); console.log(j);
-      j.toLowerCase().replace(/(^| )(\w)/g, s => j.toUpperCase());
+      j.toLowerCase();
       $(this).html(j);
   });
 
