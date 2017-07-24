@@ -7,12 +7,7 @@ $(window).on("orientationchange", function() {
   }
 });
 
-/*
+
 $(window).on("resize", function() {
-  // portrait mode
-  if(window.innerHeight > window.innerWidth){
-    alert("portrait");
-  } else {  // landscape mode
-    alert("landscape");
-  }
-});*/
+  alert("resize");
+});
