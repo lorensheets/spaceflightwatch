@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  var livestream;
+
   var y = new Date().getFullYear();
   date = date + " " + y;
   function formatDate(date) {
@@ -104,6 +106,7 @@ $(document).ready(function() {
   // Watch Live script
 
   if ( (time_diff/1000 < 777600) && (time_diff/1000 > -3600)) {
+    livestream = true;
     var w = window.innerWidth * 0.95;
     var h = w * 0.56;
     var m = "5px auto " + w * 0.05 + "px auto";
@@ -120,6 +123,8 @@ $(document).ready(function() {
       'width': w,
       'margin': m2
     });
+  } else {
+    livestream = false;
   }
 
 
