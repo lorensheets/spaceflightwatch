@@ -45,7 +45,7 @@ nav .stats {
   border-bottom: var(--stats-border);
   background-color: var(--main-bg-color);
 }
-nav .stats p {
+nav .stats div {
   padding: 0;
 }
 nav a {
