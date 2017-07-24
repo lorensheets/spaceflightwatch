@@ -6,22 +6,22 @@ $(document).ready(function() {
 
   /*  Handles updating of Voyager Distances from Earth and the Sun  */
 
-  var epoch_0 = 1301500800; //1281510000;
-  var epoch_1 = 1301587200; //1281596400;
+  var epoch_0 = 1500825600;
+  var epoch_1 = 1500912000;
 
   var current_time = 1500892023;
 
-  var dist_0_v1 = 17396281625.1305;
-  var dist_1_v1 = 17395807835.8111;
+  var dist_0_v1 = 20738518374.9197;
+  var dist_1_v1 = 20741458818.1222;
 
-  var dist_0_v2 = 14227951893.7668;
-  var dist_1_v2 = 14227140609.8932;
+  var dist_0_v2 = 17074523862.8607;
+  var dist_1_v2 = 17076213313.9471;
 
-  var dist_0_v1s = 17445817009.5116;
-  var dist_1_v1s = 17447283910.3447;
+  var dist_0_v1s = 20827181160.4370;
+  var dist_1_v1s = 20828645026.2431;
 
-  var dist_0_v2s = 14204601577.2787;
-  var dist_1_v2s = 14205894342.6130;
+  var dist_0_v2s = 17195171118.2343;
+  var dist_1_v2s = 17196470067.4883;
 
   var current_dist_km_v1 = 0;
   var current_dist_au_v1 = 0;
