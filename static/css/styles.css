@@ -319,7 +319,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: #666;
+  color: #999;
   background: var(--nav-bg-color);
 }
 
