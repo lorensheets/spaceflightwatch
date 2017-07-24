@@ -11,9 +11,15 @@ $(document).ready(function() {
     $('.jobs-list__bg').css('background-image', 'url(/static/images/' + company + '.png)');
   });
 
+  function capitalize_Words(str) {
+    return str.replace(/\w\S*/g, function(txt){
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  }
   $('.capitalize').each(function() {
       let j = $(this).html(); console.log(j);
       j.toLowerCase();
+      capitalize_Words(j);
       $(this).html(j);
   });
 
