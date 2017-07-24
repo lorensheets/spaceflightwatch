@@ -4,6 +4,7 @@
   --countdown-bg-color: #d82b1c;
   --link-bg-color: #35393f;
   --nav-bg-color: #000;
+  --stats-border: 1px solid #21252b;
 }
 html {
   height: 100%;
@@ -31,7 +32,14 @@ nav {
   width: 100%;
   text-align: right;
   background: var(--nav-bg-color);
+  padding: 0;
+}
+nav .row {
   padding: 3px 0;
+}
+nav .stats {
+  text-align: left;
+  border-top: var(--stats-border);
 }
 nav a {
   display: inline-block;
