@@ -104,7 +104,7 @@ $(document).ready(function() {
   // Watch Live script
 
   if ( (time_diff/1000 < 777600) && (time_diff/1000 > -3600)) {
-    var w = window.innerWidth * 0.7;
+    var w = window.innerWidth * 0.95;
     var h = w * 0.56;
     var m = "5px auto " + w * 0.05 + "px auto";
     var m2 = w * 0.02 + "px auto 0 auto";
