@@ -6,11 +6,12 @@ def getnext():
     launch_dates = spider.dates();
     launch_times = spider.times();
     list = []
-    #time = datetime.datetime(2017, 6, 23, 10, 10, 0).timestamp()
     next_launch = launches[0]
     next_launch_date = launch_dates[0]
     next_launch_time = launch_times[0]
     link = "https://www.youtube.com/embed/7cjPwT-Nd38"
+    #link2 = "https://www.youtube.com/embed/sqlC1Ag0ndQ"
+    #link3 = "https://www.youtube.com/embed/t4N5zsDEVuQ"
     list.append(next_launch_time)
     list.append(next_launch)
     list.append(link)

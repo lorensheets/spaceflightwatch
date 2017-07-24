@@ -78,6 +78,7 @@ a {
   width: 97.5%;
   margin: 0 auto;
   padding: 0;
+  font-size: 0.8em;
 }
 .table-header p {
   margin: 0;
@@ -334,6 +335,9 @@ footer {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .table-header {
+    font-size: 1em;
+  }
   .bottom {
     margin-bottom: 100px;
   }
