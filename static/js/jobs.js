@@ -17,8 +17,8 @@ $(document).ready(function() {
     });
   }
   $('.capitalize').each(function() {
-      let j = $(this).html(); console.log(j);
-      j.toLowerCase();
+      let j = $(this).html();
+      j.toLowerCase();console.log(j);
       capitalize_Words(j);
       $(this).html(j);
   });
