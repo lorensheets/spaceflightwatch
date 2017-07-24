@@ -2,6 +2,10 @@ var live_stream;
 
 $(document).ready(function() {
 
+  var navHeight = $('nav').innerHeight();
+  $('.top').css('margin-top', navHeight);
+
+
   var y = new Date().getFullYear();
   date = date + " " + y;
   function formatDate(date) {
