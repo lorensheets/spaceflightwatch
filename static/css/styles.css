@@ -52,6 +52,10 @@ nav a {
   display: inline-block;
   margin: 0 10px;
 }
+nav a:hover {
+  cursor: pointer;
+  color: #0000ee;
+}
 nav p {
   margin: 0;
   padding: 0;
