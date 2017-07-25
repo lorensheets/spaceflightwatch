@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
-  var navHeight = $('nav').innerHeight();
-  $('.top').css('margin-top', navHeight);
+  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  var navHeight = (iOS) ? $('nav').height : $('nav').innerHeight;
+    $('.top').css('margin-top', navHeight);
 
   livestream_size = function() {
     let w = window.innerWidth * 0.95;
