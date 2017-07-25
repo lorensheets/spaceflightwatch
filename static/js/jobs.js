@@ -18,7 +18,7 @@ $(document).ready(function() {
   }
   $('.capitalize').each(function() {
       let j = $(this).html();
-      j = j.toString().toLowerCase(); console.log(j);
+      j = j.toLowerCase(); 
       capitalize_Words(j);
       $(this).html(j);
   });
