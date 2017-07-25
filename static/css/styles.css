@@ -42,7 +42,7 @@ nav .stats {
   padding: 2px 0;
   text-align: left;
   color: #bbb;
-  font-size: 0.9em;
+  font-size: 0.5em;
   background-color: #1b1f26;
 }
 nav .stats div {
@@ -365,6 +365,9 @@ footer a:hover {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  nav .stats {
+    font-size: 0.9em;
+  }
   .table-header {
     font-size: 1em;
   }
