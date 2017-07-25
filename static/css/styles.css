@@ -113,6 +113,9 @@ a {
 .nextlaunch-container h1 {
   display: inline-block !important;
 }
+.twitter-share-button {
+  margin-left: 10px;
+}
 .watch-live {
   color: #d00;
   font-size: 1.1em;
