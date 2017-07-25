@@ -42,7 +42,6 @@ nav .stats {
   padding: 2px 0;
   text-align: left;
   color: #bbb;
-  font-size: 0.5em;
   background-color: #1b1f26;
 }
 nav .stats div {
@@ -362,6 +361,22 @@ footer a:hover {
 
 
 /* media queries */
+
+/* Portrait mode */
+
+@media screen and (orientation: landscape) {
+  nav .stats {
+    font-size: 0.6em;
+  }
+}
+
+/* Landscape mode */
+
+@media screen and (orientation: landscape) {
+  nav .stats {
+    font-size: 0.9em;
+  }
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
