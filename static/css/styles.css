@@ -364,7 +364,7 @@ footer a:hover {
 
 /* Portrait mode */
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: portrait) {
   nav .stats {
     font-size: 0.6em;
   }
