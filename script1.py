@@ -6,14 +6,19 @@ app=Flask(__name__)
 @app.route('/')
 def home():
 
+    #next launch
+    with urllib.request.urlopen("http://spaceflight.watch/nextlaunch") as url:
+        nexlaunch = json.loads(url.read().decode())
+
     #upcoming launches
     with urllib.request.urlopen("http://spaceflight.watch/upcominglaunches") as url:
-        launches = json.loads(url.read().decode())
+        upcoming = json.loads(url.read().decode())
 
     #launch = nextlaunch.getnext()
     #upcoming = nextlaunch.upcoming()
 
-    return render_template("index.html", launches=launches)
+    return render_template("index.html", date=nextlaunch[3],time=nextlaunch[0],
+        link=nextlaunch[2],next=nextlaunch[1],upcoming=upcoming)
 
 @app.route('/jobs')
 def jobs():
@@ -85,6 +90,11 @@ def news():
 
 if __name__=="__main__":
     app.run(debug=True)
+
+#render next launch json
+@app.route('/nextlaunch')
+def nextlaunch():
+    return render_template("nextlaunch.html")
 
 #render upcoming launches json
 @app.route('/upcominglaunches')
