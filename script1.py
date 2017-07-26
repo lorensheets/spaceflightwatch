@@ -8,7 +8,7 @@ def home():
 
     #next launch
     with urllib.request.urlopen("http://spaceflight.watch/nextlaunch") as url:
-        nexlaunch = json.loads(url.read().decode())
+        nextlaunch = json.loads(url.read().decode())
 
     #upcoming launches
     with urllib.request.urlopen("http://spaceflight.watch/upcominglaunches") as url:
