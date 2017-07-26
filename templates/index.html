@@ -84,18 +84,18 @@
   </div>
 
   <div class="container-fluid fullwidth table">
-    <div class="row table-header">
-      <div class="col-xs-1 left">
-        <p>DATE</p>
+    <div class="row table-header no-wrap">
+      <div class="col-xs-1 left no-wrap">
+        <p class="norm-wrap">DATE</p>
       </div>
-      <div class="col-xs-2 left">
-        <p>LAUNCH VEHICLE</p>
+      <div class="col-xs-2 left no-wrap">
+        <p class="norm-wrap">LAUNCH VEHICLE</p>
       </div>
-      <div class="col-xs-2 left">
-        <p>PAYLOAD</p>
+      <div class="col-xs-2 left no-wrap">
+        <p class="norm-wrap">PAYLOAD</p>
       </div>
-      <div class="col-xs-4 left">
-        <p>LAUNCH TIME</p>
+      <div class="col-xs-4 left no-wrap">
+        <p class="norm-wrap">LAUNCH TIME</p>
       </div>
       <div class="col-xs-3 left no-wrap">
         <p class="norm-wrap">LAUNCH SITE</p>
@@ -108,18 +108,18 @@
 
       {% for data in upcoming %}
         {% set vehicle = data[1].split('•') %}
-        <div class="row launches">
-          <div class="col-xs-1 left">
-            <p>{{data[2]}}</p>
+        <div class="row launches no-wrap">
+          <div class="col-xs-1 left no-wrap">
+            <p class="norm-wrap">{{data[2]}}</p>
           </div>
-          <div class="col-xs-2 left">
-            <p class="next-launch">{{ vehicle[0] }}</p>
+          <div class="col-xs-2 left no-wrap">
+            <p class="next-launch norm-wrap">{{ vehicle[0] }}</p>
           </div>
-          <div class="col-xs-2 left">
-            <p>{{ vehicle[1] }}</p>
+          <div class="col-xs-2 left no-wrap">
+            <p class="norm-wrap">{{ vehicle[1] }}</p>
           </div>
-          <div class="col-xs-4 left">
-            <p class="time-until">{{ data[0] }}</p>
+          <div class="col-xs-4 left no-wrap">
+            <p class="time-until norm-wrap">{{ data[0] }}</p>
           </div>
           <div class="col-xs-3 left no-wrap">
             <p class="norm-wrap">{{ data[3] }}</p>
