@@ -135,3 +135,16 @@ def moonexpressjobs():
 @app.route('/planetlabsjobs')
 def planetlabsjobs():
     return render_template("planetlabsjobs.html")
+
+
+
+
+@app.route('/test')
+def news():
+
+    #next launch
+    with urllib.request.urlopen("http://spaceflight.watch/nextlaunch") as url:
+        nextlaunch = json.loads(url.read().decode())
+
+    return render_template("test.html", date=nextlaunch[3],time=nextlaunch[0],
+        link=nextlaunch[2],next=nextlaunch[1])
