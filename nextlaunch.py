@@ -22,10 +22,29 @@ def upcoming():
     launches = spider.launches();
     launch_dates = spider.dates();
     launch_times = spider.times();
-    list = []
-    for i in range(1,len(launches)):
+    #list = []
+    file = open("templates/upcominglaunches.html","w")
+    file.write("{\n")
+    file.close()
+    for i in range(0,len(launches)):
         next_launch = launches[i]
         next_launch_time = launch_times[i]
         next_launch_date = launch_dates[i]
-        list.append([next_launch_time,next_launch,next_launch_date])
-    return list
+        #list.append([next_launch_time,next_launch,next_launch_date])
+        file = open("templates/upcominglaunches.html","a")
+        file.write("\"" + next_launch + "\",\n")
+        file.write("\"" + next_launch_time + "\",\n")
+        file.write("\"" + next_launch_date + "\",\n")
+    file = open("templates/upcominglaunches.html","r")
+    lines = file.readlines()
+    lines[len(lines)-1] = lines[len(lines)-1][:-2]
+    file.close()
+    file = open("templates/upcominglaunches.html","w")
+    file.writelines(lines)
+    file.close()
+    file = open("templates/upcominglaunches.html","a")
+    file.write("}")
+    file.close()
+    #return list
+
+upcoming()
