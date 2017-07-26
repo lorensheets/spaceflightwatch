@@ -104,6 +104,7 @@ a {
 .table-header div {
   white-space: nowrap !important;
   overflow-x: hidden;
+  padding: 0;
 }
 .table-header p {
   margin: 0;
