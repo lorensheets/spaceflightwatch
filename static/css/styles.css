@@ -162,7 +162,9 @@ a {
 .launches div p {
   white-space: normal;
 }
-
+.col-xs-1 {
+  padding-right: 15px;
+}
 .bottom-fade {
   position: absolute;
   bottom: 0;
