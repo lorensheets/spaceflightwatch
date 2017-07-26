@@ -148,6 +148,9 @@ a {
   margin: 0 auto;
   font-size: 0.7em;
 }
+.col-xs-1 {
+  padding: 0 0 0 30px;
+}
 .bottom-fade {
   position: absolute;
   bottom: 0;
