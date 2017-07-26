@@ -19,7 +19,7 @@ def getnext():
     file.write("\"time\":\"" + next_launch_time + "\",\n")
     file.write("\"next\":\"" + next_launch + "\",\n")
     file.write("\"link\":\"" + link + "\",\n")
-    file.write("\"date\":\"" + next_launch_date + "\"\n")
+    file.write("\"date\":\"" + next_launch_date + "\",\n")
     file.write("\"site\":\"" + next_launch_site + "\"\n")
     file.write("}")
     file.close()
@@ -63,4 +63,4 @@ def upcoming():
     #print(list)
     #return list
 
-upcoming()
+getnext()
