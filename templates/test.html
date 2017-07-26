@@ -5,5 +5,8 @@
 {%block stats%}{%endblock%}
 
 {%block content%}
-<p>hi</p>
+
+  {%for item in nextlaunch%}
+    <p>{{item}}</p>
+  {%endfor%}
 {%endblock%}
