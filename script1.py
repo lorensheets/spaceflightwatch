@@ -140,7 +140,7 @@ def planetlabsjobs():
 
 
 @app.route('/test')
-def news():
+def test():
 
     #next launch
     with urllib.request.urlopen("http://spaceflight.watch/nextlaunch") as url:
