@@ -40,8 +40,8 @@ def upcoming():
         next_launch_date = launch_dates[i]
         #list.append([next_launch_time,next_launch,next_launch_date])
         file = open("templates/upcominglaunches.html","a")
-        file.write("[\"" + next_launch + "\",\n")
-        file.write("\"" + next_launch_time + "\",\n")
+        file.write("[\"" + next_launch_time + "\",\n")
+        file.write("\"" + next_launch + "\",\n")
         file.write("\"" + next_launch_date + "\"],\n")
     file = open("templates/upcominglaunches.html","r")
     lines = file.readlines()
@@ -55,4 +55,4 @@ def upcoming():
     file.close()
     #return list
 
-getnext()
+upcoming()
