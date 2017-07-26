@@ -147,6 +147,8 @@ a {
   width: 95%;
   margin: 0 auto;
   font-size: 0.7em;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .col-xs-1 {
   padding: 0 30px 0 0;
@@ -338,9 +340,6 @@ footer a:hover {
 .center { text-align: center; }
 .right { text-align: right; }
 
-/* whitespace */
-.no-wrap { white-space: nowrap; }
-.norm-wrap { white-space: normal; }
 
 /* scrollbar */
 ::-webkit-scrollbar {
