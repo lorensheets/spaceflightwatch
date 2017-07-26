@@ -100,6 +100,8 @@ a {
   margin: 0 auto;
   padding: 0;
   font-size: 0.8em;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 .table-header p {
   margin: 0;
@@ -148,7 +150,7 @@ a {
   margin: 0 auto;
   font-size: 0.7em;
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .col-xs-1 {
   padding: 0 30px 0 0;
