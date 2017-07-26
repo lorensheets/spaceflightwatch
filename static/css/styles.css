@@ -163,7 +163,7 @@ a {
   white-space: normal;
 }
 .col-xs-1 {
-  padding-right: 15px;
+  padding-right: 15px !important;
 }
 .bottom-fade {
   position: absolute;
