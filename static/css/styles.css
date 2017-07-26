@@ -100,7 +100,7 @@ a {
   margin: 0 auto;
   padding: 0;
   font-size: 0.8em;
-  white-space: nowrap;
+  white-space: nowrap !important;
   overflow-x: hidden;
 }
 .table-header p {
