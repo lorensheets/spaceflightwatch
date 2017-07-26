@@ -13,8 +13,8 @@
 {%block scripts%}
 
   <script>
-    var date = "{{ date }}";
-    var time = "{{ time }}";
+    var date = "{{ launches[0] }}";
+    var time = "{{ launches[1] }}";
   </script>
   <script src={{url_for('static',filename='js/index.js')}}></script>
 
@@ -45,9 +45,9 @@
   <div class="container-fluid nextlaunch-container">
     <div class="row">
       <div class="col-xs-12">
-        <h1>Next Rocket Launch: &nbsp;&nbsp;{{next}}
+        <h1>Next Rocket Launch: &nbsp;&nbsp;{{launches[2]}}
           <a class="twitter-share-button"
-            href="https://twitter.com/intent/tweet?text=Next%20Rocket%20Launch:%20{{next}}%2E%20Watch%20Live%20%3D%3E%20">
+            href="https://twitter.com/intent/tweet?text=Next%20Rocket%20Launch:%20{{launches[2]}}%2E%20Watch%20Live%20%3D%3E%20">
             Tweet
           </a>
         </h1>
@@ -67,7 +67,7 @@
     <div class="row">
       <div class="col-xs-12">
         <p class="watch-live">WATCH LIVE:</p>
-        <iframe id="livestream" src="{{link}}" frameborder="0" allowfullscreen></iframe>
+        <iframe id="livestream" src="" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -101,7 +101,7 @@
   <div id="launchTable" class="container-fluid fullwidth launch-table">
     <div class="container-fluid fullwidth launch-table-container">
 
-      {% for data in upcoming %}
+      {% for data in launches[4:] %}
         {% set vehicle = data[1].split('•') %}
         <div class="row launches">
           <div class="col-xs-2 left">

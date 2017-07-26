@@ -13,7 +13,7 @@ def home():
     #launch = nextlaunch.getnext()
     #upcoming = nextlaunch.upcoming()
 
-    return render_template("index.html")
+    return render_template("index.html", launches=launches)
 
 @app.route('/jobs')
 def jobs():
