@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 launch_dates = []
 launch_times = []
 launch_titles = []
+launch_site = []
 
 def launches():
     url = "https://spaceflightnow.com/launch-schedule/"
@@ -38,3 +39,15 @@ def times():
         launch_times.append(txt[1].strip())
 
     return launch_times
+
+def sites():
+    url = "https://spaceflightnow.com/launch-schedule/"
+    source_code = requests.get(url)
+    plain_text = source_code.text
+    soup = BeautifulSoup(plain_text, "html5lib")
+    for launch in soup.findAll('div', {'class': 'missiondata'}):
+        txt = launch.text
+        txt = txt.split("Launch site: ")
+        launch_site.append(txt[1].strip())
+
+    return launch_site
