@@ -13,8 +13,8 @@
 {%block scripts%}
 
   <script>
-    var date = "{{ date }}";
-    var time = "{{ time }}";
+    var date = "{{ nextlaunch.date }}";
+    var time = "{{ nextlaunch.time }}";
   </script>
   <script src={{url_for('static',filename='js/index.js')}}></script>
 
@@ -45,9 +45,9 @@
   <div class="container-fluid nextlaunch-container">
     <div class="row">
       <div class="col-xs-12">
-        <h1>Next Rocket Launch: &nbsp;&nbsp;{{next}}
+        <h1>Next Rocket Launch: &nbsp;&nbsp;{{nextlaunch.next}}
           <a class="twitter-share-button"
-            href="https://twitter.com/intent/tweet?text=Next%20Rocket%20Launch:%20{{next}}%2E%20Watch%20Live%20%3D%3E%20">
+            href="https://twitter.com/intent/tweet?text=Next%20Rocket%20Launch:%20{{nextlaunch.next}}%2E%20Watch%20Live%20%3D%3E%20">
             Tweet
           </a>
         </h1>
@@ -67,7 +67,7 @@
     <div class="row">
       <div class="col-xs-12">
         <p class="watch-live">WATCH LIVE:</p>
-        <iframe id="livestream" src="{{link}}" frameborder="0" allowfullscreen></iframe>
+        <iframe id="livestream" src="{{nextlaunch.link}}" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>

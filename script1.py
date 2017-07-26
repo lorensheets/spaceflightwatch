@@ -17,8 +17,7 @@ def home():
     #launch = nextlaunch.getnext()
     #upcoming = nextlaunch.upcoming()
 
-    return render_template("index.html", date=nextlaunch[3],time=nextlaunch[0],
-        link=nextlaunch[2],next=nextlaunch[1],upcoming=upcoming)
+    return render_template("index.html", nextlaunch=nextlaunch,upcoming=upcoming)
 
 @app.route('/jobs')
 def jobs():
