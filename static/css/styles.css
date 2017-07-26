@@ -96,7 +96,7 @@ a {
   background: #111;
 }
 .table-header {
-  width: 97.5%;
+  width: 95%;
   margin: 0 auto;
   padding: 0;
   font-size: 0.8em;
@@ -144,9 +144,12 @@ a {
   -webkit-overflow-scrolling: touch;
 }
 .launches {
-  width: 97.5%;
+  width: 95%;
   margin: 0 auto;
   font-size: 0.7em;
+}
+.col-xs-1 {
+  padding: 0 30px 0 0;
 }
 .bottom-fade {
   position: absolute;
