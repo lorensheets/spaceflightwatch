@@ -14,10 +14,10 @@ def getnext():
     #link3 = "https://www.youtube.com/embed/t4N5zsDEVuQ"
     file = open("templates/nextlaunch.html","w")
     file.write("{\n")
-    file.write("\"" + next_launch_time + "\",\n")
-    file.write("\"" + next_launch + "\",\n")
-    file.write("\"" + link + "\",\n")
-    file.write("\"" + next_launch_date + "\"\n")
+    file.write("\"time\":\"" + next_launch_time + "\",\n")
+    file.write("\"next\":\"" + next_launch + "\",\n")
+    file.write("\"link\":" + link + "\",\n")
+    file.write("\"date\":" + next_launch_date + "\"\n")
     file.write("}")
     file.close()
     #list.append(next_launch_time)
@@ -55,4 +55,4 @@ def upcoming():
     file.close()
     #return list
 
-upcoming()
+getnext()
