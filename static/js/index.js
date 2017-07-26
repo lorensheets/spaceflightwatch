@@ -5,7 +5,7 @@ $(document).ready(function() {
   var y = new Date().getFullYear();
   date = date + " " + y;
   function formatDate(date) {
-    let d = new Date(date),
+    var d = new Date(date),
         month = '' + (d.getMonth() + 1),
         day = '' + d.getDate(),
         year = d.getFullYear();
@@ -19,8 +19,8 @@ $(document).ready(function() {
 
   // get just the GMT time or TBD
   if (time != "TBD") {
-    let gmt = time.indexOf("GMT");
-    let dash = time.indexOf("-");
+    var gmt = time.indexOf("GMT");
+    var dash = time.indexOf("-");
     time = time.slice(0,gmt);
     time = time.slice(0,dash);
     time = time.substr(0,2) + ":" + time.substr(2);
@@ -36,26 +36,26 @@ $(document).ready(function() {
   time_diff = time_local_utc - moment.utc();
 
   setInterval(function() {
-    let now = moment.utc();
-    let dt = time_local_utc - now;
-    let sign = dt < 0 ? "+" : "-";
-    let delta = Math.abs(dt) / 1000;
-    let countdown = "";
+    var now = moment.utc();
+    var dt = time_local_utc - now;
+    var sign = dt < 0 ? "+" : "-";
+    var delta = Math.abs(dt) / 1000;
+    var countdown = "";
 
     // calculate (and subtract) whole days
-    let days = Math.floor(delta / 86400);
+    var days = Math.floor(delta / 86400);
     delta -= days * 86400;
 
     // calculate (and subtract) whole hours
-    let hours = Math.floor(delta / 3600) % 24;
+    var hours = Math.floor(delta / 3600) % 24;
     delta -= hours * 3600;
 
     // calculate (and subtract) whole minutes
-    let minutes = Math.floor(delta / 60) % 60;
+    var minutes = Math.floor(delta / 60) % 60;
     delta -= minutes * 60;
 
     // what's left is seconds
-    let seconds = Math.floor(delta % 60);
+    var seconds = Math.floor(delta % 60);
 
     switch(true) {
       case (days >= 2):
