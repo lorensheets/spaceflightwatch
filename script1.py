@@ -142,8 +142,4 @@ def planetlabsjobs():
 @app.route('/test')
 def test():
 
-    #next launch
-    with urllib.request.urlopen("http://spaceflight.watch/nextlaunch") as url:
-        nextlaunch = json.loads(url.read().decode())
-
-    return render_template("test.html", nextlaunch=nextlaunch)
+    return render_template("test.html")
