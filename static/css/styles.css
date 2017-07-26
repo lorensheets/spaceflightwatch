@@ -140,6 +140,7 @@ a {
   height: calc(70vh - 10px);
   */
   height: 190px;
+  white-space: nowrap;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -370,9 +371,6 @@ footer a:hover {
 @media screen and (orientation: portrait) {
   nav .stats {
     font-size: 0.6em;
-  }
-  .launches {
-    white-space: nowrap;
   }
 }
 
