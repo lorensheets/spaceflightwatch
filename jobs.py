@@ -72,14 +72,14 @@ def blueorigin():
 
 
 def phasefour():
-    url = "http://www.phasefour.io/careers/"
+    url = "https://www.indeedjobs.com/widget/s/d489f6df26e6677b0051"
     source_code = requests.get(url)
     plain_text = source_code.text
     soup = BeautifulSoup(plain_text, "html5lib")
     file = open("templates/phasefourjobs.html","w")
     file.write("{\n")
     file.close()
-    for items in soup.findAll('a', {'class': 'custom-link'}):
+    for items in soup.findAll('a', {'class': 'cp-snippet-jobTitle'}):
         job = items.string
         joblink = items['href']
         file = open("templates/phasefourjobs.html","a")
@@ -199,9 +199,9 @@ def vector():
     print(soup.prettify)
 
 
-spacex()
+#spacex()
 #blueorigin()
-#phasefour()
+phasefour()
 #rocketlabs()
 #bigelow()
 #moon()
