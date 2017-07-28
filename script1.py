@@ -9,7 +9,7 @@ app=Flask(__name__)
 def home():
 
     #next launch
-    with urllib.request.urlopen("http://spaceflight.watch/nextlaunch") as url:
+    with urllib.request.urlopen("http://spaceflight.watch/next") as url:
         nextlaunch = json.loads(url.read().decode())
 
     #upcoming launches
@@ -93,9 +93,9 @@ if __name__=="__main__":
     app.run(debug=True)
 
 #render next launch json
-@app.route('/nextlaunch')
+@app.route('/next')
 def nextlaunch():
-    return render_template("nextlaunch.html")
+    return render_template("next.html")
 
 #render upcoming launches json
 @app.route('/upcominglaunches')
