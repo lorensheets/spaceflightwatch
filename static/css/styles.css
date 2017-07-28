@@ -169,8 +169,6 @@ a {
   text-align: center;
 }
 .launches div img.flag {
-  height: 8px;
-  width: 11px;
   vertical-align: inherit;
 }
 .bottom-fade {
@@ -392,6 +390,10 @@ footer a:hover {
   nav .stats {
     font-size: 0.6em;
   }
+  .launches div img.flag {
+    height: 8px;
+    width: 11px;
+  }
 }
 
 /* Landscape mode */
@@ -399,6 +401,10 @@ footer a:hover {
 @media screen and (orientation: landscape) {
   nav .stats {
     font-size: 0.9em;
+  }
+  .launches div img.flag {
+    height: 12px;
+    width: 16px;
   }
 }
 
@@ -416,6 +422,7 @@ footer a:hover {
   .launches div img.flag {
     height: 12px;
     width: 16px;
+  }
   .bottom {
     margin-bottom: 100px;
   }
