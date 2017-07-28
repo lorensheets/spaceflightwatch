@@ -135,8 +135,8 @@ $(document).ready(function() {
   $('.expand').click(function() {
 
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
-    var launchContainerHeight = $('.launch-table').css('height') == '200px' ? window.innerHeight * 0.7 + 'px' : '200px';
-    var launchTableHeight = $('.launch-table-container').css('height') == '190px' ? ( window.innerHeight * 0.7 ) - 12 + 'px' : '190px';
+    var launchContainerHeight = $('.launch-table').css('height') == '200px' ? '100%' : '200px';
+    var launchTableHeight = $('.launch-table-container').css('height') == '190px' ? 'calc(100% - 10px)' : '190px';
     var scroll = $('#launchTable').offset().top - 140;
     var overflow = $('.launch-table-container').css('overflow') == 'scroll' ? 'hidden' : 'scroll';
 
