@@ -397,10 +397,14 @@ footer a:hover {
     height: 8px;
     width: 11px;
   }
+  .rocket-icon {
+    text-align: right;
+  }
   .launches div img.rocket {
     height: 8px;
     transform-origin: center;
     transform: rotate(90deg);
+    margin-right: 5px;
   }
 }
 
@@ -416,6 +420,7 @@ footer a:hover {
   }
   .launches div img.rocket {
     height: 10px;
+    margin-right: 0;
   }
 }
 
