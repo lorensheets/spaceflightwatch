@@ -402,7 +402,7 @@ footer a:hover {
   }
   .launches div img.rocket {
     height: auto;
-    width: 20px;
+    width: 26px;
     transform-origin: center;
     transform: rotate(-90deg);
     margin-right: 10px;
