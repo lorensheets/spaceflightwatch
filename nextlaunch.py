@@ -11,9 +11,8 @@ def getnext():
     next_launch_date = launch_dates[0]
     next_launch_time = launch_times[0]
     next_launch_site = launch_sites[0]
-    link = "https://www.youtube.com/embed/7cjPwT-Nd38?autoplay=1"
-    #link2 = "https://www.youtube.com/embed/sqlC1Ag0ndQ"
-    #link3 = "https://www.youtube.com/embed/t4N5zsDEVuQ"
+    link = "https://www.youtube.com/embed/sqlC1Ag0ndQ"
+    #link2 = "https://www.youtube.com/embed/t4N5zsDEVuQ"
     file = open("templates/nextlaunch.html","w")
     file.write("{\n")
     file.write("\"time\":\"" + next_launch_time + "\",\n")
