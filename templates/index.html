@@ -17,6 +17,7 @@
     var time = "{{ nextlaunch.time }}";
   </script>
   <script src={{url_for('static',filename='js/index.js')}}></script>
+  <script src={{url_for('static',filename='js/rocketicon.js')}}></script>
 
 {%endblock%}
 
@@ -113,7 +114,7 @@
             <p class="norm-wrap">{{data[2]}}</p>
           </div>
           <div class="col-xs-2 left">
-            <p class="next-launch">{{ vehicle[0] }}</p>
+            <p class="{{vehicle[0].replace(" ","")}} next-launch">{{ vehicle[0] }}</p>
           </div>
           <div class="col-xs-2 left">
             <p>{{ vehicle[1] }}</p>
@@ -175,7 +176,7 @@
     </div>
     <div class="bottom-fade"></div>
   </div>
-  
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
