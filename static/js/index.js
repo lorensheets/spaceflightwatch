@@ -137,10 +137,10 @@ $(document).ready(function() {
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
 
     $('.launch-table').css('height') == '200px' ? '100%' : '200px';
-    var launchContainerHeight = $('.launch-table').height();
+    var launchContainerHeight = $('.launch-table').height(); console.log(launchContainerHeight);
 
     $('.launch-table-container').css('height') == '190px' ? '100%' : '190px';
-    var launchTableHeight = $('.launch-table-container').height();
+    var launchTableHeight = $('.launch-table-container').height(); console.log(launchTableHeight);
 
     var scroll = $('#launchTable').offset().top - 140;
     var overflow = $('.launch-table-container').css('overflow') == 'scroll' ? 'hidden' : 'inherit';
