@@ -123,10 +123,10 @@
             <p class="time-until">{{ data[0] }}</p>
           </div>
           <div class="col-xs-3 left">
-            <p><img class="{{ country[0].replace(" ","") }}" src=""/>{{ data[3] }}</p>
+            <p><img class="{{ country[-1].replace(" ","") }}" src=""/>{{ data[3] }}</p>
           </div>
           <script>
-            var country = "{{country[0]}}"; console.log("{{country[0].replace(" ","")}}");
+            var country = "{{country[-1]}}"; console.log("{{country[-1].replace(" ","")}}");
 
             var countries = {
               "Florida": "america.png",
@@ -148,7 +148,7 @@
 
             function setCountryIcon() {
               var icon = whichCountry(country);
-              $('.{{country[0].replace(" ","")}}').attr('src', icon);
+              $('.{{country[-1].replace(" ","")}}').attr('src', icon);
             }
 
             setCountryIcon();
