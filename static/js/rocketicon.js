@@ -32,7 +32,7 @@ $(document).ready(function() {
     $('.'+someClass+'').attr('src', icon);
   }
 
-  $('.rocket-icon').each(function() {
+  $('.rocket').each(function() {
     var thisClass = $(this).attr('class');
     thisClass = thisClass.split(" ");
     thisClass = thisClass[0];
