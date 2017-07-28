@@ -19,7 +19,10 @@ def home():
     #launch = nextlaunch.getnext()
     #upcoming = nextlaunch.upcoming()
 
-    return render_template("index.html", nextlaunch=nextlaunch,upcoming=upcoming)
+    user = request.environ['REMOTE_ADDR']
+
+
+    return render_template("index.html", nextlaunch=nextlaunch,upcoming=upcoming, user=user)
 
 @app.route('/jobs')
 def jobs():
