@@ -123,10 +123,34 @@
             <p class="time-until">{{ data[0] }}</p>
           </div>
           <div class="col-xs-3 left">
-            <p >{{ data[3] }}</p>
+            <p><img class="{{ country[-1] }}" src=""/>{{ data[3] }}</p>
           </div>
           <script>
-            console.log("{{ country[-1] }}")
+            var country = "{{country[-1]}}"; console.log(country);
+
+            var countries = {
+              "Florida": "america.png",
+              "California": "america.png",
+              "Virginia": "america.png",
+              "China": "china.png",
+              "Japan": "japan.png",
+              "French Guiana": "france.png",
+              "Kazakhstan": "russia.png"
+            }
+
+            function whichCountry(data) {
+              for(key in countries) {
+                if (key == data) {
+                  return countries[key];
+                }
+              }
+            }
+
+            function setCountryIcon() {
+              var icon = whichCountry(country);
+              $('.{{country[-1]}}').attr('src', icon);
+            }
+
           </script>
         </div>
       {% endfor %}

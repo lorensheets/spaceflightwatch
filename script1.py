@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 import nextlaunch, urllib.request, json, ssl
 
 
@@ -18,9 +18,6 @@ def home():
 
     #launch = nextlaunch.getnext()
     #upcoming = nextlaunch.upcoming()
-
-    user = request.remote_addr
-
 
     return render_template("index.html", nextlaunch=nextlaunch,upcoming=upcoming, user=user)
 
