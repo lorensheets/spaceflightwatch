@@ -162,7 +162,7 @@ a {
 .launches div p {
   white-space: normal;
 }
-.launches div p img.flag {
+.launches div img.flag {
   height: 12px;
   width: 16px;
   vertical-align: inherit;
