@@ -111,10 +111,16 @@
         {% set country = data[3].split(',') %}
         <div class="row launches">
           <div class="col-xs-2 col-sm-1 left">
-            <p class="norm-wrap">{{data[2]}}</p>
+            <div class="row no-margin">
+              <div class="col-xs-11">
+                <p class="norm-wrap">{{data[2]}}</p>
+              </div>
+              <div class="col-xs-1">
+                <img class="{{vehicle[0].replace(" ","")}} rocket-icon" src="" height="20px"/>
+              </div>
+            </div>
           </div>
           <div class="col-xs-2 left">
-            <img class="{{vehicle[0].replace(" ","")}} rocket-icon" src="" height="15px"/>
             <p class="next-launch">{{ vehicle[0] }}</p>
           </div>
           <div class="col-xs-2 left">
