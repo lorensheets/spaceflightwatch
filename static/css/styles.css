@@ -165,6 +165,9 @@ a {
 .launches div p {
   white-space: normal;
 }
+.country-icon {
+  text-align: center;
+}
 .launches div img.flag {
   height: 12px;
   width: 16px;
