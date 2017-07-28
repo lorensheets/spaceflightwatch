@@ -1,5 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 import nextlaunch, urllib.request, json, ssl
+
+import users
+
+from redis import Redis
+redis = Redis()
+
+import time
+from datetime import datetime
+
+
 
 app=Flask(__name__)
 
@@ -136,11 +146,19 @@ def planetlabsjobs():
     return render_template("planetlabsjobs.html")
 
 
-
-
 @app.route('/test')
 def test():
     #next launch
     with urllib.request.urlopen("http://spaceflight.watch/nextlaunch") as url:
         nextlaunch = json.loads(url.read().decode())
     return render_template("test.html",nextlaunch=nextlaunch)
+
+
+@app.before_request
+def mark_current_user_online():
+    mark_online(request.remote_addr)
+
+@app.route('/online')
+def index():
+    return Response('Online: %s' % ', '.join(get_online_users()),
+                    mimetype='text/plain')
