@@ -19,7 +19,7 @@ def home():
     #launch = nextlaunch.getnext()
     #upcoming = nextlaunch.upcoming()
 
-    user = request.environ['REMOTE_ADDR']
+    user = request.remote_addr
 
 
     return render_template("index.html", nextlaunch=nextlaunch,upcoming=upcoming, user=user)
