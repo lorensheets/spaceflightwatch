@@ -135,25 +135,29 @@ $(document).ready(function() {
   $('.expand').click(function() {
 
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
-
-    $('.launch-table').css('height') == '200px' ? '100%' : '200px';
-    var launchContainerHeight = $('.launch-table').height(); console.log(launchContainerHeight);
-
-    $('.launch-table-container').css('height') == '190px' ? '100%' : '190px';
-    var launchTableHeight = $('.launch-table-container').height(); console.log(launchTableHeight);
+    var launchTableHeight = $('.launch-table').height();
+    if (launchTableHeight == 200) {
+      var newlaunchTableHeight = $('.launch-table').css('height', 'auto').height(); console.log(newlaunchTableHeight);
+      $('.launch-table').animate({
+        'height': newlaunchTableHeight
+      }, 500, 'easeInOutQuad');
+      $('.launch-table-container').animate({
+        'height': newlaunchTableHeight - 10
+      }, 500, 'easeInOutQuad');
+    } else {
+      $('.launch-table').animate({
+        'height': '200px'
+      }, 500, 'easeInOutQuad');
+      $('.launch-table-container').animate({
+        'height': '190px'
+      }, 500, 'easeInOutQuad');
+    }
 
     var scroll = $('#launchTable').offset().top - 140;
-    var overflow = $('.launch-table-container').css('overflow') == 'scroll' ? 'hidden' : 'inherit';
+    var overflow = $('.launch-table-container').css('overflow') == 'inherent' ? 'hidden' : 'inherit';
 
     $('.launch-table-container').css('overflow',overflow);
 
-    $('.launch-table').animate({
-      'height': launchContainerHeight
-    }, 500, 'easeInOutQuad');
-
-    $('.launch-table-container').animate({
-      'height': launchTableHeight
-    }, 500, 'easeInOutQuad');
 
     $('html, body').animate({scrollTop: scroll},500,'easeInOutQuad');
 
