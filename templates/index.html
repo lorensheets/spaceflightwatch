@@ -108,7 +108,8 @@
 
       {% for data in upcoming %}
         {% set vehicle = data[1].split('•') %}
-        {% set country = data[3].split(',') %}
+        {% set x = data[3].split(',') %}
+        {% set country = x[-1].split(' ') %}
         <div class="row launches">
           <div class="col-xs-2 col-sm-1 left">
             <p class="norm-wrap">{{data[2]}}</p>
@@ -123,10 +124,10 @@
             <p class="time-until">{{ data[0] }}</p>
           </div>
           <div class="col-xs-3 left">
-            <p><img class="{{ country[-1]|replace({' ':''}) }}" src=""/>{{ data[3] }}</p>
+            <p><img class="{{ country[0] }}" src=""/>{{ data[3] }}</p>
           </div>
           <script>
-            var country = "{{country[-1]}}"; console.log(country);
+            var country = "{{country[0]}}"; console.log(country);
 
             var countries = {
               "Florida": "america.png",
@@ -134,7 +135,7 @@
               "Virginia": "america.png",
               "China": "china.png",
               "Japan": "japan.png",
-              "French Guiana": "france.png",
+              "French": "france.png",
               "Kazakhstan": "russia.png"
             }
 
@@ -148,7 +149,7 @@
 
             function setCountryIcon() {
               var icon = whichCountry(country);
-              $('.{{country[-1]}}').attr('src', icon);
+              $('.{{country[0]}}').attr('src', icon);
             }
 
             setCountryIcon();
