@@ -134,13 +134,13 @@
               "Virginia": "america.png",
               "China": "china.png",
               "Japan": "japan.png",
-              "French": "france.png",
+              "French Guiana": "france.png",
               "Kazakhstan": "russia.png"
             }
 
             function whichCountry(data) {
               for(key in countries) {
-                console.log(key);
+                console.log(data);
                 if (key == data) {
                   return "static/images/countries/" + countries[key];
                 }
