@@ -44,7 +44,7 @@ nav .stats {
   color: #bbb;
 }
 nav .stats div {
-  padding: 0 !important;
+  padding: 0;
 }
 nav .stat-padding {
   padding: 0 20px 0 0 !important;
