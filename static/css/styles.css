@@ -162,6 +162,11 @@ a {
 .launches div p {
   white-space: normal;
 }
+.flag {
+  height: 12px;
+  width: 16px;
+  margin: 0 5px 0 -21px;
+}
 .bottom-fade {
   position: absolute;
   bottom: 0;
