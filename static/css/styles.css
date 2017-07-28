@@ -165,7 +165,7 @@ a {
 launches div p img.flag {
   height: 12px;
   width: 16px;
-  margin: 0 5px 0 -21px;
+  margin: 0 5px 0 0;
 }
 .bottom-fade {
   position: absolute;
