@@ -162,7 +162,7 @@ a {
 .launches div p {
   white-space: normal;
 }
-launches div p img.flag {
+.launches div p img.flag {
   height: 12px !important;
   width: 16px !important;
   margin: 0 5px 0 0 !important;
