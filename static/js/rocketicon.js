@@ -6,7 +6,7 @@ $(document).ready(function() {
     "Aries1": "aries1.png",
     "Aries5": "aries5.png",
     "Atlas5": "atlas5.png",
-    "Delta2": "delta2.png",
+    "Delta4": "delta.png",
     "DeltaHeavy": "deltaheavy.png",
     "Electron": "electron.png",
     "Falcon9": "falcon9.png",
