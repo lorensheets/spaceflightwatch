@@ -134,13 +134,13 @@ a {
   height: 200px;
   background: #1b1f26;
   position: relative;
+  overflow: hidden;
 }
 .launch-table-container {
   position: absolute;
   top: 10px;
   left: 0;
   padding-bottom: 75px !important;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 .launches {
