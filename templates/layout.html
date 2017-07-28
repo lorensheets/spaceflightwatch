@@ -25,10 +25,6 @@
         enable_page_level_ads: true
       });
     </script>
-    <script>
-      var date = "{{ nextlaunch.date }}";
-      var time = "{{ nextlaunch.time }}";
-    </script>
     {%block scripts%}
     {%endblock%}
     <script src={{url_for('static',filename='js/resize.js')}}></script>
