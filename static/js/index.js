@@ -137,19 +137,13 @@ $(document).ready(function() {
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
     var launchTableHeight = $('.launch-table').css('height'); console.log(launchTableHeight);
     if (launchTableHeight == '200px') {
-      var newlaunchTableHeight = $('.launch-table')[0].scrollHeight; console.log(newlaunchTableHeight);
+      var newlaunchTableHeight = $('.launch-table-container')[0].scrollHeight; console.log(newlaunchTableHeight);
       $('.launch-table').animate({
         'height': newlaunchTableHeight
-      }, 500, 'easeInOutQuad');
-      $('.launch-table-container').animate({
-        'height': newlaunchTableHeight - 10
       }, 500, 'easeInOutQuad');
     } else {
       $('.launch-table').animate({
         'height': '200px'
-      }, 500, 'easeInOutQuad');
-      $('.launch-table-container').animate({
-        'height': '190px'
       }, 500, 'easeInOutQuad');
     }
 
