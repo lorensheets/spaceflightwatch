@@ -36,7 +36,7 @@ $(document).ready(function() {
     $('.'+someClass+'').attr('src', icon);
   }
 
-  $('.next-launch').each(function() {
+  $('.rocket-icon').each(function() {
     var thisClass = $(this).attr('class');
     thisClass = thisClass.split(" ");
     thisClass = thisClass[0];
