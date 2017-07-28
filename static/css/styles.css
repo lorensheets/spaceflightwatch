@@ -170,6 +170,9 @@ a {
 }
 .rocket-icon {
   text-align: right;
+  height: 15px;
+  width: auto;
+  vertical-align: inherit;
 }
 .launches div img.flag {
   vertical-align: inherit;
