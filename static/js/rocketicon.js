@@ -13,7 +13,9 @@ $(document).ready(function() {
     "FalconHeavy": "falconheavy.png",
     "H-2A": "h2a.png",
     "LongueMarche": "longuemarche.png",
+    "Minotaur4": "minotaur4.png"
     "NewGlenn": "newglenn.png",
+    "Proton": "proton.png",
     "PSLV": "pslv.png",
     "Soyuz": "soyuz.png",
     "Vega": "vega.png"
