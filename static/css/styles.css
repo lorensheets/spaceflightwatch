@@ -169,8 +169,8 @@ a {
   text-align: center;
 }
 .launches div img.flag {
-  height: 12px;
-  width: 16px;
+  height: 8px;
+  width: 11px;
   vertical-align: inherit;
 }
 .bottom-fade {
@@ -413,6 +413,9 @@ footer a:hover {
   .launches {
     font-size: 0.9em;
   }
+  .launches div img.flag {
+    height: 12px;
+    width: 16px;
   .bottom {
     margin-bottom: 100px;
   }
