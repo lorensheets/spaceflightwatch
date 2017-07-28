@@ -136,7 +136,7 @@ $(document).ready(function() {
 
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
 
-    $('.launch-table').css('height') == '200px' ? 'auto' : '200px';
+    $('.launch-table').css('height') == '200px' ? '100%' : '200px';
     var launchContainerHeight = $('.launch-table').height();
 
     $('.launch-table-container').css('height') == '190px' ? '100%' : '190px';
