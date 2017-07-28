@@ -163,9 +163,9 @@ a {
   white-space: normal;
 }
 launches div p img.flag {
-  height: 12px;
-  width: 16px;
-  margin: 0 5px 0 0;
+  height: 12px !important;
+  width: 16px !important;
+  margin: 0 5px 0 0 !important;
 }
 .bottom-fade {
   position: absolute;
