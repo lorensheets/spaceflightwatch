@@ -140,6 +140,7 @@
 
             function whichCountry(data) {
               for(key in countries) {
+                console.log(key);
                 if (key == data) {
                   return "static/images/countries/" + countries[key];
                 }
@@ -148,7 +149,6 @@
 
             function setCountryIcon() {
               var icon = whichCountry(country);
-              console.log(icon);
               $('.{{country[-1].replace(" ","")}}').attr('src', icon);
             }
 
