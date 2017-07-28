@@ -169,13 +169,9 @@ a {
   text-align: center;
 }
 .rocket-icon {
-  text-align: right;
+  text-align: left;
 }
-.launches div img.rocket {
-  vertical-align: inherit;
-  height: 15px;
-}
-.launches div img.flag {
+.launches div img.flag, .launches div img.rocket {
   vertical-align: inherit;
 }
 .bottom-fade {
@@ -401,6 +397,9 @@ footer a:hover {
     height: 8px;
     width: 11px;
   }
+  .launches div img.rocket {
+    height: 10px;
+  }
 }
 
 /* Landscape mode */
@@ -412,6 +411,9 @@ footer a:hover {
   .launches div img.flag {
     height: 12px;
     width: 16px;
+  }
+  .launches div img.rocket {
+    height: 14px;
   }
 }
 
@@ -429,6 +431,9 @@ footer a:hover {
   .launches div img.flag {
     height: 12px;
     width: 16px;
+  }
+  .launches div img.rocket {
+    height: 14px;
   }
   .bottom {
     margin-bottom: 100px;
