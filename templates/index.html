@@ -140,8 +140,9 @@
 
             function whichCountry(data) {
               for(key in countries) {
+                console.log(key);
+                console.log(data);
                 if (key == data) {
-                  console.log(countries[key]);
                   return "static/images/countries/" + countries[key];
                 }
               }
