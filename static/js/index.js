@@ -2,6 +2,8 @@ var live_stream;
 
 $(document).ready(function() {
 
+  // date = "{{ date }}"
+
   var y = new Date().getFullYear();
   date = date + " " + y;
   function formatDate(date) {
