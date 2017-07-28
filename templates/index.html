@@ -120,10 +120,17 @@
             <p>{{ vehicle[1] }}</p>
           </div>
           <div class="col-xs-3 col-sm-4 left">
-            <p class="time-until">{{ data[0] }}</p>
+            <div class="row">
+              <div class="col-xs-10">
+                <p class="time-until">{{ data[0] }}</p>
+              </div>
+              <div class="col-xs-2">
+                <img class="{{ country[-1].replace(" ","") }} flag" src=""/>
+              </div>
+            </div>
           </div>
           <div class="col-xs-3 left">
-            <p><img class="{{ country[-1].replace(" ","") }} flag" src=""/>{{ data[3] }}</p>
+            <p>{{ data[3] }}</p>
           </div>
           <script>
             var country = "{{country[-1].replace(" ","")}}";
