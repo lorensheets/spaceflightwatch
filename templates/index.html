@@ -108,6 +108,7 @@
 
       {% for data in upcoming %}
         {% set vehicle = data[1].split('•') %}
+        {% set country = data[3].split(',') %}
         <div class="row launches">
           <div class="col-xs-2 col-sm-1 left">
             <p class="norm-wrap">{{data[2]}}</p>
@@ -124,6 +125,9 @@
           <div class="col-xs-3 left">
             <p >{{ data[3] }}</p>
           </div>
+          <script>
+            console.log("{{ country[0] }}")
+          </script>
         </div>
       {% endfor %}
 
