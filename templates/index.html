@@ -126,7 +126,7 @@
             <p><img class="{{ country[-1].replace(" ","") }}" height="10px" width="14px" src=""/>{{ data[3] }}</p>
           </div>
           <script>
-            var country = "{{country[-1]}}"; console.log("{{country[-1].replace(" ","")}}");
+            var country = "{{country[-1]}}";
 
             var countries = {
               "Florida": "america.png",
@@ -148,6 +148,7 @@
 
             function setCountryIcon() {
               var icon = whichCountry(country);
+              console.log(icon);
               $('.{{country[-1].replace(" ","")}}').attr('src', icon);
             }
 
