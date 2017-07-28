@@ -135,8 +135,8 @@ $(document).ready(function() {
   $('.expand').click(function() {
 
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
-    var launchTableHeight = $('.launch-table').height(); console.log(launchTableHeight);
-    if (launchTableHeight == 200) {
+    var launchTableHeight = $('.launch-table').css('height'); console.log(launchTableHeight);
+    if (launchTableHeight == '200px') {
       var newlaunchTableHeight = $('.launch-table').css('height', 'auto').height(); console.log(newlaunchTableHeight);
       $('.launch-table').animate({
         'height': newlaunchTableHeight
