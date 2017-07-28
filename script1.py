@@ -19,7 +19,7 @@ def home():
     #launch = nextlaunch.getnext()
     #upcoming = nextlaunch.upcoming()
 
-    return render_template("index.html", nextlaunch=nextlaunch,upcoming=upcoming, user=user)
+    return render_template("index.html", nextlaunch=nextlaunch,upcoming=upcoming)
 
 @app.route('/jobs')
 def jobs():
