@@ -2,8 +2,6 @@ var live_stream;
 
 $(document).ready(function() {
 
-  // date = "{{ date }}"
-
   var y = new Date().getFullYear();
   date = date + " " + y;
   function formatDate(date) {
@@ -137,7 +135,7 @@ $(document).ready(function() {
     var thisTxt = $(this).text() == 'View More' ? 'View Less' : 'View More';
     var launchTableHeight = $('.launch-table').css('height');
     if (launchTableHeight == '200px') {
-      var newlaunchTableHeight = $('.launch-table-container')[0].scrollHeight; 
+      var newlaunchTableHeight = $('.launch-table-container')[0].scrollHeight;
       $('.launch-table').animate({
         'height': newlaunchTableHeight
       }, 500, 'easeInOutQuad');
