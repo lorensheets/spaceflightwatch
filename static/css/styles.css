@@ -398,7 +398,9 @@ footer a:hover {
     width: 11px;
   }
   .launches div img.rocket {
-    height: 6px;
+    height: 8px;
+    transform-origin: center;
+    transform: rotate(90deg);
   }
 }
 
