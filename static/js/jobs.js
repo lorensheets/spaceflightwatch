@@ -1,3 +1,5 @@
+var live_stream;
+
 $(document).ready(function() {
 
   $('.company-icon').on('click', function() {
