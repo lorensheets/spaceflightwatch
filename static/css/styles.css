@@ -165,8 +165,11 @@ a {
 .launches div p {
   white-space: normal;
 }
-.icon {
+.country-icon {
   text-align: center;
+}
+.rocket-icon {
+  text-align: left;
 }
 .launches div img.flag {
   vertical-align: inherit;
