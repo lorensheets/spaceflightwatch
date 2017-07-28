@@ -7,10 +7,10 @@ def getnext():
     launch_times = spider.times();
     launch_sites = spider.sites();
     list = []
-    next_launch = launches[0]
-    next_launch_date = launch_dates[0]
-    next_launch_time = launch_times[0]
-    next_launch_site = launch_sites[0]
+    next_launch = launches[1]
+    next_launch_date = launch_dates[1]
+    next_launch_time = launch_times[1]
+    next_launch_site = launch_sites[1]
     link = "https://www.youtube.com/embed/sqlC1Ag0ndQ"
     #link2 = "https://www.youtube.com/embed/t4N5zsDEVuQ"
     file = open("templates/nextlaunch.html","w")
