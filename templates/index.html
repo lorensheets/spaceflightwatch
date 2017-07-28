@@ -126,7 +126,7 @@
             <p><img class="{{ country[-1].replace(" ","") }}" height="10px" width="14px" src=""/>{{ data[3] }}</p>
           </div>
           <script>
-            var country = "{{country[-1]}}";
+            var country = "{{country[-1].replace(" ","")}}";
 
             var countries = {
               "Florida": "america.png",
@@ -134,14 +134,12 @@
               "Virginia": "america.png",
               "China": "china.png",
               "Japan": "japan.png",
-              "French Guiana": "france.png",
+              "FrenchGuiana": "france.png",
               "Kazakhstan": "russia.png"
             }
 
             function whichCountry(data) {
               for(key in countries) {
-                console.log(key);
-                console.log(data);
                 if (key == data) {
                   return "static/images/countries/" + countries[key];
                 }
