@@ -73,14 +73,20 @@
       <div class="container-fluid fullwidth">
         <div class="row margins">
           <div class="col-xs-12">
-            <a href="/">Rocket Launches</a>
-            <a href="/jobs">Space Jobs</a>
-            <!--<a href="/news">Space News</a>-->
+            <div class="row no-margin">
+                <div class="col-xs-12 col-sm-8">
+                  {%block stats%}
+                  {%endblock%}
+                </div>
+                <div class="col-xs-12 col-sm-4"
+                  <a href="/">Rocket Launches</a>
+                  <a href="/jobs">Space Jobs</a>
+                  <!--<a href="/news">Space News</a>-->
+                </div>
+            </div>
           </div>
         </div>
       </div>
-      {%block stats%}
-      {%endblock%}
     </nav>
 
     <div class="container-fluid top">
