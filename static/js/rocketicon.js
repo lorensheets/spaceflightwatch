@@ -1,7 +1,4 @@
-
 $(document).ready(function() {
-
-  var rocket = "{{vehicle[0].replace(" ","")}}";
 
   var rockets = {
     "Antares": "antares.png",
