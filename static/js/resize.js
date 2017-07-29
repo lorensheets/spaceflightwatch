@@ -1,9 +1,8 @@
 $(document).ready(function() {
 
   function topContentMargin() {
-    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (window.innerWidth > 768) {
-      var navHeight = (iOS) ? $('nav').height() : $('nav').innerHeight();
+      var navHeight = $('nav').innerHeight();
     } else {
       var navHeight = '10px';
     }
