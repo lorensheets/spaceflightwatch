@@ -387,6 +387,9 @@ footer a:hover {
 
 @media screen and (orientation: portrait) {
   nav .stats {
+    font-size: 0.7em;
+  }
+  nav a {
     font-size: 0.8em;
   }
   .launches div img.flag {
@@ -410,6 +413,9 @@ footer a:hover {
 @media screen and (orientation: landscape) {
   nav .stats {
     font-size: 0.9em;
+  }
+  nav a {
+    font-size: 1em;
   }
   .launches div img.flag {
     height: 12px;
