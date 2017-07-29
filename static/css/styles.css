@@ -67,6 +67,7 @@ nav p {
 h1 {
   font-family: "Zelda", sans-serif;
   font-size: 4em;
+  margin: 0;
 }
 ul {
   list-style-type: none;
