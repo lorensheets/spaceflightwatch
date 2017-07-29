@@ -65,7 +65,8 @@ nav p {
   display: none;
 }
 .logo {
-  
+  height: 32px;
+  width: 32px;
 }
 h1 {
   font-family: "Zelda", sans-serif;
@@ -407,8 +408,8 @@ footer a:hover {
     font-size: 0.8em;
   }
   h1 {
-    font-size: 1.5em;
-    letter-spacing: 0.3em;
+    font-size: 1.25em;
+    letter-spacing: 0.2em;
   }
   .launches div img.flag {
     height: 8px;
@@ -456,6 +457,10 @@ footer a:hover {
   }
   nav .stats {
     font-size: 0.9em;
+  }
+  .logo {
+    height: 48px;
+    width: 48px;
   }
   h1 {
     font-size: 2.5em;
