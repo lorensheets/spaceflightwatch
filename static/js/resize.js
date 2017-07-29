@@ -4,7 +4,7 @@ $(document).ready(function() {
     if (window.innerWidth > 768) {
       var navHeight = $('nav').innerHeight(); console.log(navHeight);
     } else {
-      var navHeight = '10px'; console.log(navHeight);
+      var navHeight = 10; console.log(navHeight);
     }
     $('.top').css('margin-top', navHeight);
   }
