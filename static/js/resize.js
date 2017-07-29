@@ -6,12 +6,13 @@ $(document).ready(function() {
     } else {
       var navHeight = '10px';
     }
+    console.log("Resizing");
     $('.top').css('margin-top', navHeight);
   }
 
   topContentMargin();
 
-  window.onresize = topContentMargin;
+   $(window).on('resize',topContentMargin);
 
   livestream_size = function() {
     var w = window.innerWidth * 0.95;
