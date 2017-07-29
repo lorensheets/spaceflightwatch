@@ -3,10 +3,10 @@ $(document).ready(function() {
   function topContentMargin() {
     var navHeight;
     if (window.innerWidth > 768) {
-      navHeight = $('nav').innerHeight();
+      navHeight = $('nav').innerHeight() + 10;
       $('.top').css('margin-top', navHeight);
     } else {
-      navHeight = 5;
+      navHeight = 10;
     }
     $('.top').css('margin-top', navHeight);
   }
