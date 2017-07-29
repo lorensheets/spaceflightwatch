@@ -387,7 +387,7 @@ footer a:hover {
 
 @media screen and (orientation: portrait) {
   nav .stats {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
   .launches div img.flag {
     height: 8px;
