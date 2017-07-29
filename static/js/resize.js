@@ -2,11 +2,10 @@ $(document).ready(function() {
 
   function topContentMargin() {
     if (window.innerWidth > 768) {
-      var navHeight = $('nav').innerHeight();
+      var navHeight = $('nav').innerHeight(); console.log(navHeight);
     } else {
-      var navHeight = '10px';
+      var navHeight = '10px'; console.log(navHeight);
     }
-    console.log("Resizing");
     $('.top').css('margin-top', navHeight);
   }
 
