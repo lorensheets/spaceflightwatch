@@ -6,14 +6,12 @@ $(document).ready(function() {
       navHeight = $('nav').innerHeight(); console.log(navHeight);
       $('.top').css('margin-top', navHeight);
     } else {
-      navHeight = 10; console.log(navHeight);    
+      navHeight = 10; console.log(navHeight);
     }
     $('.top').css('margin-top', navHeight);
   }
 
   topContentMargin();
-
-   $(window).on('resize',topContentMargin);
 
   livestream_size = function() {
     var w = window.innerWidth * 0.95;
@@ -31,23 +29,14 @@ $(document).ready(function() {
       'width': w,
       'margin': m2
     });
-    navHeight = $('nav').innerHeight();
-    $('.top').css('margin-top', navHeight);
   }
 
   if (live_stream == true) {
-
     $(window).on("orientationchange", livestream_size);
-
     $(window).on("resize", livestream_size);
-
+    $(window).on("resize", topContentMargin);
   } else {
-
-    $(window).on("resize", function() {
-      navHeight = $('nav').innerHeight();
-      $('.top').css('margin-top', navHeight);
-    });
-
+    $(window).on("resize", topContentMargin);
   }
 
 
