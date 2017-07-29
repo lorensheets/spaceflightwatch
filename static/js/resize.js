@@ -3,17 +3,17 @@ $(document).ready(function() {
   function topContentMargin() {
     var navHeight;
     if (window.innerWidth > 768) {
-      navHeight = $('nav').innerHeight(); console.log(navHeight);
+      navHeight = $('nav').innerHeight();
       $('.top').css('margin-top', navHeight);
     } else {
-      navHeight = 10; console.log(navHeight);
+      navHeight = 5;
     }
     $('.top').css('margin-top', navHeight);
   }
 
   topContentMargin();
 
-  livestream_size = function() {
+  function livestream_size() {
     var w = window.innerWidth * 0.95;
     var h = w * 0.56;
     var m = "5px auto " + w * 0.05 + "px auto";
@@ -38,7 +38,5 @@ $(document).ready(function() {
   } else {
     $(window).on("resize", topContentMargin);
   }
-
-
 
 });
