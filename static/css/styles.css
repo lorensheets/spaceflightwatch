@@ -408,8 +408,8 @@ footer a:hover {
     font-size: 0.8em;
   }
   h1 {
-    font-size: 1.25em;
-    letter-spacing: 0.2em;
+    font-size: 1.35em;
+    letter-spacing: 0.25em;
   }
   .launches div img.flag {
     height: 8px;
@@ -435,6 +435,10 @@ footer a:hover {
   }
   nav a {
     font-size: 1em;
+  }
+  .logo {
+    height: 36px;
+    width: 36px;
   }
   h1 {
     font-size: 2.25em;
