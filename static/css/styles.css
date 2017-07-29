@@ -64,6 +64,9 @@ nav p {
 #livestream, .watch-live {
   display: none;
 }
+.logo {
+  margin: 20px 0;
+}
 h1 {
   font-family: "Zelda", sans-serif;
   margin: 20px 0;
