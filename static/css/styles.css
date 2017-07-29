@@ -1,6 +1,6 @@
 @font-face {
     font-family: Zelda;
-    src: url("static/fonts/zelda.otf") format("opentype");
+    src: url("../fonts/zelda.otf") format("opentype");
 }
 :root {
   --main-bg-color: #21252b;
