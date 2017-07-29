@@ -6,6 +6,7 @@ $(document).ready(function() {
     "Aries1": "aries1.png",
     "Aries5": "aries5.png",
     "Atlas5": "atlas5.png",
+    "Delta2": "delta.png",
     "Delta4": "delta.png",
     "DeltaHeavy": "deltaheavy.png",
     "Electron": "electron.png",
@@ -18,6 +19,7 @@ $(document).ready(function() {
     "NewGlenn": "newglenn.png",
     "Proton": "proton.png",
     "PSLV": "pslv.png",
+    "Rockot": "rockot.png",
     "Soyuz": "soyuz.png",
     "Vega": "vega.png"
   }
