@@ -1,8 +1,18 @@
 $(document).ready(function() {
 
-  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  var navHeight = (iOS) ? $('nav').height() : $('nav').innerHeight();
-  $('.top').css('margin-top', navHeight);
+  function topContentMargin() {
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (window.innerWidth > 768) {
+      var navHeight = (iOS) ? $('nav').height() : $('nav').innerHeight();
+    } else {
+      var navHeight = '10px';
+    }
+    $('.top').css('margin-top', navHeight);
+  }
+
+  topContentMargin();
+
+  window.onresize = topContentMargin;
 
   livestream_size = function() {
     var w = window.innerWidth * 0.95;
