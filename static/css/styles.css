@@ -26,7 +26,7 @@ html, body {
   overflow-x: hidden;
 }
 nav {
-  position: fixed;
+  position: relative;
   z-index: 100;
   top: 0;
   left: 0;
@@ -429,6 +429,9 @@ footer a:hover {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  nav {
+    position: fixed;
+  }
   nav .stats {
     font-size: 0.9em;
   }
