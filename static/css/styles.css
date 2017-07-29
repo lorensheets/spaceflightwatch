@@ -66,8 +66,6 @@ nav p {
 }
 h1 {
   font-family: "Zelda", sans-serif;
-  font-size: 2.5em;
-  letter-spacing: 0.5em;
   margin: 20px 0;
   color: #000;
 }
@@ -405,6 +403,10 @@ footer a:hover {
   nav a {
     font-size: 0.8em;
   }
+  h1 {
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+  }
   .launches div img.flag {
     height: 8px;
     width: 11px;
@@ -430,6 +432,10 @@ footer a:hover {
   nav a {
     font-size: 1em;
   }
+  h1 {
+    font-size: 2.25em;
+    letter-spacing: 0.4em;
+  }
   .launches div img.flag {
     height: 12px;
     width: 16px;
@@ -447,6 +453,10 @@ footer a:hover {
   }
   nav .stats {
     font-size: 0.9em;
+  }
+  h1 {
+    font-size: 2.5em;
+    letter-spacing: 0.5em;
   }
   .table-header {
     font-size: 1em;
