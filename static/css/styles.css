@@ -52,7 +52,6 @@ nav .stat-padding {
 }
 .nav-link {
   text-align: right;
-  padding: 0 15px;
 }
 .nav-link-desktop {
   white-space: nowrap;
@@ -116,6 +115,7 @@ a {
 .no-wrap { white-space: nowrap; }
 .no-margin { margin: 0 !important; }
 .no-padding { padding: 0 !important; }
+.negative-margin { margin: 0 0 0 0; }
 .center div { text-align: right; }
 .table { background: #111; }
 .table-header {
@@ -475,6 +475,7 @@ footer a:hover {
   nav .stats {
     font-size: 0.9em;
   }
+  .negative-margin { margin: 0 0 0 -35px; }
   .center div {
     text-align: center;
   }
