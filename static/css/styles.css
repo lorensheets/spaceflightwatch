@@ -54,6 +54,10 @@ nav a {
   display: inline-block;
   margin: 0;
 }
+nav-link {
+  padding: 0 10px;
+  white-space: nowrap;
+}
 nav a:hover {
   cursor: pointer;
 }
@@ -108,12 +112,6 @@ a {
 }
 .no-padding {
   padding: 0 !important;
-}
-.no-wrap {
-  white-space: nowrap;
-}
-.nav-border {
-  border: none;
 }
 .center div {
   text-align: right;
@@ -480,9 +478,6 @@ footer a:hover {
   }
   .center div {
     text-align: center;
-  }
-  .nav-border {
-    border-right: 1px solid #999;
   }
   .logo {
     height: 48px;
