@@ -241,4 +241,4 @@ def vector():
 #moon()
 #planetlabs()
 #vector()
-planetaryresources()
+#planetaryresources()
