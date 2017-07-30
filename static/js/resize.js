@@ -9,7 +9,6 @@ $(document).ready(function() {
       navHeight = 0;
     }
     $('.top').css('margin-top', navHeight);
-    alert(navHeight);
   }
 
   topContentMargin();
