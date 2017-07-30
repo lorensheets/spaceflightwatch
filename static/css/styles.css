@@ -50,13 +50,13 @@ nav .stats {
 nav .stat-padding {
   padding: 0 20px 0 0 !important;
 }
-nav a {
-  display: inline-block;
-  margin: 0;
-}
-nav-link {
+.nav-link {
+  text-align: right;
   padding: 0 15px;
-  white-space: nowrap;
+}
+.nav-link-desktop a {
+  display: inline-block;
+  margin: 0 15px;
 }
 nav a:hover {
   cursor: pointer;
