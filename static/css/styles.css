@@ -52,6 +52,7 @@ nav .stat-padding {
 }
 .nav-link {
   text-align: right;
+  padding: 0;
 }
 .nav-link-desktop {
   white-space: nowrap;
