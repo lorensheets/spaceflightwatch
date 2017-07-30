@@ -201,7 +201,7 @@ def vector():
 
 #spacex()
 #blueorigin()
-phasefour()
+#phasefour()
 #rocketlabs()
 #bigelow()
 #moon()
