@@ -112,7 +112,7 @@ a {
 .no-wrap {
   white-space: nowrap;
 }
-.center {
+.center div {
   text-align: center;
 }
 .table {
