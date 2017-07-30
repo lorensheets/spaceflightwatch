@@ -34,12 +34,10 @@ $(document).ready(function() {
 
   if (live_stream == true) {
     $(window).on("orientationchange", livestream_size);
-    $(window).on("orientationchange", topContentMargin);
     $(window).on("resize", livestream_size);
     $(window).on("resize", topContentMargin);
   } else {
     $(window).on("resize", topContentMargin);
-    $(window).on("orientationchange", topContentMargin);
   }
 
 });

@@ -157,4 +157,18 @@ $(document).ready(function() {
 
   });
 
+  // device orientation change resize table
+
+  function tableResize() {
+    var launchTableHeight = $('.launch-table').css('height');
+    if (launchTableHeight !== '200px') {
+      var newlaunchTableHeight = $('.launch-table-container')[0].scrollHeight;
+      $('.launch-table').animate({
+        'height': newlaunchTableHeight
+      }, 500, 'easeInOutQuad');
+    }
+  }
+
+  $(window).on("orientationchange", tableResize);
+
 });
