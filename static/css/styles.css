@@ -112,6 +112,9 @@ a {
 .no-wrap {
   white-space: nowrap;
 }
+.nav-border {
+  border: none;
+}
 .center div {
   text-align: right;
 }
@@ -477,6 +480,9 @@ footer a:hover {
   }
   .center div {
     text-align: center;
+  }
+  .nav-border {
+    border-right: 1px solid #999;
   }
   .logo {
     height: 48px;
