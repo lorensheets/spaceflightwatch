@@ -66,7 +66,7 @@
       <div class="col-xs-12">
         <div class="jobs-list">
 
-          <div id="spacex__job-list" class="row job-list selected">
+          <div id="spacex__job-list" class="row job-list no-margin selected">
             {% for key in spacexjobs %}
               <div class="col-xs-12 job-category"><h4>{{key}}</h4></div>
               {% for val in spacexjobs[key] %}
@@ -79,7 +79,7 @@
             {% endfor %}
           </div>
 
-          <div id="planetaryresources__job-list" class="row job-list">
+          <div id="planetaryresources__job-list" class="row job-list no-margin">
             {% for key in planetaryresourcesjobs %}
               <div class="col-xs-12 job-category"><h4>{{key}}</h4></div>
               {% for val in planetaryresourcesjobs[key] %}
@@ -92,7 +92,7 @@
             {% endfor %}
           </div>
 
-          <div id="blueorigin__job-list" class="row job-list">
+          <div id="blueorigin__job-list" class="row job-list no-margin">
             {% for job in blueoriginjobs %}
             <div class="job col-xs-12 col-sm-4">
               <a href="http://www.blueorigin.com{{blueoriginjobs[job]}}" target="_blank">{{ job }}</a><br>
@@ -100,7 +100,7 @@
             {% endfor %}
           </div>
 
-          <div id="phasefour__job-list" class="row job-list">
+          <div id="phasefour__job-list" class="row job-list no-margin">
             {% for job in phasefourjobs %}
             <div class="job col-xs-12 col-sm-4">
               <a class="capitalize" href="https://www.indeedjobs.com{{phasefourjobs[job]}}" target="_blank">{{ job }}</a><br>
@@ -108,7 +108,7 @@
             {% endfor %}
           </div>
 
-          <div id="rocketlabs__job-list" class="row job-list">
+          <div id="rocketlabs__job-list" class="row job-list no-margin">
             {% for job in rocketlabsjobs %}
             <div class="job col-xs-12 col-sm-4">
               <a href="http://www.rocketlabusa.com{{rocketlabsjobs[job]}}" target="_blank">{{ job }}</a><br>
@@ -116,7 +116,7 @@
             {% endfor %}
           </div>
 
-          <div id="bigelow__job-list" class="row job-list">
+          <div id="bigelow__job-list" class="row job-list no-margin">
             {% for job in bigelowjobs %}
             <div class="job col-xs-12 col-sm-4">
               <a href="{{bigelowjobs[job]}}" target="_blank">{{ job }}</a><br>
@@ -124,7 +124,7 @@
             {% endfor %}
           </div>
 
-          <div id="moonexpress__job-list" class="row job-list">
+          <div id="moonexpress__job-list" class="row job-list no-margin">
             {% for job in moonexpressjobs %}
             <div class="job col-xs-12 col-sm-4">
               <a href="{{moonexpressjobs[job]}}" target="_blank">{{ job }}</a><br>
@@ -132,7 +132,7 @@
             {% endfor %}
           </div>
 
-          <div id="planetlabs__job-list" class="row job-list">
+          <div id="planetlabs__job-list" class="row job-list no-margin">
             {% for item in planetlabsjobs %}
               {% for category in planetlabsjobs[item] %}
                 <div class="col-xs-12 job-category"><h4>{{ category.name }}</h4></div>
@@ -145,7 +145,7 @@
             {%endfor%}
           </div>
 
-          <div id="vectorspacesystems__job-list" class="row job-list">
+          <div id="vectorspacesystems__job-list" class="row job-list no-margin">
             {% for job in vectorspacesystemsjobs %}
             <div class="job col-xs-12 col-sm-4">
               <a href="https://vectorspacesystems.com{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
