@@ -112,6 +112,9 @@ a {
 .no-wrap {
   white-space: nowrap;
 }
+.center {
+  text-align: center;
+}
 .table {
   background: #111;
 }
