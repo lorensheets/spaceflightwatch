@@ -79,79 +79,79 @@
             {% endfor %}
           </div>
 
-          <ul id="planetaryresources__job-list" class="job-list">
+          <div id="planetaryresources__job-list" class="row job-list">
             {% for key in planetaryresourcesjobs %}
-              <li><h4>{{key}}</h4></li>
+              <div class="col-xs-12"><h4>{{key}}</h4></div>
               {% for val in planetaryresourcesjobs[key] %}
                 {% for job in val %}
-                  <li class="job">
+                  <div class="job col-xs-12 col-sm-4">
                     <a href="{{val[job]}}" target="_blank">{{ job }}</a><br>
-                  </li>
+                  </div>
                 {% endfor %}
               {% endfor %}
             {% endfor %}
-          </ul>
+          </div>
 
-          <ul id="blueorigin__job-list" class="job-list">
+          <div id="blueorigin__job-list" class="row job-list">
             {% for job in blueoriginjobs %}
-            <li>
+            <div class="job col-xs-12 col-sm-4">
               <a href="http://www.blueorigin.com{{blueoriginjobs[job]}}" target="_blank">{{ job }}</a><br>
-            </li>
+            </div>
             {% endfor %}
-          </ul>
+          </div>
 
-          <ul id="phasefour__job-list" class="job-list">
+          <div id="phasefour__job-list" class="row job-list">
             {% for job in phasefourjobs %}
-            <li>
+            <div class="job col-xs-12 col-sm-4">
               <a class="capitalize" href="https://www.indeedjobs.com{{phasefourjobs[job]}}" target="_blank">{{ job }}</a><br>
-            </li>
+            </div>
             {% endfor %}
-          </ul>
+          </div>
 
-          <ul id="rocketlabs__job-list" class="job-list">
+          <div id="rocketlabs__job-list" class="row job-list">
             {% for job in rocketlabsjobs %}
-            <li>
+            <div class="job col-xs-12 col-sm-4">
               <a href="http://www.rocketlabusa.com{{rocketlabsjobs[job]}}" target="_blank">{{ job }}</a><br>
-            </li>
+            </div>
             {% endfor %}
-          </ul>
+          </div>
 
-          <ul id="bigelow__job-list" class="job-list">
+          <div id="bigelow__job-list" class="row job-list">
             {% for job in bigelowjobs %}
-            <li>
+            <div class="job col-xs-12 col-sm-4">
               <a href="{{bigelowjobs[job]}}" target="_blank">{{ job }}</a><br>
-            </li>
+            </div>
             {% endfor %}
-          </ul>
+          </div>
 
-          <ul id="moonexpress__job-list" class="job-list">
+          <div id="moonexpress__job-list" class="row job-list">
             {% for job in moonexpressjobs %}
-            <li>
+            <div class="job col-xs-12 col-sm-4">
               <a href="{{moonexpressjobs[job]}}" target="_blank">{{ job }}</a><br>
-            </li>
+            </div>
             {% endfor %}
-          </ul>
+          </div>
 
-          <ul id="planetlabs__job-list" class="job-list">
+          <div id="planetlabs__job-list" class="row job-list">
             {% for item in planetlabsjobs %}
               {% for category in planetlabsjobs[item] %}
-                <li><h4>{{ category.name }}</h4></li>
+                <div class="col-xs-12"><h4>{{ category.name }}</h4></div>
                 {% for job in category.jobs %}
-                  <li class="job">
+                  <div class="job col-xs-12 col-sm-4">
                     <a href="{{job.absolute_url}}" target="_blank">{{ job.title }}</a><br>
-                  </li>
+                  </div>
                 {%endfor%}
               {%endfor%}
             {%endfor%}
-          </ul>
+          </div>
 
-          <ul id="vectorspacesystems__job-list" class="job-list">
+          <div id="vectorspacesystems__job-list" class="row job-list">
             {% for job in vectorspacesystemsjobs %}
-            <li>
+            <div class="job col-xs-12 col-sm-4">
               <a href="https://vectorspacesystems.com{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
-            </li>
+            </div>
             {% endfor %}
-          </ul>
+          </div>
 
         </div>
       </div>
