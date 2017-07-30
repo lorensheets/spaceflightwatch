@@ -57,26 +57,7 @@ def jobs():
     #planet labs jobs
     with urllib.request.urlopen("http://spaceflight.watch/planetlabsjobs") as url:
         planetlabsjobs = json.loads(url.read().decode())
-
-    """
-    planetaryresourcesjobs = [
-        ['Finance & Operations Analyst','?gh_jid=744711'], \
-        ['Chief Scientist','?gh_jid=682831'], \
-        ['Director of Instrument Systems','?gh_jid=682839'], \
-        ['Early Career Engineer','?gh_jid=682849'], \
-        ['Instrument Systems Engineer','?gh_jid=745216'], \
-        ['Mission Design Engineer','?gh_jid=647441'], \
-        ['Network Engineer','?gh_jid=682858'], \
-        ['Planetary Scientist','?gh_jid=682861'], \
-        ['Propulsion System Engineer','?gh_jid=682863'], \
-        ['Senior Instrument Systems Engineer','?gh_jid=745263'], \
-        ['Thermal Subsystems Engineer','?gh_jid=745158'], \
-        ['Mission Design Engineer, Luxembourg','?gh_jid=716075'], \
-        ['Planetary Scientist - Luxembourg','?gh_jid=716052'], \
-        ['Business Analyst','?gh_jid=744045'], \
-        ['Director of Marketing','?gh_jid=682845']
-    ]
-    """
+        
 
     vectorspacesystemsjobs = [
         ['Ground Software Engineer','/job/ground-software-engineer/'], \
