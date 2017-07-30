@@ -82,15 +82,6 @@ h1 {
 h1 span {
   color: var(--countdown-bg-color);
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-  padding-bottom: 55px;
-}
-li {
-  padding: 3px 0;
-  text-transform: capitalize;
-}
 a {
   color: var(--main-txt-color);
 }
@@ -279,6 +270,7 @@ h2 span {
   position: absolute;
   top: 10px;
   left: 0;
+  padding-bottom: 50px;
 }
 .jobs-list__bg {
   position: absolute;
@@ -295,6 +287,9 @@ h2 span {
 }
 .job {
   padding-left: 15px;
+}
+.job a {
+  text-transform: capitalize;
 }
 .companies-container {
   background: #111;
