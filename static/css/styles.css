@@ -52,7 +52,7 @@ nav .stat-padding {
 }
 nav a {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0;
 }
 nav a:hover {
   cursor: pointer;
