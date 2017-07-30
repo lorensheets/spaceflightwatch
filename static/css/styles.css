@@ -113,7 +113,7 @@ a {
   white-space: nowrap;
 }
 .center div {
-  text-align: center;
+  text-align: right;
 }
 .table {
   background: #111;
@@ -474,6 +474,9 @@ footer a:hover {
   }
   nav .stats {
     font-size: 0.9em;
+  }
+  .center div {
+    text-align: center;
   }
   .logo {
     height: 48px;
