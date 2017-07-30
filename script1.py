@@ -57,7 +57,7 @@ def jobs():
     #planet labs jobs
     with urllib.request.urlopen("http://spaceflight.watch/planetlabsjobs") as url:
         planetlabsjobs = json.loads(url.read().decode())
-        
+
 
     vectorspacesystemsjobs = [
         ['Ground Software Engineer','/job/ground-software-engineer/'], \
@@ -136,3 +136,9 @@ def test():
     with urllib.request.urlopen("http://spaceflight.watch/nextlaunch") as url:
         nextlaunch = json.loads(url.read().decode())
     return render_template("test.html",nextlaunch=nextlaunch)
+
+
+#render sml sitemap
+@app.route('/sitemap')
+def sitemap():
+    return render_template("sitemap.xml")
