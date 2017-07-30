@@ -71,6 +71,41 @@ def blueorigin():
     #return blueorigin_results
 
 
+def planetaryresources():
+    url = "https://boards.greenhouse.io/embed/job_board?for=planetaryresources"
+    source_code = requests.get(url)
+    plain_text = source_code.text
+    soup = BeautifulSoup(plain_text, "html5lib")
+    file = open("templates/planetaryresourcesjobs.html","w")
+    file.write("{\n")
+    file.close()
+    for item in soup.findAll('section'):
+        category = item.find('h2')
+        file = open("templates/planetaryresourcesjobs.html","a")
+        file.write("\"" + category.string + "\":[{\n")
+        file.close()
+        for job in item.findAll('a'):
+            joblink = job['href']
+            file = open("templates/planetaryresourcesjobs.html","a")
+            file.write("\"" + job.string + "\":\"" + joblink + "\",\n")
+            file.close()
+        file = open("templates/planetaryresourcesjobs.html","a")
+        file.write("}],\n")
+        file.close()
+    file = open("templates/planetaryresourcesjobs.html","r")
+    lines = file.readlines()
+    lines[len(lines)-1] = lines[len(lines)-1][:-2]
+    file.close()
+    file = open("templates/planetaryresourcesjobs.html","w")
+    file.writelines(lines)
+    file.close()
+    file = open("templates/planetaryresourcesjobs.html","a")
+    file.write("}")
+    file.close()
+
+    #print(soup.prettify)
+
+
 def phasefour():
     url = "https://www.indeedjobs.com/widget/s/d489f6df26e6677b0051"
     source_code = requests.get(url)
@@ -198,7 +233,6 @@ def vector():
     soup = BeautifulSoup(plain_text, "html5lib")
     print(soup.prettify)
 
-
 #spacex()
 #blueorigin()
 #phasefour()
@@ -207,3 +241,4 @@ def vector():
 #moon()
 #planetlabs()
 #vector()
+planetaryresources()

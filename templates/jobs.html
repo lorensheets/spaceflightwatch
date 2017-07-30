@@ -67,13 +67,26 @@
         <div class="jobs-list">
 
           <ul id="spacex__job-list" class="job-list selected">
-            {%for key in spacexjobs%}
+            {% for key in spacexjobs %}
               <li><h4>{{key}}</h4></li>
-              {%for val in spacexjobs[key]%}
+              {% for val in spacexjobs[key] %}
                 {% for job in val %}
                 <li class="job">
                   <a href="http://www.spacex.com{{val[job]}}" target="_blank">{{ job }}</a><br>
                 </li>
+                {% endfor %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
+
+          <ul id="planetaryresources__job-list" class="job-list">
+            {% for key in planetaryresourcesjobs %}
+              <li><h4>{{key}}</h4></li>
+              {% for val in planetaryresourcesjobs[key] %}
+                {% for job in val %}
+                  <li class="job">
+                    <a href="{{val[job]}}" target="_blank">{{ job[0] }}</a><br>
+                  </li>
                 {% endfor %}
               {% endfor %}
             {% endfor %}
@@ -99,14 +112,6 @@
             {% for job in rocketlabsjobs %}
             <li>
               <a href="http://www.rocketlabusa.com{{rocketlabsjobs[job]}}" target="_blank">{{ job }}</a><br>
-            </li>
-            {% endfor %}
-          </ul>
-
-          <ul id="planetaryresources__job-list" class="job-list">
-            {% for job in planetaryresourcesjobs %}
-            <li>
-              <a href="http://www.planetaryresources.com/careers/job-board/{{job[1]}}" target="_blank">{{ job[0] }}</a><br>
             </li>
             {% endfor %}
           </ul>

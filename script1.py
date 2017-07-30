@@ -34,6 +34,10 @@ def jobs():
     with urllib.request.urlopen("http://spaceflight.watch/blueoriginjobs") as url:
         blueoriginjobs = json.loads(url.read().decode())
 
+    #planetaryresources jobs
+    with urllib.request.urlopen("http://spaceflight.watch/planetaryresourcesjobs") as url:
+        planetaryresourcesjobs = json.loads(url.read().decode())
+
     #phasefour jobs
     with urllib.request.urlopen("http://spaceflight.watch/phasefourjobs") as url:
         phasefourjobs = json.loads(url.read().decode())
@@ -54,6 +58,7 @@ def jobs():
     with urllib.request.urlopen("http://spaceflight.watch/planetlabsjobs") as url:
         planetlabsjobs = json.loads(url.read().decode())
 
+    """
     planetaryresourcesjobs = [
         ['Finance & Operations Analyst','?gh_jid=744711'], \
         ['Chief Scientist','?gh_jid=682831'], \
@@ -71,6 +76,7 @@ def jobs():
         ['Business Analyst','?gh_jid=744045'], \
         ['Director of Marketing','?gh_jid=682845']
     ]
+    """
 
     vectorspacesystemsjobs = [
         ['Ground Software Engineer','/job/ground-software-engineer/'], \
@@ -111,6 +117,11 @@ def spacexjobs():
 @app.route('/blueoriginjobs')
 def blueoriginjobs():
     return render_template("blueoriginjobs.html")
+
+#render planetaryresourcesjobs json
+@app.route('/planetaryresourcesjobs')
+def planetaryresourcesjobs():
+    return render_template("planetaryresourcesjobs.html")
 
 #render phasefourjobs json
 @app.route('/phasefourjobs')
