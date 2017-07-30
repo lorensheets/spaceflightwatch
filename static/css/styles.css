@@ -57,9 +57,11 @@ nav .stat-padding {
 .nav-link-desktop {
   white-space: nowrap;
   padding: 0;
+  text-align: right;
 }
 .nav-link-desktop a {
   display: inline-block;
+  text-align: center;
   margin: 0 15px;
 }
 nav a:hover {
