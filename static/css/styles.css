@@ -80,7 +80,7 @@ h1 {
   text-align: center;
 }
 h1 span {
-  color: #1dcaff;
+  color: var(--countdown-bg-color);
 }
 ul {
   list-style-type: none;
