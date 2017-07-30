@@ -285,8 +285,11 @@ h2 span {
   background-position: center;
   opacity: 0.1;
 }
+.job-category {
+  margin-top: 20px;
+}
 .job {
-  padding-left: 15px;
+  padding: 5px 0;
 }
 .job a {
   text-transform: capitalize;
