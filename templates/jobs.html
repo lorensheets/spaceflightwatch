@@ -68,7 +68,7 @@
 
           <div id="spacex__job-list" class="row job-list no-margin selected">
             {% for key in spacexjobs %}
-              <div class="col-xs-12 job-category"><h4>{{key}}</h4></div>
+              <div class="col-xs-12 job-category"><h3>{{key}}</h3></div>
               {% for val in spacexjobs[key] %}
                 {% for job in val %}
                 <div class="job col-xs-12 col-sm-4">
@@ -81,7 +81,7 @@
 
           <div id="planetaryresources__job-list" class="row job-list no-margin">
             {% for key in planetaryresourcesjobs %}
-              <div class="col-xs-12 job-category"><h4>{{key}}</h4></div>
+              <div class="col-xs-12 job-category"><h3>{{key}}</h3></div>
               {% for val in planetaryresourcesjobs[key] %}
                 {% for job in val %}
                   <div class="job col-xs-12 col-sm-4">
@@ -135,7 +135,7 @@
           <div id="planetlabs__job-list" class="row job-list no-margin">
             {% for item in planetlabsjobs %}
               {% for category in planetlabsjobs[item] %}
-                <div class="col-xs-12 job-category"><h4>{{ category.name }}</h4></div>
+                <div class="col-xs-12 job-category"><h3>{{ category.name }}</h3></div>
                 {% for job in category.jobs %}
                   <div class="job col-xs-12 col-sm-4">
                     <a href="{{job.absolute_url}}" target="_blank">{{ job.title }}</a><br>
