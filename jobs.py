@@ -1,12 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-#spacex_results = []
-#blueorigin_results = []
-#phasefour_results = []
-#rocketlabs_results = []
-#bigelow_results = []
-
 def spacex():
     url = "https://spacex.com/careers/list"
     source_code = requests.get(url)
@@ -235,7 +229,7 @@ def vector():
 
 #spacex()
 #blueorigin()
-#phasefour()
+phasefour()
 #rocketlabs()
 #bigelow()
 #moon()
