@@ -23,6 +23,7 @@ $(document).ready(function() {
     "PSLV": "pslv.png",
     "Rockot": "rockot.png",
     "Soyuz": "soyuz.png",
+    "Vector-R": "vector.png",
     "Vega": "vega.png"
   }
 
