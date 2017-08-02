@@ -87,7 +87,7 @@ def nextlaunch():
 #render upcoming launches json
 @app.route('/upcominglaunches')
 def upcoming():
-    return render_template("upcominglaunches.html")
+    return render_template("upcominglaunch.html")
 
 #render spacexjobs json
 @app.route('/spacexjobs')
