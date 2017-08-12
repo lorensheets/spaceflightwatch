@@ -105,7 +105,7 @@ $(document).ready(function() {
 
   // Watch Live script
 
-  if ( (time_diff/1000 < 1000000) && (time_diff/1000 > -7200) && link != "") {
+  if ( (time_diff/1000 < 1000000) && (time_diff/1000 > -20000) && link != "") {
     live_stream = true;
     var w = window.innerWidth * 0.95;
     var h = w * 0.56;
