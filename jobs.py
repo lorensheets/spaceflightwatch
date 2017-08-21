@@ -229,10 +229,10 @@ def vector():
 
 #spacex()
 #blueorigin()
-phasefour()
+#phasefour()
 #rocketlabs()
 #bigelow()
 #moon()
 #planetlabs()
-#vector()
+vector()
 #planetaryresources()

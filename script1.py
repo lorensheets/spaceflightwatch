@@ -60,9 +60,18 @@ def jobs():
 
 
     vectorspacesystemsjobs = [
-        ['Ground Software Engineer','/job/ground-software-engineer/'], \
-        ['Electrical Wiring Technician','/job/electrical-wiring-technician/'], \
-        ['Embedded Software Engineer','/job/embedded-software-engineer/']
+        ['Liquid Rocket Propulsion Engineer, Development Engineer','liquid-rocket-propulsion-engineer-development-engineer'], \
+        ['Contracts Administrator','contracts-administrator'], \
+        ['Human Resource Specialist','human-resource-specialist'], \
+        ['Program Controller','program-controller'], \
+        ['Systems Engineer','systems-engineer'], \
+        ['Director, Structural Engineering','director-structural-engineering'], \
+        ['Guidance, Navigation and Control (GN&C) Engineer','guidance-navigation-control-gnc-engineer'], \
+        ['Mechanical Engineer, Structures Development Engineer','mechanical-engineer-structures-development-engineer'], \
+        ['Assembly, Integration and Test Technician','assembly-integration-test-technician'], \
+        ['Ground Software Engineer','ground-software-engineer'], \
+        ['Electrical Wiring Technician','electrical-wiring-technician'], \
+        ['Embedded Software Engineer','embedded-software-engineer']
     ]
 
     return render_template("jobs.html", spacexjobs=spacexjobs, blueoriginjobs=blueoriginjobs,
