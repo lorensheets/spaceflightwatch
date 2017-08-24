@@ -38,7 +38,7 @@ def upcoming():
     file = open("templates/upcominglaunches.html","w")
     file.write("[\n")
     file.close()
-    for i in range(1,len(launches)):
+    for i in range(0,len(launches)):
         next_launch = launches[i]
         next_launch_time = launch_times[i]
         next_launch_date = launch_dates[i]
